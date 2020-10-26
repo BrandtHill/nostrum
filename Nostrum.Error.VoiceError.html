@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.23.0">
     <meta name="project" content="Nostrum v0.4.5">
-    <title>Nostrum.Cache.Mapping.ShardPidNum — Nostrum v0.4.5</title>
+    <title>Nostrum.Error.VoiceError — Nostrum v0.4.5</title>
     <link rel="stylesheet" href="dist/elixir-9f91ebe876dc01d67920.css" />
     <script src="dist/sidebar_items-b2bb24de56.js"></script>
       <script src="docs_config.js"></script>
@@ -64,8 +64,8 @@ Nostrum      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        Nostrum.Cache.Mapping.ShardPidNum <small class="app-vsn">(Nostrum v0.4.5)</small>
-          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/mapping/shard_pid_num.ex#L1" title="View Source" class="view-source" rel="help">
+        Nostrum.Error.VoiceError <small>exception</small> <small class="app-vsn">(Nostrum v0.4.5)</small>
+          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/error/voice_error.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -73,60 +73,10 @@ Nostrum      </a>
 
 
         <section id="moduledoc">
-<p>Simple mapping of shard pid to num</p>        </section>
+<p>Represents an error when playing sound through voice channels.</p><p>This occurs when attempting to play audio and Porcelain can't find either
+the ffmpeg executable or the youtube-dl executable.</p>        </section>
 
-        <section id="summary" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#summary">
-              <span class="icon-link" aria-hidden="true"></span>
-              <span class="sr-only">Link to this section</span>
-            </a>
-            Summary
-          </h1>
-  <div class="summary-functions summary">
-    <h2>
-      <a href="#functions">Functions</a>
-    </h2>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#get_pid/1">get_pid(shard_num)</a>
-  </div>
-    <div class="summary-synopsis"><p>Gets the a shard pid from a shard number.</p></div>
-</div>
-  </div>
-        </section>
 
-        <section id="functions" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#functions">
-              <span class="icon-link" aria-hidden="true"></span>
-              <span class="sr-only">Link to this section</span>
-            </a>
-Functions          </h1>
-          <div class="functions-list">
-<section class="detail" id="get_pid/1">
-  <div class="detail-header">
-    <a href="#get_pid/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature">get_pid(shard_num)</h1>
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/mapping/shard_pid_num.ex#L10" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-  </div>
-
-  <section class="docstring">
-      <h2>Specs</h2>
-      <div class="specs">
-          <pre>get_pid(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) :: {:ok, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pid</a>()} | {:error, :id_not_found}</pre>
-      </div>
-
-<p>Gets the a shard pid from a shard number.</p>  </section>
-</section>
-          </div>
-        </section>
       <footer class="footer">
         <p>
           <span class="line">

@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.20.2">
-    <meta name="project" content="Nostrum v0.4.3">
-    <title>Nostrum.Struct.Embed — Nostrum v0.4.3</title>
-    <link rel="stylesheet" href="dist/html-d9f58a6320b5bfa6dd77.css" />
-    <script src="dist/sidebar_items-a4b54834bd.js"></script>
+    <meta name="generator" content="ExDoc v0.23.0">
+    <meta name="project" content="Nostrum v0.4.5">
+    <title>Nostrum.Struct.Embed — Nostrum v0.4.5</title>
+    <link rel="stylesheet" href="dist/elixir-9f91ebe876dc01d67920.css" />
+    <script src="dist/sidebar_items-b2bb24de56.js"></script>
       <script src="docs_config.js"></script>
-    <script async src="dist/html-d9f58a6320b5bfa6dd77.js"></script>
+    <script async src="dist/app-60a0c9f10e9e52eae31f.js"></script>
   </head>
   <body data-type="modules">
-    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+    <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -22,14 +22,14 @@
 
 <section class="sidebar">
   <form class="sidebar-search" action="search.html">
-    <button type="submit" class="search-button">
-      <span class="icon-search" aria-hidden="true"></span>
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <span class="icon-search" aria-hidden="true" title="Submit search"></span>
     </button>
-    <button type="button" tabindex="-1" class="search-close-button">
-      <span class="icon-cross" title="Cancel search"></span>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <span class="icon-cross" aria-hidden="true" title="Cancel search"></span>
     </button>
     <label class="search-label">
-      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Search" autocomplete="off" />
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
     </label>
   </form>
 
@@ -42,9 +42,9 @@
     <div class="sidebar-projectDetails">
       <a href="https://github.com/kraigie/nostrum" class="sidebar-projectName">
 Nostrum      </a>
-      <h2 class="sidebar-projectVersion">
-        v0.4.3
-      </h2>
+      <strong class="sidebar-projectVersion">
+        v0.4.5
+      </strong>
     </div>
   </div>
 
@@ -52,8 +52,6 @@ Nostrum      </a>
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-
-      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
 
       <li><a id="tasks-list" href="#full-list">Mix Tasks</a></li>
   </ul>
@@ -66,8 +64,8 @@ Nostrum      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        <small class="app-vsn">Nostrum v0.4.3</small>
-Nostrum.Struct.Embed          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L1" title="View Source" class="view-source" rel="help">
+        Nostrum.Struct.Embed <small class="app-vsn">(Nostrum v0.4.5)</small>
+          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -75,15 +73,12 @@ Nostrum.Struct.Embed          <a href="https://github.com/kraigie/nostrum/blob/m
 
 
         <section id="moduledoc">
-<p>Functions that work on Discord embeds.</p>
-<h2 id="module-building-embeds" class="section-heading">
+<p>Functions that work on Discord embeds.</p><h2 id="module-building-embeds" class="section-heading">
   <a href="#module-building-embeds" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Building Embeds
 </h2>
-
-<p><a href="#content"><code class="inline">Nostrum.Struct.Embed</code></a>s can be built using this module&#39;s builder functions
-or standard <a href="https://hexdocs.pm/elixir/Map.html"><code class="inline">Map</code></a> syntax:</p>
-<pre><code class="Elixir">iex&gt; import Nostrum.Struct.Embed
+<p><a href="#content"><code class="inline">Nostrum.Struct.Embed</code></a>s can be built using this module's builder functions
+or standard <a href="https://hexdocs.pm/elixir/Map.html"><code class="inline">Map</code></a> syntax:</p><pre><code class="Elixir">iex&gt; import Nostrum.Struct.Embed
 ...&gt; embed =
 ...&gt;   %Nostrum.Struct.Embed{}
 ...&gt;   |&gt; put_title(&quot;craig&quot;)
@@ -104,8 +99,7 @@ or standard <a href="https://hexdocs.pm/elixir/Map.html"><code class="inline">Ma
     %Nostrum.Struct.Embed.Field{name: &quot;Field 1&quot;, value: &quot;Test&quot;},
     %Nostrum.Struct.Embed.Field{name: &quot;Field 2&quot;, value: &quot;More test&quot;, inline: true}
   ]
-}</code></pre>
-        </section>
+}</code></pre>        </section>
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -284,18 +278,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">author()</span>
+    <h1 class="signature">author()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L100" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>author() :: <a href="Nostrum.Struct.Embed.Author.html#t:t/0">Nostrum.Struct.Embed.Author.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Author information</p>
-  </section>
+
+<p>Author information</p>  </section>
 </section>
 <section class="detail" id="t:color/0">
   <div class="detail-header">
@@ -303,18 +299,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">color()</span>
+    <h1 class="signature">color()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L82" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-      <div class="specs">
-          <pre>color() :: <a href="https://hexdocs.pm/elixir/Integer.html#t:t/0">Integer.t</a>() | nil</pre>
-      </div>
   </div>
+
   <section class="docstring">
-<p>Color code of the embed</p>
-  </section>
+      <h2>Specs</h2>
+      <div class="specs">
+          <pre>color() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>() | nil</pre>
+      </div>
+
+<p>Color code of the embed</p>  </section>
 </section>
 <section class="detail" id="t:description/0">
   <div class="detail-header">
@@ -322,18 +320,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">description()</span>
+    <h1 class="signature">description()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L73" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>description() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Description of the embed</p>
-  </section>
+
+<p>Description of the embed</p>  </section>
 </section>
 <section class="detail" id="t:fields/0">
   <div class="detail-header">
@@ -341,18 +341,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">fields()</span>
+    <h1 class="signature">fields()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L103" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>fields() :: [<a href="Nostrum.Struct.Embed.Field.html#t:t/0">Nostrum.Struct.Embed.Field.t</a>()] | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Fields information</p>
-  </section>
+
+<p>Fields information</p>  </section>
 </section>
 <section class="detail" id="t:footer/0">
   <div class="detail-header">
@@ -360,18 +362,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">footer()</span>
+    <h1 class="signature">footer()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L85" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>footer() :: <a href="Nostrum.Struct.Embed.Footer.html#t:t/0">Nostrum.Struct.Embed.Footer.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Footer information</p>
-  </section>
+
+<p>Footer information</p>  </section>
 </section>
 <section class="detail" id="t:image/0">
   <div class="detail-header">
@@ -379,18 +383,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">image()</span>
+    <h1 class="signature">image()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L88" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>image() :: <a href="Nostrum.Struct.Embed.Image.html#t:t/0">Nostrum.Struct.Embed.Image.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Image information</p>
-  </section>
+
+<p>Image information</p>  </section>
 </section>
 <section class="detail" id="t:provider/0">
   <div class="detail-header">
@@ -398,18 +404,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">provider()</span>
+    <h1 class="signature">provider()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L97" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>provider() :: <a href="Nostrum.Struct.Embed.Provider.html#t:t/0">Nostrum.Struct.Embed.Provider.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Provider information</p>
-  </section>
+
+<p>Provider information</p>  </section>
 </section>
 <section class="detail" id="t:t/0">
   <div class="detail-header">
@@ -417,11 +425,15 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">t()</span>
+    <h1 class="signature">t()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L105" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>t() :: %Nostrum.Struct.Embed{
   author: <a href="#t:author/0">author</a>(),
@@ -439,8 +451,7 @@ Types          </h1>
   video: <a href="#t:video/0">video</a>()
 }</pre>
       </div>
-  </div>
-  <section class="docstring">
+
   </section>
 </section>
 <section class="detail" id="t:thumbnail/0">
@@ -449,18 +460,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">thumbnail()</span>
+    <h1 class="signature">thumbnail()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L91" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>thumbnail() :: <a href="Nostrum.Struct.Embed.Thumbnail.html#t:t/0">Nostrum.Struct.Embed.Thumbnail.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Thumbnail information</p>
-  </section>
+
+<p>Thumbnail information</p>  </section>
 </section>
 <section class="detail" id="t:timestamp/0">
   <div class="detail-header">
@@ -468,18 +481,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">timestamp()</span>
+    <h1 class="signature">timestamp()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L79" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>timestamp() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Timestamp of embed content</p>
-  </section>
+
+<p>Timestamp of embed content</p>  </section>
 </section>
 <section class="detail" id="t:title/0">
   <div class="detail-header">
@@ -487,18 +502,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">title()</span>
+    <h1 class="signature">title()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L67" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>title() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Title of the embed</p>
-  </section>
+
+<p>Title of the embed</p>  </section>
 </section>
 <section class="detail" id="t:type/0">
   <div class="detail-header">
@@ -506,18 +523,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">type()</span>
+    <h1 class="signature">type()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L70" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>type() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Type of the embed</p>
-  </section>
+
+<p>Type of the embed</p>  </section>
 </section>
 <section class="detail" id="t:url/0">
   <div class="detail-header">
@@ -525,18 +544,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">url()</span>
+    <h1 class="signature">url()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L76" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>url() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Url of the embed</p>
-  </section>
+
+<p>Url of the embed</p>  </section>
 </section>
 <section class="detail" id="t:video/0">
   <div class="detail-header">
@@ -544,18 +565,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">video()</span>
+    <h1 class="signature">video()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L94" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>video() :: <a href="Nostrum.Struct.Embed.Video.html#t:t/0">Nostrum.Struct.Embed.Video.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Video information</p>
-  </section>
+
+<p>Video information</p>  </section>
 </section>
           </div>
         </section>
@@ -573,11 +596,15 @@ Functions          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">put_author(embed, name, url, icon_url)</span>
+    <h1 class="signature">put_author(embed, name, url, icon_url)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L329" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>put_author(
   <a href="#t:t/0">t</a>(),
@@ -586,14 +613,11 @@ Functions          </h1>
   <a href="Nostrum.Struct.Embed.Author.html#t:icon_url/0">Nostrum.Struct.Embed.Author.icon_url</a>()
 ) :: <a href="#t:t/0">t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Puts a <a href="Nostrum.Struct.Embed.Author.html"><code class="inline">Nostrum.Struct.Embed.Author</code></a> under <code class="inline">:author</code> in <code class="inline">embed</code>.</p>
-<h2 id="put_author/4-examples" class="section-heading">
+
+<p>Puts a <a href="Nostrum.Struct.Embed.Author.html"><code class="inline">Nostrum.Struct.Embed.Author</code></a> under <code class="inline">:author</code> in <code class="inline">embed</code>.</p><h2 id="put_author/4-examples" class="section-heading">
   <a href="#put_author/4-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-
 <pre><code class="Elixir">iex&gt; embed = %Nostrum.Struct.Embed{}
 ...&gt; Nostrum.Struct.Embed.put_author(embed, &quot;skippi&quot;, &quot;https://github.com/skippi&quot;, nil)
 %Nostrum.Struct.Embed{
@@ -602,8 +626,7 @@ Functions          </h1>
     url: &quot;https://github.com/skippi&quot;,
     icon_url: nil
   }
-}</code></pre>
-  </section>
+}</code></pre>  </section>
 </section>
 <section class="detail" id="put_color/2">
   <div class="detail-header">
@@ -611,26 +634,26 @@ Functions          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">put_color(embed, value)</span>
+    <h1 class="signature">put_color(embed, value)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L203" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>put_color(<a href="#t:t/0">t</a>(), <a href="#t:color/0">color</a>()) :: <a href="#t:t/0">t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Puts the given <code class="inline">value</code> under <code class="inline">:color</code> in <code class="inline">embed</code>.</p>
-<h2 id="put_color/2-examples" class="section-heading">
+
+<p>Puts the given <code class="inline">value</code> under <code class="inline">:color</code> in <code class="inline">embed</code>.</p><h2 id="put_color/2-examples" class="section-heading">
   <a href="#put_color/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-
 <pre><code class="Elixir">iex&gt; embed = %Nostrum.Struct.Embed{}
 ...&gt; Nostrum.Struct.Embed.put_color(embed, 431948)
-%Nostrum.Struct.Embed{color: 431948}</code></pre>
-  </section>
+%Nostrum.Struct.Embed{color: 431948}</code></pre>  </section>
 </section>
 <section class="detail" id="put_description/2">
   <div class="detail-header">
@@ -638,26 +661,26 @@ Functions          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">put_description(embed, value)</span>
+    <h1 class="signature">put_description(embed, value)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L155" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>put_description(<a href="#t:t/0">t</a>(), <a href="#t:description/0">description</a>()) :: <a href="#t:t/0">t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Puts the given <code class="inline">value</code> under <code class="inline">:description</code> in <code class="inline">embed</code>.</p>
-<h2 id="put_description/2-examples" class="section-heading">
+
+<p>Puts the given <code class="inline">value</code> under <code class="inline">:description</code> in <code class="inline">embed</code>.</p><h2 id="put_description/2-examples" class="section-heading">
   <a href="#put_description/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-
 <pre><code class="Elixir">iex&gt; embed = %Nostrum.Struct.Embed{}
 ...&gt; Nostrum.Struct.Embed.put_description(embed, &quot;An elixir library for the discord API.&quot;)
-%Nostrum.Struct.Embed{description: &quot;An elixir library for the discord API.&quot;}</code></pre>
-  </section>
+%Nostrum.Struct.Embed{description: &quot;An elixir library for the discord API.&quot;}</code></pre>  </section>
 </section>
 <section class="detail" id="put_field/4">
     <span id="put_field/3"></span>
@@ -666,11 +689,15 @@ Functions          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">put_field(embed, name, value, inline \\ nil)</span>
+    <h1 class="signature">put_field(embed, name, value, inline \\ nil)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L368" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>put_field(
   <a href="#t:t/0">t</a>(),
@@ -679,14 +706,11 @@ Functions          </h1>
   <a href="Nostrum.Struct.Embed.Field.html#t:inline/0">Nostrum.Struct.Embed.Field.inline</a>()
 ) :: <a href="#t:t/0">t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Adds a <a href="Nostrum.Struct.Embed.Field.html"><code class="inline">Nostrum.Struct.Embed.Field</code></a> under <code class="inline">:fields</code> in <code class="inline">embed</code>.</p>
-<h2 id="put_field/4-examples" class="section-heading">
+
+<p>Adds a <a href="Nostrum.Struct.Embed.Field.html"><code class="inline">Nostrum.Struct.Embed.Field</code></a> under <code class="inline">:fields</code> in <code class="inline">embed</code>.</p><h2 id="put_field/4-examples" class="section-heading">
   <a href="#put_field/4-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-
 <pre><code class="Elixir">iex&gt; embed = %Nostrum.Struct.Embed{}
 ...&gt; Nostrum.Struct.Embed.put_field(embed, &quot;First User&quot;, &quot;b1nzy&quot;)
 %Nostrum.Struct.Embed{
@@ -706,8 +730,7 @@ iex&gt; embed = %Nostrum.Struct.Embed{
     %Nostrum.Struct.Embed.Field{name: &quot;First User&quot;, value: &quot;b1nzy&quot;},
     %Nostrum.Struct.Embed.Field{name: &quot;Second User&quot;, value: &quot;Danny&quot;}
   ]
-}</code></pre>
-  </section>
+}</code></pre>  </section>
 </section>
 <section class="detail" id="put_footer/3">
     <span id="put_footer/2"></span>
@@ -716,11 +739,15 @@ iex&gt; embed = %Nostrum.Struct.Embed{
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">put_footer(embed, text, icon_url \\ nil)</span>
+    <h1 class="signature">put_footer(embed, text, icon_url \\ nil)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L233" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>put_footer(
   <a href="#t:t/0">t</a>(),
@@ -728,14 +755,11 @@ iex&gt; embed = %Nostrum.Struct.Embed{
   <a href="Nostrum.Struct.Embed.Footer.html#t:icon_url/0">Nostrum.Struct.Embed.Footer.icon_url</a>()
 ) :: <a href="#t:t/0">t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Puts a <a href="Nostrum.Struct.Embed.Footer.html"><code class="inline">Nostrum.Struct.Embed.Footer</code></a> under <code class="inline">:footer</code> in <code class="inline">embed</code>.</p>
-<h2 id="put_footer/3-examples" class="section-heading">
+
+<p>Puts a <a href="Nostrum.Struct.Embed.Footer.html"><code class="inline">Nostrum.Struct.Embed.Footer</code></a> under <code class="inline">:footer</code> in <code class="inline">embed</code>.</p><h2 id="put_footer/3-examples" class="section-heading">
   <a href="#put_footer/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-
 <pre><code class="Elixir">iex&gt; embed = %Nostrum.Struct.Embed{}
 ...&gt; Nostrum.Struct.Embed.put_footer(embed, &quot;Discord API&quot;, nil)
 %Nostrum.Struct.Embed{
@@ -752,8 +776,7 @@ iex&gt; embed = %Nostrum.Struct.Embed{}
     text: &quot;nostrum footer&quot;,
     icon_url: &quot;https://discord.com/assets/53ef346458017da2062aca5c7955946b.svg&quot;
   }
-}</code></pre>
-  </section>
+}</code></pre>  </section>
 </section>
 <section class="detail" id="put_image/2">
   <div class="detail-header">
@@ -761,30 +784,30 @@ iex&gt; embed = %Nostrum.Struct.Embed{}
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">put_image(embed, url)</span>
+    <h1 class="signature">put_image(embed, url)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L258" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>put_image(<a href="#t:t/0">t</a>(), <a href="Nostrum.Struct.Embed.Image.html#t:url/0">Nostrum.Struct.Embed.Image.url</a>()) :: <a href="#t:t/0">t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Puts a <a href="Nostrum.Struct.Embed.Image.html"><code class="inline">Nostrum.Struct.Embed.Image</code></a> under <code class="inline">:image</code> in <code class="inline">embed</code>.</p>
-<h2 id="put_image/2-examples" class="section-heading">
+
+<p>Puts a <a href="Nostrum.Struct.Embed.Image.html"><code class="inline">Nostrum.Struct.Embed.Image</code></a> under <code class="inline">:image</code> in <code class="inline">embed</code>.</p><h2 id="put_image/2-examples" class="section-heading">
   <a href="#put_image/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-
 <pre><code class="Elixir">iex&gt; embed = %Nostrum.Struct.Embed{}
 ...&gt; Nostrum.Struct.Embed.put_image(embed, &quot;https://discord.com/assets/af92e60c16b7019f34a467383b31490a.svg&quot;)
 %Nostrum.Struct.Embed{
   image: %Nostrum.Struct.Embed.Image{
     url: &quot;https://discord.com/assets/af92e60c16b7019f34a467383b31490a.svg&quot;
   }
-}</code></pre>
-  </section>
+}</code></pre>  </section>
 </section>
 <section class="detail" id="put_thumbnail/2">
   <div class="detail-header">
@@ -792,30 +815,30 @@ iex&gt; embed = %Nostrum.Struct.Embed{}
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">put_thumbnail(embed, url)</span>
+    <h1 class="signature">put_thumbnail(embed, url)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L282" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>put_thumbnail(<a href="#t:t/0">t</a>(), <a href="Nostrum.Struct.Embed.Thumbnail.html#t:url/0">Nostrum.Struct.Embed.Thumbnail.url</a>()) :: <a href="#t:t/0">t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Puts a <a href="Nostrum.Struct.Embed.Thumbnail.html"><code class="inline">Nostrum.Struct.Embed.Thumbnail</code></a> under <code class="inline">:thumbnail</code> in <code class="inline">embed</code>.</p>
-<h2 id="put_thumbnail/2-examples" class="section-heading">
+
+<p>Puts a <a href="Nostrum.Struct.Embed.Thumbnail.html"><code class="inline">Nostrum.Struct.Embed.Thumbnail</code></a> under <code class="inline">:thumbnail</code> in <code class="inline">embed</code>.</p><h2 id="put_thumbnail/2-examples" class="section-heading">
   <a href="#put_thumbnail/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-
 <pre><code class="Elixir">iex&gt; embed = %Nostrum.Struct.Embed{}
 ...&gt; Nostrum.Struct.Embed.put_thumbnail(embed, &quot;https://discord.com/assets/af92e60c16b7019f34a467383b31490a.svg&quot;)
 %Nostrum.Struct.Embed{
   thumbnail: %Nostrum.Struct.Embed.Thumbnail{
     url: &quot;https://discord.com/assets/af92e60c16b7019f34a467383b31490a.svg&quot;
   }
-}</code></pre>
-  </section>
+}</code></pre>  </section>
 </section>
 <section class="detail" id="put_timestamp/2">
   <div class="detail-header">
@@ -823,26 +846,26 @@ iex&gt; embed = %Nostrum.Struct.Embed{}
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">put_timestamp(embed, value)</span>
+    <h1 class="signature">put_timestamp(embed, value)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L187" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>put_timestamp(<a href="#t:t/0">t</a>(), <a href="#t:timestamp/0">timestamp</a>()) :: <a href="#t:t/0">t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Puts the given <code class="inline">value</code> under <code class="inline">:timestamp</code> in <code class="inline">embed</code>.</p>
-<h2 id="put_timestamp/2-examples" class="section-heading">
+
+<p>Puts the given <code class="inline">value</code> under <code class="inline">:timestamp</code> in <code class="inline">embed</code>.</p><h2 id="put_timestamp/2-examples" class="section-heading">
   <a href="#put_timestamp/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">embed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="3205113774-1">%</span><span class="nc" data-group-id="3205113774-1">Nostrum.Struct.Embed</span><span class="p" data-group-id="3205113774-1">{</span><span class="p" data-group-id="3205113774-1">}</span><span class="w">
-</span><span class="gp unselectable">...&gt; </span><span class="nc">Nostrum.Struct.Embed</span><span class="o">.</span><span class="n">put_timestamp</span><span class="p" data-group-id="3205113774-2">(</span><span class="n">embed</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2018-04-21T17:33:51.893000Z&quot;</span><span class="p" data-group-id="3205113774-2">)</span><span class="w">
-</span><span class="p" data-group-id="3205113774-3">%</span><span class="nc" data-group-id="3205113774-3">Nostrum.Struct.Embed</span><span class="p" data-group-id="3205113774-3">{</span><span class="ss">timestamp</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2018-04-21T17:33:51.893000Z&quot;</span><span class="p" data-group-id="3205113774-3">}</span></code></pre>
-  </section>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">embed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="4961923530-1">%</span><span class="nc" data-group-id="4961923530-1">Nostrum.Struct.Embed</span><span class="p" data-group-id="4961923530-1">{</span><span class="p" data-group-id="4961923530-1">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="nc">Nostrum.Struct.Embed</span><span class="o">.</span><span class="n">put_timestamp</span><span class="p" data-group-id="4961923530-2">(</span><span class="n">embed</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2018-04-21T17:33:51.893000Z&quot;</span><span class="p" data-group-id="4961923530-2">)</span><span class="w">
+</span><span class="p" data-group-id="4961923530-3">%</span><span class="nc" data-group-id="4961923530-3">Nostrum.Struct.Embed</span><span class="p" data-group-id="4961923530-3">{</span><span class="ss">timestamp</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2018-04-21T17:33:51.893000Z&quot;</span><span class="p" data-group-id="4961923530-3">}</span></code></pre>  </section>
 </section>
 <section class="detail" id="put_title/2">
   <div class="detail-header">
@@ -850,26 +873,26 @@ iex&gt; embed = %Nostrum.Struct.Embed{}
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">put_title(embed, value)</span>
+    <h1 class="signature">put_title(embed, value)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L133" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>put_title(<a href="#t:t/0">t</a>(), <a href="#t:title/0">title</a>()) :: <a href="#t:t/0">t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Puts the given <code class="inline">value</code> under <code class="inline">:title</code> in <code class="inline">embed</code>.</p>
-<h2 id="put_title/2-examples" class="section-heading">
+
+<p>Puts the given <code class="inline">value</code> under <code class="inline">:title</code> in <code class="inline">embed</code>.</p><h2 id="put_title/2-examples" class="section-heading">
   <a href="#put_title/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-
 <pre><code class="Elixir">iex&gt; embed = %Nostrum.Struct.Embed{}
 ...&gt; Nostrum.Struct.Embed.put_title(embed, &quot;nostrum&quot;)
-%Nostrum.Struct.Embed{title: &quot;nostrum&quot;}</code></pre>
-  </section>
+%Nostrum.Struct.Embed{title: &quot;nostrum&quot;}</code></pre>  </section>
 </section>
 <section class="detail" id="put_url/2">
   <div class="detail-header">
@@ -877,26 +900,26 @@ iex&gt; embed = %Nostrum.Struct.Embed{}
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">put_url(embed, value)</span>
+    <h1 class="signature">put_url(embed, value)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/embed.ex#L171" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>put_url(<a href="#t:t/0">t</a>(), <a href="#t:url/0">url</a>()) :: <a href="#t:t/0">t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Puts the given <code class="inline">value</code> under <code class="inline">:url</code> in <code class="inline">embed</code>.</p>
-<h2 id="put_url/2-examples" class="section-heading">
+
+<p>Puts the given <code class="inline">value</code> under <code class="inline">:url</code> in <code class="inline">embed</code>.</p><h2 id="put_url/2-examples" class="section-heading">
   <a href="#put_url/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-
 <pre><code class="Elixir">iex&gt; embed = %Nostrum.Struct.Embed{}
 ...&gt; Nostrum.Struct.Embed.put_url(embed, &quot;https://github.com/Kraigie/nostrum&quot;)
-%Nostrum.Struct.Embed{url: &quot;https://github.com/Kraigie/nostrum&quot;}</code></pre>
-  </section>
+%Nostrum.Struct.Embed{url: &quot;https://github.com/Kraigie/nostrum&quot;}</code></pre>  </section>
 </section>
           </div>
         </section>
@@ -904,19 +927,28 @@ iex&gt; embed = %Nostrum.Struct.Embed{}
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.20.2),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.23.0) for the
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank">Elixir programming language</a>.
           </span>
           <span class="line">
-            designed by
+            Designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
         </p>
         <p>
+            <a href="api-reference.html" title="API reference" class="line footer-button">API Reference</a>
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
           <button class="line footer-button night-mode-toggle">
             Toggle night mode
           </button>
-          <button class="line footer-button display-shortcuts-help">
-            Display keyboard shortcuts
+          <button class="line footer-button display-quick-switch">
+            Go to a HexDocs package
+          </button>
+          <button class="line footer-button tooltips-toggle">
+            <span class="tooltips-option-disable">Disable tooltips</span>
+            <span class="tooltips-option-enable">Enable tooltips</span>
           </button>
         </p>
       </footer>

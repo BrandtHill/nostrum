@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.20.2">
-    <meta name="project" content="Nostrum v0.4.3">
-    <title>Nostrum.Cache.UserCache — Nostrum v0.4.3</title>
-    <link rel="stylesheet" href="dist/html-d9f58a6320b5bfa6dd77.css" />
-    <script src="dist/sidebar_items-a4b54834bd.js"></script>
+    <meta name="generator" content="ExDoc v0.23.0">
+    <meta name="project" content="Nostrum v0.4.5">
+    <title>Nostrum.Cache.UserCache — Nostrum v0.4.5</title>
+    <link rel="stylesheet" href="dist/elixir-9f91ebe876dc01d67920.css" />
+    <script src="dist/sidebar_items-b2bb24de56.js"></script>
       <script src="docs_config.js"></script>
-    <script async src="dist/html-d9f58a6320b5bfa6dd77.js"></script>
+    <script async src="dist/app-60a0c9f10e9e52eae31f.js"></script>
   </head>
   <body data-type="modules">
-    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+    <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -22,14 +22,14 @@
 
 <section class="sidebar">
   <form class="sidebar-search" action="search.html">
-    <button type="submit" class="search-button">
-      <span class="icon-search" aria-hidden="true"></span>
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <span class="icon-search" aria-hidden="true" title="Submit search"></span>
     </button>
-    <button type="button" tabindex="-1" class="search-close-button">
-      <span class="icon-cross" title="Cancel search"></span>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <span class="icon-cross" aria-hidden="true" title="Cancel search"></span>
     </button>
     <label class="search-label">
-      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Search" autocomplete="off" />
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
     </label>
   </form>
 
@@ -42,9 +42,9 @@
     <div class="sidebar-projectDetails">
       <a href="https://github.com/kraigie/nostrum" class="sidebar-projectName">
 Nostrum      </a>
-      <h2 class="sidebar-projectVersion">
-        v0.4.3
-      </h2>
+      <strong class="sidebar-projectVersion">
+        v0.4.5
+      </strong>
     </div>
   </div>
 
@@ -52,8 +52,6 @@ Nostrum      </a>
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-
-      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
 
       <li><a id="tasks-list" href="#full-list">Mix Tasks</a></li>
   </ul>
@@ -66,8 +64,8 @@ Nostrum      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        <small class="app-vsn">Nostrum v0.4.3</small>
-Nostrum.Cache.UserCache          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/user_cache.ex#L1" title="View Source" class="view-source" rel="help">
+        Nostrum.Cache.UserCache <small class="app-vsn">(Nostrum v0.4.5)</small>
+          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/user_cache.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -75,19 +73,15 @@ Nostrum.Cache.UserCache          <a href="https://github.com/kraigie/nostrum/blo
 
 
         <section id="moduledoc">
-<p>Cache for users.</p>
-<p>The ETS table name associated with the User Cache is <code class="inline">:users</code>. Besides the
-methods provided below you can call any other ETS methods on the table.</p>
-<h2 id="module-example" class="section-heading">
+<p>Cache for users.</p><p>The ETS table name associated with the User Cache is <code class="inline">:users</code>. Besides the
+methods provided below you can call any other ETS methods on the table.</p><h2 id="module-example" class="section-heading">
   <a href="#module-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
-
-<pre><code class="nohighlight makeup elixir"><span class="n">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:ets</span><span class="o">.</span><span class="n">info</span><span class="p" data-group-id="2148376959-1">(</span><span class="ss">:users</span><span class="p" data-group-id="2148376959-1">)</span><span class="w">
-</span><span class="p" data-group-id="2148376959-2">[</span><span class="n">...</span><span class="p">,</span><span class="w"> </span><span class="ss">heir</span><span class="p">:</span><span class="w"> </span><span class="ss">:none</span><span class="p">,</span><span class="w"> </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="ss">:users</span><span class="p">,</span><span class="w"> </span><span class="ss">size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="p" data-group-id="2148376959-2">]</span><span class="w">
-</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="p" data-group-id="2148376959-3">[</span><span class="ss">:size</span><span class="p" data-group-id="2148376959-3">]</span><span class="w">
-</span><span class="mi">1</span></code></pre>
-        </section>
+<pre><code class="nohighlight makeup elixir"><span class="n">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:ets</span><span class="o">.</span><span class="n">info</span><span class="p" data-group-id="9131380013-1">(</span><span class="ss">:users</span><span class="p" data-group-id="9131380013-1">)</span><span class="w">
+</span><span class="p" data-group-id="9131380013-2">[</span><span class="n">...</span><span class="p">,</span><span class="w"> </span><span class="ss">heir</span><span class="p">:</span><span class="w"> </span><span class="ss">:none</span><span class="p">,</span><span class="w"> </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="ss">:users</span><span class="p">,</span><span class="w"> </span><span class="ss">size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="p" data-group-id="9131380013-2">]</span><span class="w">
+</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="p" data-group-id="9131380013-3">[</span><span class="ss">:size</span><span class="p" data-group-id="9131380013-3">]</span><span class="w">
+</span><span class="mi">1</span></code></pre>        </section>
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -130,31 +124,30 @@ Functions          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">get(id)</span>
+    <h1 class="signature">get(id)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/user_cache.ex#L38" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>get(<a href="Nostrum.Struct.User.html#t:id/0">Nostrum.Struct.User.id</a>()) ::
   {:error, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()} | {:ok, <a href="Nostrum.Struct.User.html#t:t/0">Nostrum.Struct.User.t</a>()}</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Retrieves a user from the cache by id.</p>
-<p>If successful, returns <code class="inline">{:ok, user}</code>. Otherwise, returns <code class="inline">{:error, reason}</code>.</p>
-<h2 id="get/1-example" class="section-heading">
+
+<p>Retrieves a user from the cache by id.</p><p>If successful, returns <code class="inline">{:ok, user}</code>. Otherwise, returns <code class="inline">{:error, reason}</code>.</p><h2 id="get/1-example" class="section-heading">
   <a href="#get/1-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
-
-<pre><code class="nohighlight makeup elixir"><span class="k">case</span><span class="w"> </span><span class="nc">Nostrum.Cache.UserCache</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="2746932087-1">(</span><span class="mi">1111222233334444</span><span class="p" data-group-id="2746932087-1">)</span><span class="w"> </span><span class="k" data-group-id="2746932087-2">do</span><span class="w">
-  </span><span class="p" data-group-id="2746932087-3">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p" data-group-id="2746932087-3">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="k">case</span><span class="w"> </span><span class="nc">Nostrum.Cache.UserCache</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="9709535466-1">(</span><span class="mi">1111222233334444</span><span class="p" data-group-id="9709535466-1">)</span><span class="w"> </span><span class="k" data-group-id="9709535466-2">do</span><span class="w">
+  </span><span class="p" data-group-id="9709535466-3">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p" data-group-id="9709535466-3">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
     </span><span class="s">&quot;We found &quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="w">
-  </span><span class="p" data-group-id="2746932087-4">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="c">_reason</span><span class="p" data-group-id="2746932087-4">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+  </span><span class="p" data-group-id="9709535466-4">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="c">_reason</span><span class="p" data-group-id="9709535466-4">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
     </span><span class="s">&quot;No es bueno&quot;</span><span class="w">
-</span><span class="k" data-group-id="2746932087-2">end</span></code></pre>
-  </section>
+</span><span class="k" data-group-id="9709535466-2">end</span></code></pre>  </section>
 </section>
 <section class="detail" id="get!/1">
   <div class="detail-header">
@@ -162,18 +155,20 @@ Functions          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">get!(id)</span>
+    <h1 class="signature">get!(id)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/user_cache.ex#L49" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>get!(<a href="Nostrum.Struct.User.html#t:id/0">Nostrum.Struct.User.id</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">no_return</a>() | <a href="Nostrum.Struct.User.html#t:t/0">Nostrum.Struct.User.t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Same as <a href="#get/1"><code class="inline">get/1</code></a>, but raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> in case of a failure.</p>
-  </section>
+
+<p>Same as <a href="#get/1"><code class="inline">get/1</code></a>, but raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> in case of a failure.</p>  </section>
 </section>
           </div>
         </section>
@@ -181,19 +176,28 @@ Functions          </h1>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.20.2),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.23.0) for the
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank">Elixir programming language</a>.
           </span>
           <span class="line">
-            designed by
+            Designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
         </p>
         <p>
+            <a href="api-reference.html" title="API reference" class="line footer-button">API Reference</a>
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
           <button class="line footer-button night-mode-toggle">
             Toggle night mode
           </button>
-          <button class="line footer-button display-shortcuts-help">
-            Display keyboard shortcuts
+          <button class="line footer-button display-quick-switch">
+            Go to a HexDocs package
+          </button>
+          <button class="line footer-button tooltips-toggle">
+            <span class="tooltips-option-disable">Disable tooltips</span>
+            <span class="tooltips-option-enable">Enable tooltips</span>
           </button>
         </p>
       </footer>

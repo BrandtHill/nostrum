@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.23.0">
     <meta name="project" content="Nostrum v0.4.5">
-    <title>Nostrum.Cache.Mapping.ShardPidNum — Nostrum v0.4.5</title>
+    <title>Nostrum.Struct.Event.SpeakingUpdate — Nostrum v0.4.5</title>
     <link rel="stylesheet" href="dist/elixir-9f91ebe876dc01d67920.css" />
     <script src="dist/sidebar_items-b2bb24de56.js"></script>
       <script src="docs_config.js"></script>
@@ -64,8 +64,8 @@ Nostrum      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        Nostrum.Cache.Mapping.ShardPidNum <small class="app-vsn">(Nostrum v0.4.5)</small>
-          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/mapping/shard_pid_num.ex#L1" title="View Source" class="view-source" rel="help">
+        Nostrum.Struct.Event.SpeakingUpdate <small class="app-vsn">(Nostrum v0.4.5)</small>
+          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/speaking_update.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -73,7 +73,7 @@ Nostrum      </a>
 
 
         <section id="moduledoc">
-<p>Simple mapping of shard pid to num</p>        </section>
+<p>Struct representing a Nostrum-generated Speaking Update event</p><p>Nostrum will generate this event when the bot starts or stops playing audio.</p>        </section>
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -83,35 +83,52 @@ Nostrum      </a>
             </a>
             Summary
           </h1>
-  <div class="summary-functions summary">
+  <div class="summary-types summary">
     <h2>
-      <a href="#functions">Functions</a>
+      <a href="#types">Types</a>
     </h2>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#get_pid/1">get_pid(shard_num)</a>
+    <a href="#t:channel_id/0">channel_id()</a>
   </div>
-    <div class="summary-synopsis"><p>Gets the a shard pid from a shard number.</p></div>
+    <div class="summary-synopsis"><p>Id of the channel this speaking update is occurring in.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:guild_id/0">guild_id()</a>
+  </div>
+    <div class="summary-synopsis"><p>Id of the guild this speaking update is occurring in.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:speaking/0">speaking()</a>
+  </div>
+    <div class="summary-synopsis"><p>Boolean representing if bot has started or stopped speaking.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:t/0">t()</a>
+  </div>
 </div>
   </div>
         </section>
 
-        <section id="functions" class="details-list">
+        <section id="types" class="details-list">
           <h1 class="section-heading">
-            <a class="hover-link" href="#functions">
+            <a class="hover-link" href="#types">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-Functions          </h1>
-          <div class="functions-list">
-<section class="detail" id="get_pid/1">
+Types          </h1>
+          <div class="types-list">
+<section class="detail" id="t:channel_id/0">
   <div class="detail-header">
-    <a href="#get_pid/1" class="detail-link" title="Link to this function">
+    <a href="#t:channel_id/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
+      <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">get_pid(shard_num)</h1>
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/mapping/shard_pid_num.ex#L10" class="view-source" rel="help" title="View Source">
+    <h1 class="signature">channel_id()</h1>
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/speaking_update.ex#L17" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -120,10 +137,77 @@ Functions          </h1>
   <section class="docstring">
       <h2>Specs</h2>
       <div class="specs">
-          <pre>get_pid(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) :: {:ok, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pid</a>()} | {:error, :id_not_found}</pre>
+          <pre>channel_id() :: Channel.id()</pre>
       </div>
 
-<p>Gets the a shard pid from a shard number.</p>  </section>
+<p>Id of the channel this speaking update is occurring in.</p>  </section>
+</section>
+<section class="detail" id="t:guild_id/0">
+  <div class="detail-header">
+    <a href="#t:guild_id/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature">guild_id()</h1>
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/speaking_update.ex#L22" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
+      <div class="specs">
+          <pre>guild_id() :: Guild.id()</pre>
+      </div>
+
+<p>Id of the guild this speaking update is occurring in.</p>  </section>
+</section>
+<section class="detail" id="t:speaking/0">
+  <div class="detail-header">
+    <a href="#t:speaking/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature">speaking()</h1>
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/speaking_update.ex#L27" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
+      <div class="specs">
+          <pre>speaking() :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
+      </div>
+
+<p>Boolean representing if bot has started or stopped speaking.</p>  </section>
+</section>
+<section class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature">t()</h1>
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/speaking_update.ex#L29" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
+      <div class="specs">
+          <pre>t() :: %Nostrum.Struct.Event.SpeakingUpdate{
+  channel_id: <a href="#t:channel_id/0">channel_id</a>(),
+  guild_id: <a href="#t:guild_id/0">guild_id</a>(),
+  speaking: <a href="#t:speaking/0">speaking</a>()
+}</pre>
+      </div>
+
+  </section>
 </section>
           </div>
         </section>

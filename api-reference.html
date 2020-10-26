@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.20.2">
-    <meta name="project" content="Nostrum v0.4.3">
-    <title>API Reference — Nostrum v0.4.3</title>
-    <link rel="stylesheet" href="dist/html-d9f58a6320b5bfa6dd77.css" />
-    <script src="dist/sidebar_items-a4b54834bd.js"></script>
+    <meta name="generator" content="ExDoc v0.23.0">
+    <meta name="project" content="Nostrum v0.4.5">
+    <title>API Reference — Nostrum v0.4.5</title>
+    <link rel="stylesheet" href="dist/elixir-9f91ebe876dc01d67920.css" />
+    <script src="dist/sidebar_items-b2bb24de56.js"></script>
       <script src="docs_config.js"></script>
-    <script async src="dist/html-d9f58a6320b5bfa6dd77.js"></script>
+    <script async src="dist/app-60a0c9f10e9e52eae31f.js"></script>
   </head>
   <body data-type="extras">
-    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+    <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -22,14 +22,14 @@
 
 <section class="sidebar">
   <form class="sidebar-search" action="search.html">
-    <button type="submit" class="search-button">
-      <span class="icon-search" aria-hidden="true"></span>
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <span class="icon-search" aria-hidden="true" title="Submit search"></span>
     </button>
-    <button type="button" tabindex="-1" class="search-close-button">
-      <span class="icon-cross" title="Cancel search"></span>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <span class="icon-cross" aria-hidden="true" title="Cancel search"></span>
     </button>
     <label class="search-label">
-      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Search" autocomplete="off" />
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
     </label>
   </form>
 
@@ -42,9 +42,9 @@
     <div class="sidebar-projectDetails">
       <a href="https://github.com/kraigie/nostrum" class="sidebar-projectName">
 Nostrum      </a>
-      <h2 class="sidebar-projectVersion">
-        v0.4.3
-      </h2>
+      <strong class="sidebar-projectVersion">
+        v0.4.5
+      </strong>
     </div>
   </div>
 
@@ -52,8 +52,6 @@ Nostrum      </a>
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-
-      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
 
       <li><a id="tasks-list" href="#full-list">Mix Tasks</a></li>
   </ul>
@@ -66,8 +64,7 @@ Nostrum      </a>
     <div id="content" class="content-inner">
 
 <h1>
-  <small class="app-vsn">Nostrum v0.4.3</small>
-  API Reference
+  API Reference <small class="app-vsn">Nostrum v0.4.5</small>
 </h1>
 
   <section class="details-list">
@@ -81,13 +78,13 @@ Nostrum      </a>
   <div class="summary-signature">
     <a href="Nostrum.Api.html">Nostrum.Api</a>
   </div>
-    <div class="summary-synopsis"><p>Interface for Discord&#39;s rest API.</p></div>
+    <div class="summary-synopsis"><p>Interface for Discord's rest API.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="Nostrum.Api.Ratelimiter.html">Nostrum.Api.Ratelimiter</a>
   </div>
-    <div class="summary-synopsis"><p>Ratelimit implimentation specific to Discord&#39;s API.
+    <div class="summary-synopsis"><p>Ratelimit implimentation specific to Discord's API.
 Only to be used when starting in a rest-only manner.</p></div>
 </div>
 <div class="summary-row">
@@ -143,6 +140,24 @@ Only to be used when starting in a rest-only manner.</p></div>
     <a href="Nostrum.Consumer.html">Nostrum.Consumer</a>
   </div>
     <div class="summary-synopsis"><p>Consumer process for gateway event handling.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Error.ApiError.html">Nostrum.Error.ApiError</a>
+  </div>
+    <div class="summary-synopsis"><p>Represents a failed response from the API.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Error.CacheError.html">Nostrum.Error.CacheError</a>
+  </div>
+    <div class="summary-synopsis"><p>Represents an error when interacting with the cache.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Error.VoiceError.html">Nostrum.Error.VoiceError</a>
+  </div>
+    <div class="summary-synopsis"><p>Represents an error when playing sound through voice channels.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -220,13 +235,13 @@ Only to be used when starting in a rest-only manner.</p></div>
   <div class="summary-signature">
     <a href="Nostrum.Struct.Event.InviteCreate.html">Nostrum.Struct.Event.InviteCreate</a>
   </div>
-    <div class="summary-synopsis"><p>Struct representing a Invite Create event</p></div>
+    <div class="summary-synopsis"><p>Struct representing an Invite Create event</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="Nostrum.Struct.Event.InviteDelete.html">Nostrum.Struct.Event.InviteDelete</a>
   </div>
-    <div class="summary-synopsis"><p>Struct representing a Invite Delete event</p></div>
+    <div class="summary-synopsis"><p>Struct representing an Invite Delete event</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -242,6 +257,12 @@ Only to be used when starting in a rest-only manner.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Nostrum.Struct.Event.SpeakingUpdate.html">Nostrum.Struct.Event.SpeakingUpdate</a>
+  </div>
+    <div class="summary-synopsis"><p>Struct representing a Nostrum-generated Speaking Update event</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Nostrum.Struct.Guild.html">Nostrum.Struct.Guild</a>
   </div>
     <div class="summary-synopsis"><p>Struct representing a Discord guild.</p></div>
@@ -250,13 +271,13 @@ Only to be used when starting in a rest-only manner.</p></div>
   <div class="summary-signature">
     <a href="Nostrum.Struct.Guild.AuditLog.html">Nostrum.Struct.Guild.AuditLog</a>
   </div>
-    <div class="summary-synopsis"><p>Represents a guild&#39;s audit log.</p></div>
+    <div class="summary-synopsis"><p>Represents a guild's audit log.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="Nostrum.Struct.Guild.AuditLogEntry.html">Nostrum.Struct.Guild.AuditLogEntry</a>
   </div>
-    <div class="summary-synopsis"><p>Represents a single entry in the guild&#39;s audit log.</p></div>
+    <div class="summary-synopsis"><p>Represents a single entry in the guild's audit log.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -268,7 +289,7 @@ Only to be used when starting in a rest-only manner.</p></div>
   <div class="summary-signature">
     <a href="Nostrum.Struct.Guild.Integration.Account.html">Nostrum.Struct.Guild.Integration.Account</a>
   </div>
-    <div class="summary-synopsis"><p>Struct representing a Discord guild&#39;s integration account.</p></div>
+    <div class="summary-synopsis"><p>Struct representing a Discord guild's integration account.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -340,7 +361,7 @@ Only to be used when starting in a rest-only manner.</p></div>
   <div class="summary-signature">
     <a href="Nostrum.Struct.User.Connection.html">Nostrum.Struct.User.Connection</a>
   </div>
-    <div class="summary-synopsis"><p>Struct representing a Discord User&#39;s connections</p></div>
+    <div class="summary-synopsis"><p>Struct representing a Discord User's connections</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -372,27 +393,11 @@ Only to be used when starting in a rest-only manner.</p></div>
   </div>
     <div class="summary-synopsis"><p>Utility functions</p></div>
 </div>
-    </div>
-  </section>
-
-  <section class="details-list">
-    <h2 id="exceptions" class="section-heading">
-  <a href="#exceptions" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-  Exceptions
-</h2>
-
-    <div class="summary">
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Nostrum.Error.ApiError.html">Nostrum.Error.ApiError</a>
+    <a href="Nostrum.Voice.html">Nostrum.Voice</a>
   </div>
-    <div class="summary-synopsis"><p>Represents a failed response from the API.</p></div>
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Nostrum.Error.CacheError.html">Nostrum.Error.CacheError</a>
-  </div>
-    <div class="summary-synopsis"><p>Represents an error when interacting with the cache.</p></div>
+    <div class="summary-synopsis"><p>Interface for playing audio through Discord's voice channels.</p></div>
 </div>
     </div>
   </section>
@@ -416,19 +421,28 @@ Only to be used when starting in a rest-only manner.</p></div>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.20.2),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.23.0) for the
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank">Elixir programming language</a>.
           </span>
           <span class="line">
-            designed by
+            Designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
         </p>
         <p>
+            <a href="api-reference.html" title="API reference" class="line footer-button">API Reference</a>
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
           <button class="line footer-button night-mode-toggle">
             Toggle night mode
           </button>
-          <button class="line footer-button display-shortcuts-help">
-            Display keyboard shortcuts
+          <button class="line footer-button display-quick-switch">
+            Go to a HexDocs package
+          </button>
+          <button class="line footer-button tooltips-toggle">
+            <span class="tooltips-option-disable">Disable tooltips</span>
+            <span class="tooltips-option-enable">Enable tooltips</span>
           </button>
         </p>
       </footer>

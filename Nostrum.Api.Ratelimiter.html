@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.20.2">
-    <meta name="project" content="Nostrum v0.4.3">
-    <title>Nostrum.Api.Ratelimiter — Nostrum v0.4.3</title>
-    <link rel="stylesheet" href="dist/html-d9f58a6320b5bfa6dd77.css" />
-    <script src="dist/sidebar_items-a4b54834bd.js"></script>
+    <meta name="generator" content="ExDoc v0.23.0">
+    <meta name="project" content="Nostrum v0.4.5">
+    <title>Nostrum.Api.Ratelimiter — Nostrum v0.4.5</title>
+    <link rel="stylesheet" href="dist/elixir-9f91ebe876dc01d67920.css" />
+    <script src="dist/sidebar_items-b2bb24de56.js"></script>
       <script src="docs_config.js"></script>
-    <script async src="dist/html-d9f58a6320b5bfa6dd77.js"></script>
+    <script async src="dist/app-60a0c9f10e9e52eae31f.js"></script>
   </head>
   <body data-type="modules">
-    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+    <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -22,14 +22,14 @@
 
 <section class="sidebar">
   <form class="sidebar-search" action="search.html">
-    <button type="submit" class="search-button">
-      <span class="icon-search" aria-hidden="true"></span>
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <span class="icon-search" aria-hidden="true" title="Submit search"></span>
     </button>
-    <button type="button" tabindex="-1" class="search-close-button">
-      <span class="icon-cross" title="Cancel search"></span>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <span class="icon-cross" aria-hidden="true" title="Cancel search"></span>
     </button>
     <label class="search-label">
-      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Search" autocomplete="off" />
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
     </label>
   </form>
 
@@ -42,9 +42,9 @@
     <div class="sidebar-projectDetails">
       <a href="https://github.com/kraigie/nostrum" class="sidebar-projectName">
 Nostrum      </a>
-      <h2 class="sidebar-projectVersion">
-        v0.4.3
-      </h2>
+      <strong class="sidebar-projectVersion">
+        v0.4.5
+      </strong>
     </div>
   </div>
 
@@ -52,8 +52,6 @@ Nostrum      </a>
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-
-      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
 
       <li><a id="tasks-list" href="#full-list">Mix Tasks</a></li>
   </ul>
@@ -66,8 +64,8 @@ Nostrum      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        <small class="app-vsn">Nostrum v0.4.3</small>
-Nostrum.Api.Ratelimiter          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/api/ratelimiter.ex#L1" title="View Source" class="view-source" rel="help">
+        Nostrum.Api.Ratelimiter <small class="app-vsn">(Nostrum v0.4.5)</small>
+          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/api/ratelimiter.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -75,9 +73,8 @@ Nostrum.Api.Ratelimiter          <a href="https://github.com/kraigie/nostrum/blo
 
 
         <section id="moduledoc">
-<p>Ratelimit implimentation specific to Discord&#39;s API.
-Only to be used when starting in a rest-only manner.</p>
-        </section>
+<p>Ratelimit implimentation specific to Discord's API.
+Only to be used when starting in a rest-only manner.</p>        </section>
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -124,8 +121,7 @@ Only to be used when starting in a rest-only manner.</p>
   <div class="summary-signature">
     <a href="#init/1">init(list)</a>
   </div>
-    <div class="summary-synopsis"><p>Invoked when the server is started. <code class="inline">start_link/3</code> or <code class="inline">start/3</code> will
-block until it returns.</p></div>
+    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/elixir/GenServer.html#c:init/1"><code class="inline">GenServer.init/1</code></a>.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -150,19 +146,21 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">on_start()</span>
+    <h1 class="signature">on_start()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/api/ratelimiter.ex#L18" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>on_start() ::
   {:ok, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pid</a>()} | :ignore | {:error, {:already_started, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pid</a>()} | <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()}</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Return values of start functions.</p>
-  </section>
+
+<p>Return values of start functions.</p>  </section>
 </section>
           </div>
         </section>
@@ -180,16 +178,16 @@ Functions          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">child_spec(init_arg)</span>
+    <h1 class="signature">child_spec(init_arg)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/api/ratelimiter.ex#L7" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
   </div>
+
   <section class="docstring">
-<p>Returns a specification to start this module under a supervisor.</p>
-<p>See <a href="https://hexdocs.pm/elixir/Supervisor.html"><code class="inline">Supervisor</code></a>.</p>
-  </section>
+
+<p>Returns a specification to start this module under a supervisor.</p><p>See <a href="https://hexdocs.pm/elixir/Supervisor.html"><code class="inline">Supervisor</code></a>.</p>  </section>
 </section>
 <section class="detail" id="empty_buckets/0">
   <div class="detail-header">
@@ -197,18 +195,20 @@ Functions          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">empty_buckets()</span>
+    <h1 class="signature">empty_buckets()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/api/ratelimiter.ex#L44" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-      <div class="specs">
-          <pre>empty_buckets() :: :ok</pre>
-      </div>
   </div>
+
   <section class="docstring">
-<p>Empties all buckets, voiding any saved ratelimit values.</p>
-  </section>
+      <h2>Specs</h2>
+      <div class="specs">
+          <pre>empty_buckets() :: true</pre>
+      </div>
+
+<p>Empties all buckets, voiding any saved ratelimit values.</p>  </section>
 </section>
 <section class="detail" id="get_endpoint/2">
   <div class="detail-header">
@@ -216,18 +216,20 @@ Functions          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">get_endpoint(route, method)</span>
+    <h1 class="signature">get_endpoint(route, method)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/api/ratelimiter.ex#L135" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>get_endpoint(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()) :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Retrieves a proper ratelimit endpoint from a given route and url.</p>
-  </section>
+
+<p>Retrieves a proper ratelimit endpoint from a given route and url.</p>  </section>
 </section>
 <section class="detail" id="init/1">
   <div class="detail-header">
@@ -235,50 +237,16 @@ Functions          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">init(list)</span>
+    <h1 class="signature">init(list)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/api/ratelimiter.ex#L35" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
   </div>
+
   <section class="docstring">
-<p>Invoked when the server is started. <code class="inline">start_link/3</code> or <code class="inline">start/3</code> will
-block until it returns.</p>
-<p><code class="inline">init_arg</code> is the argument term (second argument) passed to <code class="inline">start_link/3</code>.</p>
-<p>Returning <code class="inline">{:ok, state}</code> will cause <code class="inline">start_link/3</code> to return
-<code class="inline">{:ok, pid}</code> and the process to enter its loop.</p>
-<p>Returning <code class="inline">{:ok, state, timeout}</code> is similar to <code class="inline">{:ok, state}</code>,
-except that it also sets a timeout. See the &quot;Timeouts&quot; section
-in the module documentation for more information.</p>
-<p>Returning <code class="inline">{:ok, state, :hibernate}</code> is similar to <code class="inline">{:ok, state}</code>
-except the process is hibernated before entering the loop. See
-<code class="inline">c:handle_call/3</code> for more information on hibernation.</p>
-<p>Returning <code class="inline">{:ok, state, {:continue, continue}}</code> is similar to
-<code class="inline">{:ok, state}</code> except that immediately after entering the loop
-the <code class="inline">c:handle_continue/2</code> callback will be invoked with the value
-<code class="inline">continue</code> as first argument.</p>
-<p>Returning <code class="inline">:ignore</code> will cause <code class="inline">start_link/3</code> to return <code class="inline">:ignore</code> and
-the process will exit normally without entering the loop or calling
-<code class="inline">c:terminate/2</code>. If used when part of a supervision tree the parent
-supervisor will not fail to start nor immediately try to restart the
-<a href="https://hexdocs.pm/elixir/GenServer.html"><code class="inline">GenServer</code></a>. The remainder of the supervision tree will be started
-and so the <a href="https://hexdocs.pm/elixir/GenServer.html"><code class="inline">GenServer</code></a> should not be required by other processes.
-It can be started later with <a href="https://hexdocs.pm/elixir/Supervisor.html#restart_child/2"><code class="inline">Supervisor.restart_child/2</code></a> as the child
-specification is saved in the parent supervisor. The main use cases for
-this are:</p>
-<ul>
-<li>The <a href="https://hexdocs.pm/elixir/GenServer.html"><code class="inline">GenServer</code></a> is disabled by configuration but might be enabled later.
-</li>
-<li>An error occurred and it will be handled by a different mechanism than the
-   <a href="https://hexdocs.pm/elixir/Supervisor.html"><code class="inline">Supervisor</code></a>. Likely this approach involves calling <a href="https://hexdocs.pm/elixir/Supervisor.html#restart_child/2"><code class="inline">Supervisor.restart_child/2</code></a>
-after a delay to attempt a restart.
-</li>
-</ul>
-<p>Returning <code class="inline">{:stop, reason}</code> will cause <code class="inline">start_link/3</code> to return
-<code class="inline">{:error, reason}</code> and the process to exit with reason <code class="inline">reason</code> without
-entering the loop or calling <code class="inline">c:terminate/2</code>.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/elixir/GenServer.html#c:init/1"><code class="inline">GenServer.init/1</code></a>.</p>
-  </section>
+
+<p>Callback implementation for <a href="https://hexdocs.pm/elixir/GenServer.html#c:init/1"><code class="inline">GenServer.init/1</code></a>.</p>  </section>
 </section>
 <section class="detail" id="start_link/1">
   <div class="detail-header">
@@ -286,18 +254,20 @@ entering the loop or calling <code class="inline">c:terminate/2</code>.</p>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature">start_link(list)</span>
+    <h1 class="signature">start_link(list)</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/api/ratelimiter.ex#L31" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>start_link([]) :: <a href="#t:on_start/0">on_start</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Starts the ratelimiter.</p>
-  </section>
+
+<p>Starts the ratelimiter.</p>  </section>
 </section>
           </div>
         </section>
@@ -305,19 +275,28 @@ entering the loop or calling <code class="inline">c:terminate/2</code>.</p>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.20.2),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.23.0) for the
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank">Elixir programming language</a>.
           </span>
           <span class="line">
-            designed by
+            Designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
         </p>
         <p>
+            <a href="api-reference.html" title="API reference" class="line footer-button">API Reference</a>
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
           <button class="line footer-button night-mode-toggle">
             Toggle night mode
           </button>
-          <button class="line footer-button display-shortcuts-help">
-            Display keyboard shortcuts
+          <button class="line footer-button display-quick-switch">
+            Go to a HexDocs package
+          </button>
+          <button class="line footer-button tooltips-toggle">
+            <span class="tooltips-option-disable">Disable tooltips</span>
+            <span class="tooltips-option-enable">Enable tooltips</span>
           </button>
         </p>
       </footer>

@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.20.2">
-    <meta name="project" content="Nostrum v0.4.3">
-    <title>Nostrum.Struct.Invite — Nostrum v0.4.3</title>
-    <link rel="stylesheet" href="dist/html-d9f58a6320b5bfa6dd77.css" />
-    <script src="dist/sidebar_items-a4b54834bd.js"></script>
+    <meta name="generator" content="ExDoc v0.23.0">
+    <meta name="project" content="Nostrum v0.4.5">
+    <title>Nostrum.Struct.Invite — Nostrum v0.4.5</title>
+    <link rel="stylesheet" href="dist/elixir-9f91ebe876dc01d67920.css" />
+    <script src="dist/sidebar_items-b2bb24de56.js"></script>
       <script src="docs_config.js"></script>
-    <script async src="dist/html-d9f58a6320b5bfa6dd77.js"></script>
+    <script async src="dist/app-60a0c9f10e9e52eae31f.js"></script>
   </head>
   <body data-type="modules">
-    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+    <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -22,14 +22,14 @@
 
 <section class="sidebar">
   <form class="sidebar-search" action="search.html">
-    <button type="submit" class="search-button">
-      <span class="icon-search" aria-hidden="true"></span>
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <span class="icon-search" aria-hidden="true" title="Submit search"></span>
     </button>
-    <button type="button" tabindex="-1" class="search-close-button">
-      <span class="icon-cross" title="Cancel search"></span>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <span class="icon-cross" aria-hidden="true" title="Cancel search"></span>
     </button>
     <label class="search-label">
-      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Search" autocomplete="off" />
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
     </label>
   </form>
 
@@ -42,9 +42,9 @@
     <div class="sidebar-projectDetails">
       <a href="https://github.com/kraigie/nostrum" class="sidebar-projectName">
 Nostrum      </a>
-      <h2 class="sidebar-projectVersion">
-        v0.4.3
-      </h2>
+      <strong class="sidebar-projectVersion">
+        v0.4.5
+      </strong>
     </div>
   </div>
 
@@ -52,8 +52,6 @@ Nostrum      </a>
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-
-      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
 
       <li><a id="tasks-list" href="#full-list">Mix Tasks</a></li>
   </ul>
@@ -66,8 +64,8 @@ Nostrum      </a>
     <div id="content" class="content-inner">
 
       <h1>
-        <small class="app-vsn">Nostrum v0.4.3</small>
-Nostrum.Struct.Invite          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L1" title="View Source" class="view-source" rel="help">
+        Nostrum.Struct.Invite <small class="app-vsn">(Nostrum v0.4.5)</small>
+          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -75,8 +73,7 @@ Nostrum.Struct.Invite          <a href="https://github.com/kraigie/nostrum/blob/
 
 
         <section id="moduledoc">
-<p>Struct representing a Discord invite.</p>
-        </section>
+<p>Struct representing a Discord invite.</p>        </section>
 
         <section id="summary" class="details-list">
           <h1 class="section-heading">
@@ -202,18 +199,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">approximate_member_count()</span>
+    <h1 class="signature">approximate_member_count()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L63" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>approximate_member_count() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Approximate total member count of the guild this invite is for.</p>
-  </section>
+
+<p>Approximate total member count of the guild this invite is for.</p>  </section>
 </section>
 <section class="detail" id="t:approximate_presence_count/0">
   <div class="detail-header">
@@ -221,18 +220,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">approximate_presence_count()</span>
+    <h1 class="signature">approximate_presence_count()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L58" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>approximate_presence_count() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Approximate online member count of the guild this invite is for.</p>
-  </section>
+
+<p>Approximate online member count of the guild this invite is for.</p>  </section>
 </section>
 <section class="detail" id="t:channel/0">
   <div class="detail-header">
@@ -240,18 +241,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">channel()</span>
+    <h1 class="signature">channel()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L38" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>channel() :: <a href="Nostrum.Struct.Channel.html#t:t/0">Nostrum.Struct.Channel.t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>The channel this invite is for.</p>
-  </section>
+
+<p>The channel this invite is for.</p>  </section>
 </section>
 <section class="detail" id="t:code/0">
   <div class="detail-header">
@@ -259,18 +262,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">code()</span>
+    <h1 class="signature">code()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L28" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>code() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>The invite code (unique ID).</p>
-  </section>
+
+<p>The invite code (unique ID).</p>  </section>
 </section>
 <section class="detail" id="t:created_at/0">
   <div class="detail-header">
@@ -278,18 +283,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">created_at()</span>
+    <h1 class="signature">created_at()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L88" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>created_at() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>When this invite was created.</p>
-  </section>
+
+<p>When this invite was created.</p>  </section>
 </section>
 <section class="detail" id="t:detailed_invite/0">
   <div class="detail-header">
@@ -297,11 +304,15 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">detailed_invite()</span>
+    <h1 class="signature">detailed_invite()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L112" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>detailed_invite() :: %Nostrum.Struct.Invite{
   approximate_member_count: <a href="#t:approximate_member_count/0">approximate_member_count</a>(),
@@ -319,10 +330,8 @@ Types          </h1>
   uses: <a href="#t:uses/0">uses</a>()
 }</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>An invite with metadata.</p>
-  </section>
+
+<p>An invite with metadata.</p>  </section>
 </section>
 <section class="detail" id="t:guild/0">
   <div class="detail-header">
@@ -330,18 +339,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">guild()</span>
+    <h1 class="signature">guild()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L33" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>guild() :: <a href="Nostrum.Struct.Guild.html#t:t/0">Nostrum.Struct.Guild.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Partially populated guild struct of the guild this invite is for.</p>
-  </section>
+
+<p>Partially populated guild struct of the guild this invite is for.</p>  </section>
 </section>
 <section class="detail" id="t:inviter/0">
   <div class="detail-header">
@@ -349,18 +360,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">inviter()</span>
+    <h1 class="signature">inviter()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L43" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>inviter() :: <a href="Nostrum.Struct.User.html#t:t/0">Nostrum.Struct.User.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>The user who created this invite.</p>
-  </section>
+
+<p>The user who created this invite.</p>  </section>
 </section>
 <section class="detail" id="t:max_age/0">
   <div class="detail-header">
@@ -368,18 +381,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">max_age()</span>
+    <h1 class="signature">max_age()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L78" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>max_age() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Duration (in seconds) after which the invite expires.</p>
-  </section>
+
+<p>Duration (in seconds) after which the invite expires.</p>  </section>
 </section>
 <section class="detail" id="t:max_uses/0">
   <div class="detail-header">
@@ -387,18 +402,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">max_uses()</span>
+    <h1 class="signature">max_uses()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L73" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>max_uses() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Max number of times this invite can be used.</p>
-  </section>
+
+<p>Max number of times this invite can be used.</p>  </section>
 </section>
 <section class="detail" id="t:simple_invite/0">
   <div class="detail-header">
@@ -406,11 +423,15 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">simple_invite()</span>
+    <h1 class="signature">simple_invite()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L93" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>simple_invite() :: %Nostrum.Struct.Invite{
   approximate_member_count: <a href="#t:approximate_member_count/0">approximate_member_count</a>(),
@@ -428,10 +449,8 @@ Types          </h1>
   uses: nil
 }</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>An invite without metadata.</p>
-  </section>
+
+<p>An invite without metadata.</p>  </section>
 </section>
 <section class="detail" id="t:t/0">
   <div class="detail-header">
@@ -439,16 +458,19 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">t()</span>
+    <h1 class="signature">t()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L128" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>t() :: <a href="#t:simple_invite/0">simple_invite</a>() | <a href="#t:detailed_invite/0">detailed_invite</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
+
   </section>
 </section>
 <section class="detail" id="t:target_user/0">
@@ -457,18 +479,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">target_user()</span>
+    <h1 class="signature">target_user()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L48" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>target_user() :: <a href="Nostrum.Struct.User.html#t:t/0">Nostrum.Struct.User.t</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Partially populated user struct of the target user for this invite.</p>
-  </section>
+
+<p>Partially populated user struct of the target user for this invite.</p>  </section>
 </section>
 <section class="detail" id="t:target_user_type/0">
   <div class="detail-header">
@@ -476,18 +500,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">target_user_type()</span>
+    <h1 class="signature">target_user_type()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L53" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>target_user_type() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>() | nil</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>The type of user target for this invite.</p>
-  </section>
+
+<p>The type of user target for this invite.</p>  </section>
 </section>
 <section class="detail" id="t:temporary/0">
   <div class="detail-header">
@@ -495,18 +521,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">temporary()</span>
+    <h1 class="signature">temporary()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L83" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>temporary() :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Whether this invite only grants temporary membership.</p>
-  </section>
+
+<p>Whether this invite only grants temporary membership.</p>  </section>
 </section>
 <section class="detail" id="t:uses/0">
   <div class="detail-header">
@@ -514,18 +542,20 @@ Types          </h1>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">uses()</span>
+    <h1 class="signature">uses()</h1>
       <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/invite.ex#L68" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
+  </div>
+
+  <section class="docstring">
+      <h2>Specs</h2>
       <div class="specs">
           <pre>uses() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
       </div>
-  </div>
-  <section class="docstring">
-<p>Number of times this invite has been used.</p>
-  </section>
+
+<p>Number of times this invite has been used.</p>  </section>
 </section>
           </div>
         </section>
@@ -533,19 +563,28 @@ Types          </h1>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.20.2),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.23.0) for the
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank">Elixir programming language</a>.
           </span>
           <span class="line">
-            designed by
+            Designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
         </p>
         <p>
+            <a href="api-reference.html" title="API reference" class="line footer-button">API Reference</a>
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
           <button class="line footer-button night-mode-toggle">
             Toggle night mode
           </button>
-          <button class="line footer-button display-shortcuts-help">
-            Display keyboard shortcuts
+          <button class="line footer-button display-quick-switch">
+            Go to a HexDocs package
+          </button>
+          <button class="line footer-button tooltips-toggle">
+            <span class="tooltips-option-disable">Disable tooltips</span>
+            <span class="tooltips-option-enable">Enable tooltips</span>
           </button>
         </p>
       </footer>
