@@ -191,7 +191,7 @@ Functions          </h1>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">get_channel_id(guild_id)</h1>
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L372" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L376" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -277,7 +277,7 @@ nil</code></pre>  </section>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">pause(guild_id)</h1>
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L228" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L232" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -313,7 +313,7 @@ iex&gt; Nostrum.Voice.pause(123456789)</code></pre>  </section>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">play(guild_id, input, type \\ :url, options \\ [])</h1>
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L146" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -341,8 +341,10 @@ iex&gt; Nostrum.Voice.pause(123456789)</code></pre>  </section>
 <ul><li><code class="inline">:start_pos</code> (string) - The start position of the audio to be played. Defaults to beginning.</li><li><code class="inline">:duration</code> (string) - The duration to of the audio to be played . Defaults to entire duration.</li><li><code class="inline">:realtime</code> (boolean) - Make ffmpeg process the input in realtime instead of as fast as possible. Defaults to true.</li><li><code class="inline">:volume</code> (number) - The output volume of the audio. Default volume is 1.0.</li><li><code class="inline">:filter</code> (string) - Filter(s) to be applied to the audio. No filters applied by default.</li></ul><p>  The values of <code class="inline">:start_pos</code> and <code class="inline">:duration</code> can be <a href="https://ffmpeg.org/ffmpeg-utils.html#Time-duration">any time duration that ffmpeg can read</a>.
   The <code class="inline">:filter</code> can be used multiple times in a single call (see examples).
   The values of <code class="inline">:filter</code> can be <a href="https://ffmpeg.org/ffmpeg-filters.html#Audio-Filters">any audio filters that ffmpeg can read</a>.
-  Filters will be applied in order and can be as complex as you want. The world is your oyster!
-  Note that using the <code class="inline">:volume</code> option is shortcut to the &quot;volume&quot; filter, and using any number of <code class="inline">:filter</code> options will override it.</p><p>  Having all the ffmpeg audio filters available is <em>extremely powerful</em> so it may be worth learning some of them for your use cases.
+  Filters will be applied in order and can be as complex as you want. The world is your oyster!</p><p>  Note that using the <code class="inline">:volume</code> option is shortcut for the &quot;volume&quot; filter, and will be added to the end of the filter chain, acting as a master volume.
+  Volume values between <code class="inline">0.0</code> and <code class="inline">1.0</code> act as standard oparating range where <code class="inline">0</code> is off and <code class="inline">1</code> is max.
+  Values greater than <code class="inline">1.0</code> will add saturation and distortion to the audio.
+  Negative values act the same as their position but reverse the polarity of the waveform.</p><p>  Having all the ffmpeg audio filters available is <em>extremely powerful</em> so it may be worth learning some of them for your use cases.
   If you use any filters to <em>increase</em> the playback speed of your audio, it's recommended to set the <code class="inline">:realtime</code> option to <code class="inline">false</code>
   because realtime processing is relative to the original playback speed.</p><h2 id="play/4-examples" class="section-heading">
   <a href="#play/4-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -373,7 +375,7 @@ iex&gt; Nostrum.Voice.play(123456789, &quot;https://www.youtube.com/watch?v=0ngc
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">playing?(guild_id)</h1>
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L316" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L320" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -412,7 +414,7 @@ false</code></pre>  </section>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">ready?(guild_id)</h1>
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L345" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L349" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -449,7 +451,7 @@ false</code></pre>  </section>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">resume(guild_id)</h1>
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L270" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L274" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -484,7 +486,7 @@ iex&gt; Nostrum.Voice.resume(123456789)</code></pre>  </section>
       <span class="sr-only">Link to this function</span>
     </a>
     <h1 class="signature">stop(guild_id)</h1>
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L186" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/voice.ex#L190" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
