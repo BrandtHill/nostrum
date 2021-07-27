@@ -4,16 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.23.0">
+    <meta name="generator" content="ExDoc v0.24.2">
     <meta name="project" content="Nostrum v0.4.7">
     <title>Intro — Nostrum v0.4.7</title>
-    <link rel="stylesheet" href="dist/elixir-9f91ebe876dc01d67920.css" />
-    <script src="dist/sidebar_items-98eb99c877.js"></script>
+    <link rel="stylesheet" href="dist/elixir-a172fe91e725dcb259e2.css" />
+    <script src="dist/sidebar_items-cb993a0a0f.js"></script>
       <script src="docs_config.js"></script>
-    <script async src="dist/app-60a0c9f10e9e52eae31f.js"></script>
+    <script async src="dist/app-f27ff079945e43879c46.js"></script>
   </head>
   <body data-type="extras">
-    <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
+    <script>
+      try {
+        if (localStorage.getItem('night-mode') === 'true') {
+          document.body.classList.add('night-mode');
+        }
+      } catch (error) { }
+    </script>
 <div class="main">
 
 <button class="sidebar-button sidebar-toggle">
@@ -29,7 +35,7 @@
       <span class="icon-cross" aria-hidden="true" title="Cancel search"></span>
     </button>
     <label class="search-label">
-      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
     </label>
   </form>
 
@@ -49,11 +55,11 @@ Nostrum      </a>
   </div>
 
   <ul class="sidebar-listNav">
-    <li><a id="extras-list" href="#full-list">Pages</a></li>
+    <li><a id="extras-list-link" href="#full-list">Pages</a></li>
 
-      <li><a id="modules-list" href="#full-list">Modules</a></li>
+      <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
-      <li><a id="tasks-list" href="#full-list">Mix Tasks</a></li>
+      <li><a id="tasks-list-link" href="#full-list">Mix Tasks</a></li>
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -93,10 +99,7 @@ end</code></pre><p> <em>Dev</em></p><pre><code class="Elixir">def deps do
   [{:nostrum, git: &quot;https://github.com/Kraigie/nostrum.git&quot;}]
 end</code></pre><p>Edit or create your config file:</p><p>The file should be located at <code class="inline">/config/config.exs</code>. To run Nostrum you need the
 following two fields:</p><pre><code class="Elixir">config :nostrum,
-  token: 666, # The token of your bot as a string
-  num_shards: 2 # The number of shards you want to run your bot under, or :auto.</code></pre><p>If you don't know what <code class="inline">num_shards</code> is or don't have your bot on a lot of guilds
-you can omit the field and it will default to 1. You can also set this option to
-<code class="inline">:auto</code> and Nostrum will automatically get the recommended number of shards.</p><p>The following fields are also supported:</p><ul><li><code class="inline">ffmpeg</code> - Specifies the path to the <code class="inline">ffmpeg</code> executable for playing audio. Defaults to <code class="inline">&quot;ffmpeg&quot;</code>.</li><li><code class="inline">youtubedl</code> - Specifies the path to the <code class="inline">youtube-dl</code> executable for playing audio with youtube-dl support. Defaults to <code class="inline">&quot;youtube-dl&quot;</code>.</li><li><code class="inline">gateway_intents</code> - This field takes a list of atoms representing gateway intents for Nostrum to subscribe to from the Discord API. More information can be found in the <a href="gateway-intents.html">gateway intents</a> documentation page.</li><li><code class="inline">audio_timeout</code> - Milliseconds that input must begin generating audio by upon invoking <code class="inline">play</code>. More information about this option can be found in the <a href="voice.html">voice</a> documentation page. Defaults to <code class="inline">20_000</code> (20s).</li><li><code class="inline">voice_auto_connect</code> - This will determine if Nostrum automatically connects to voice websockets gateways upon joining voice channels. If set to <code class="inline">false</code> but you still wish to connect to the voice gateway, you can do so manually by calling <a href="Nostrum.Voice.html#connect_to_gateway/1"><code class="inline">Nostrum.Voice.connect_to_gateway/1</code></a> after joining a voice channel. Defaults to <code class="inline">true</code>.</li><li><code class="inline">dev</code> - This is added to enable Nostrum to be run completely stand alone for
+  token: 666  # The token of your bot as a string</code></pre><p>The following fields are also supported:</p><ul><li><code class="inline">num_shards</code> - A fixed number of shards to run, or <code class="inline">:auto</code> to have Nostrum determine it automatically. Defaults to <code class="inline">:auto</code>.</li><li><code class="inline">ffmpeg</code> - Specifies the path to the <code class="inline">ffmpeg</code> executable for playing audio. Defaults to <code class="inline">&quot;ffmpeg&quot;</code>.</li><li><code class="inline">youtubedl</code> - Specifies the path to the <code class="inline">youtube-dl</code> executable for playing audio with youtube-dl support. Defaults to <code class="inline">&quot;youtube-dl&quot;</code>.</li><li><code class="inline">gateway_intents</code> - This field takes a list of atoms representing gateway intents for Nostrum to subscribe to from the Discord API. More information can be found in the <a href="gateway-intents.html">gateway intents</a> documentation page.</li><li><code class="inline">audio_timeout</code> - Milliseconds that input must begin generating audio by upon invoking <code class="inline">play</code>. More information about this option can be found in the <a href="voice.html">voice</a> documentation page. Defaults to <code class="inline">20_000</code> (20s).</li><li><code class="inline">voice_auto_connect</code> - This will determine if Nostrum automatically connects to voice websockets gateways upon joining voice channels. If set to <code class="inline">false</code> but you still wish to connect to the voice gateway, you can do so manually by calling <a href="Nostrum.Voice.html#connect_to_gateway/1"><code class="inline">Nostrum.Voice.connect_to_gateway/1</code></a> after joining a voice channel. Defaults to <code class="inline">true</code>.</li><li><code class="inline">dev</code> - This is added to enable Nostrum to be run completely stand alone for
 development purposes. <code class="inline">true</code> will cause Nostrum to spawn its own event consumers.
 If you have the dev flag set to true while running Nostrum alongside your
 application some of your events will be consumed. Defaults to <code class="inline">false</code>.</li><li><code class="inline">log_full_events</code> - This will log the full payload received over the websocket.
@@ -122,11 +125,31 @@ Nostrum takes advantage of <code class="inline">:debug</code>, <code class="inli
   Example Bot
 </h3>
 <p>A very simple example bot can be found
-<a href="https://github.com/Kraigie/nostrum/blob/master/examples/event_consumer.ex">here</a>.</p><p>A more complex bot can be found <a href="https://github.com/jchristgit/bolt">here</a>.</p><p>An example bot that plays audio through voice channels can be found <a href="https://github.com/Kraigie/nostrum/blob/master/examples/audio_player_example.ex">here</a>.</p>      <footer class="footer">
+<a href="https://github.com/Kraigie/nostrum/blob/master/examples/event_consumer.ex">here</a>.</p><p>A more complex bot can be found <a href="https://github.com/jchristgit/bolt">here</a>.</p><p>An example bot that plays audio through voice channels can be found <a href="https://github.com/Kraigie/nostrum/blob/master/examples/audio_player_example.ex">here</a>.</p><div class="bottom-actions">
+  <div class="bottom-actions-item">
+      <a href="api-reference.html" class="bottom-actions-button" rel="prev">
+        <span class="subheader">
+          ← Previous Page
+        </span>
+        <span class="title">
+API Reference        </span>
+      </a>
+  </div>
+  <div class="bottom-actions-item">
+      <a href="api.html" class="bottom-actions-button" rel="next">
+        <span class="subheader">
+          Next Page →
+        </span>
+        <span class="title">
+Api        </span>
+      </a>
+  </div>
+</div>
+      <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.23.0) for the
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.24.2) for the
             <a href="https://elixir-lang.org" title="Elixir" target="_blank">Elixir programming language</a>.
           </span>
           <span class="line">
