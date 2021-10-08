@@ -9,6 +9,7 @@ Nostrum.Cache.Mapping.GuildShard.html
 Nostrum.Cache.Mapping.ShardPidNum.html
 Nostrum.Cache.Me.html
 Nostrum.Cache.PresenceCache.html
+Nostrum.Cache.UserCache.ETS.html
 Nostrum.Cache.UserCache.html
 Nostrum.Consumer.html
 Nostrum.Error.ApiError.html
@@ -64,6 +65,7 @@ Nostrum.Struct.Message.Application.html
 Nostrum.Struct.Message.Attachment.html
 Nostrum.Struct.Message.Reaction.html
 Nostrum.Struct.Message.Reference.html
+Nostrum.Struct.Message.Sticker.html
 Nostrum.Struct.Message.html
 Nostrum.Struct.Overwrite.html
 Nostrum.Struct.User.Connection.html
@@ -84,8 +86,8 @@ dist/html/fonts/icomoon.eot
 dist/html/fonts/icomoon.svg
 dist/html/fonts/icomoon.ttf
 dist/html/fonts/icomoon.woff
-dist/search_items-1ee99e2847.js
-dist/sidebar_items-ac0dc2c544.js
+dist/search_items-6bd559b8ec.js
+dist/sidebar_items-15b1d06457.js
 events.html
 gateway-intents.html
 index.html

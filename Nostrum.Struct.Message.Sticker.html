@@ -7,7 +7,7 @@
     <meta name="generator" content="ExDoc v0.25.1">
     <meta name="project" content="Nostrum v0.5.0">
 
-    <title>Nostrum.Struct.Event.InviteCreate — Nostrum v0.5.0</title>
+    <title>Nostrum.Struct.Message.Sticker — Nostrum v0.5.0</title>
     <link rel="stylesheet" href="dist/elixir-a172fe91e725dcb259e2.css" />
 
     <script src="dist/sidebar_items-15b1d06457.js"></script>
@@ -82,9 +82,9 @@ Nostrum
     <div id="content" class="content-inner">
 
       <h1>
-Nostrum.Struct.Event.InviteCreate <small class="app-vsn">(Nostrum v0.5.0)</small>
+Nostrum.Struct.Message.Sticker <small class="app-vsn">(Nostrum v0.5.0)</small>
 
-          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -93,7 +93,7 @@ Nostrum.Struct.Event.InviteCreate <small class="app-vsn">(Nostrum v0.5.0)</small
 
 
         <section id="moduledoc">
-<p>Struct representing an Invite Create event</p>
+<p>A <a href="Nostrum.Struct.Message.Sticker.html#content"><code class="inline">Nostrum.Struct.Message.Sticker</code></a> represents a sticker that can be sent inside a <a href="Nostrum.Struct.Message.html"><code class="inline">Nostrum.Struct.Message</code></a>.</p><p>More information can be found on the <a href="https://discord.com/developers/docs/resources/sticker#sticker-object-sticker-structure">Discord API Sticker Object Documentation.</a></p>
         </section>
 
 
@@ -112,29 +112,29 @@ Nostrum.Struct.Event.InviteCreate <small class="app-vsn">(Nostrum v0.5.0)</small
     </h2>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:channel_id/0">channel_id()</a>
+    <a href="#t:available/0">available()</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Channel id of the channel this invite is for.</p></div>
+    <div class="summary-synopsis"><p>Whether this guild sticker can be used, may be false due to loss of Server Boosts</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:code/0">code()</a>
+    <a href="#t:description/0">description()</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>The unique invite code.</p></div>
+    <div class="summary-synopsis"><p>Description of the sticker</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:created_at/0">created_at()</a>
+    <a href="#t:format_type/0">format_type()</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>The time at which the invite was created.</p></div>
+    <div class="summary-synopsis"><p><a href="https://discord.com/developers/docs/resources/sticker#sticker-object-sticker-format-types">Discord API Sticker Object Format Type Documentation</a></p></div>
 
 </div>
 <div class="summary-row">
@@ -143,34 +143,43 @@ Nostrum.Struct.Event.InviteCreate <small class="app-vsn">(Nostrum v0.5.0)</small
 
   </div>
 
-    <div class="summary-synopsis"><p>Guild id of the guild this invite is for.</p></div>
+    <div class="summary-synopsis"><p>Id of the guild that owns this sticker</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:inviter/0">inviter()</a>
+    <a href="#t:id/0">id()</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>The user that created the invite.</p></div>
+    <div class="summary-synopsis"><p>Id of the sticker</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:max_age/0">max_age()</a>
+    <a href="#t:name/0">name()</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Duration (in seconds) after which the invite expires.</p></div>
+    <div class="summary-synopsis"><p>Name of the sticker</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:max_uses/0">max_uses()</a>
+    <a href="#t:pack_id/0">pack_id()</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Max number of times this invite can be used.</p></div>
+    <div class="summary-synopsis"><p>Id of the pack the sticker is from</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:sort_value/0">sort_value()</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>The sticker's sort order within its pack</p></div>
 
 </div>
 <div class="summary-row">
@@ -182,38 +191,29 @@ Nostrum.Struct.Event.InviteCreate <small class="app-vsn">(Nostrum v0.5.0)</small
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:target_user/0">target_user()</a>
+    <a href="#t:tags/0">tags()</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Partially populated user struct of the target user for this invite.</p></div>
+    <div class="summary-synopsis"><p>Discord name of a unicode emoji representing the sticker's expression. for standard stickers, a comma-separated list of related expressions.</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:target_user_type/0">target_user_type()</a>
+    <a href="#t:type/0">type()</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>The type of user target for this invite.</p></div>
+    <div class="summary-synopsis"><p><a href="https://discord.com/developers/docs/resources/sticker#sticker-object-sticker-types">Discord API Sticker Object Type Documentation</a></p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:temporary/0">temporary()</a>
+    <a href="#t:user/0">user()</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Whether this invite only grants temporary membership.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:uses/0">uses()</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Number of times this invite has been used.</p></div>
+    <div class="summary-synopsis"><p>User that uploaded the guild sticker</p></div>
 
 </div>
 
@@ -231,16 +231,16 @@ Nostrum.Struct.Event.InviteCreate <small class="app-vsn">(Nostrum v0.5.0)</small
 Types
           </h1>
           <div class="types-list">
-<section class="detail" id="t:channel_id/0">
+<section class="detail" id="t:available/0">
 
   <div class="detail-header">
-    <a href="#t:channel_id/0" class="detail-link" title="Link to this type">
+    <a href="#t:available/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">channel_id()</h1>
+    <h1 class="signature">available()</h1>
 
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L70" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -253,23 +253,23 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre>channel_id() :: <a href="Nostrum.Struct.Channel.html#t:id/0">Nostrum.Struct.Channel.id</a>()</pre>
+          <pre>available() :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
 
       </div>
 
-<p>Channel id of the channel this invite is for.</p>
+<p>Whether this guild sticker can be used, may be false due to loss of Server Boosts</p>
   </section>
 </section>
-<section class="detail" id="t:code/0">
+<section class="detail" id="t:description/0">
 
   <div class="detail-header">
-    <a href="#t:code/0" class="detail-link" title="Link to this type">
+    <a href="#t:description/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">code()</h1>
+    <h1 class="signature">description()</h1>
 
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L43" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -282,23 +282,23 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre>code() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
+          <pre>description() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
 
       </div>
 
-<p>The unique invite code.</p>
+<p>Description of the sticker</p>
   </section>
 </section>
-<section class="detail" id="t:created_at/0">
+<section class="detail" id="t:format_type/0">
 
   <div class="detail-header">
-    <a href="#t:created_at/0" class="detail-link" title="Link to this type">
+    <a href="#t:format_type/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">created_at()</h1>
+    <h1 class="signature">format_type()</h1>
 
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L65" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -311,11 +311,11 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre>created_at() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
+          <pre>format_type() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
 
       </div>
 
-<p>The time at which the invite was created.</p>
+<p><a href="https://discord.com/developers/docs/resources/sticker#sticker-object-sticker-format-types">Discord API Sticker Object Format Type Documentation</a></p><ul><li><code class="inline">1</code>  - <code class="inline">PNG</code></li><li><code class="inline">2</code>  - <code class="inline">APNG</code></li><li><code class="inline">3</code>  - <code class="inline">LOTTIE</code></li></ul>
   </section>
 </section>
 <section class="detail" id="t:guild_id/0">
@@ -327,7 +327,7 @@ Types
     </a>
     <h1 class="signature">guild_id()</h1>
 
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L75" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -344,19 +344,19 @@ Types
 
       </div>
 
-<p>Guild id of the guild this invite is for.</p>
+<p>Id of the guild that owns this sticker</p>
   </section>
 </section>
-<section class="detail" id="t:inviter/0">
+<section class="detail" id="t:id/0">
 
   <div class="detail-header">
-    <a href="#t:inviter/0" class="detail-link" title="Link to this type">
+    <a href="#t:id/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">inviter()</h1>
+    <h1 class="signature">id()</h1>
 
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L28" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -369,23 +369,23 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre>inviter() :: <a href="Nostrum.Struct.User.html#t:t/0">Nostrum.Struct.User.t</a>() | nil</pre>
+          <pre>id() :: <a href="Nostrum.Snowflake.html#t:t/0">Nostrum.Snowflake.t</a>()</pre>
 
       </div>
 
-<p>The user that created the invite.</p>
+<p>Id of the sticker</p>
   </section>
 </section>
-<section class="detail" id="t:max_age/0">
+<section class="detail" id="t:name/0">
 
   <div class="detail-header">
-    <a href="#t:max_age/0" class="detail-link" title="Link to this type">
+    <a href="#t:name/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">max_age()</h1>
+    <h1 class="signature">name()</h1>
 
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L38" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -398,23 +398,23 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre>max_age() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
+          <pre>name() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
 
       </div>
 
-<p>Duration (in seconds) after which the invite expires.</p>
+<p>Name of the sticker</p>
   </section>
 </section>
-<section class="detail" id="t:max_uses/0">
+<section class="detail" id="t:pack_id/0">
 
   <div class="detail-header">
-    <a href="#t:max_uses/0" class="detail-link" title="Link to this type">
+    <a href="#t:pack_id/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">max_uses()</h1>
+    <h1 class="signature">pack_id()</h1>
 
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L33" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -427,11 +427,40 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre>max_uses() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
+          <pre>pack_id() :: <a href="Nostrum.Snowflake.html#t:t/0">Nostrum.Snowflake.t</a>()</pre>
 
       </div>
 
-<p>Max number of times this invite can be used.</p>
+<p>Id of the pack the sticker is from</p>
+  </section>
+</section>
+<section class="detail" id="t:sort_value/0">
+
+  <div class="detail-header">
+    <a href="#t:sort_value/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature">sort_value()</h1>
+
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L85" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre>sort_value() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
+
+      </div>
+
+<p>The sticker's sort order within its pack</p>
   </section>
 </section>
 <section class="detail" id="t:t/0">
@@ -443,7 +472,7 @@ Types
     </a>
     <h1 class="signature">t()</h1>
 
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L87" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -456,18 +485,18 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre>t() :: %Nostrum.Struct.Event.InviteCreate{
-  channel_id: <a href="#t:channel_id/0">channel_id</a>(),
-  code: <a href="#t:code/0">code</a>(),
-  created_at: <a href="#t:created_at/0">created_at</a>(),
+          <pre>t() :: %Nostrum.Struct.Message.Sticker{
+  available: <a href="#t:available/0">available</a>(),
+  description: <a href="#t:description/0">description</a>(),
+  format_type: <a href="#t:format_type/0">format_type</a>(),
   guild_id: <a href="#t:guild_id/0">guild_id</a>(),
-  inviter: <a href="#t:inviter/0">inviter</a>(),
-  max_age: <a href="#t:max_age/0">max_age</a>(),
-  max_uses: <a href="#t:max_uses/0">max_uses</a>(),
-  target_user: <a href="#t:target_user/0">target_user</a>(),
-  target_user_type: <a href="#t:target_user_type/0">target_user_type</a>(),
-  temporary: <a href="#t:temporary/0">temporary</a>(),
-  uses: <a href="#t:uses/0">uses</a>()
+  id: <a href="#t:id/0">id</a>(),
+  name: <a href="#t:name/0">name</a>(),
+  pack_id: <a href="#t:pack_id/0">pack_id</a>(),
+  sort_value: <a href="#t:sort_value/0">sort_value</a>(),
+  tags: <a href="#t:tags/0">tags</a>(),
+  type: <a href="#t:type/0">type</a>(),
+  user: <a href="#t:user/0">user</a>()
 }</pre>
 
       </div>
@@ -475,16 +504,16 @@ Types
 
   </section>
 </section>
-<section class="detail" id="t:target_user/0">
+<section class="detail" id="t:tags/0">
 
   <div class="detail-header">
-    <a href="#t:target_user/0" class="detail-link" title="Link to this type">
+    <a href="#t:tags/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">target_user()</h1>
+    <h1 class="signature">tags()</h1>
 
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L48" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -497,23 +526,23 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre>target_user() :: <a href="Nostrum.Struct.User.html#t:t/0">Nostrum.Struct.User.t</a>() | nil</pre>
+          <pre>tags() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
 
       </div>
 
-<p>Partially populated user struct of the target user for this invite.</p>
+<p>Discord name of a unicode emoji representing the sticker's expression. for standard stickers, a comma-separated list of related expressions.</p>
   </section>
 </section>
-<section class="detail" id="t:target_user_type/0">
+<section class="detail" id="t:type/0">
 
   <div class="detail-header">
-    <a href="#t:target_user_type/0" class="detail-link" title="Link to this type">
+    <a href="#t:type/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">target_user_type()</h1>
+    <h1 class="signature">type()</h1>
 
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L66" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L56" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -526,23 +555,23 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre>target_user_type() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>() | nil</pre>
+          <pre>type() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
 
       </div>
 
-<p>The type of user target for this invite.</p>
+<p><a href="https://discord.com/developers/docs/resources/sticker#sticker-object-sticker-types">Discord API Sticker Object Type Documentation</a></p><ul><li><code class="inline">1</code>  - <code class="inline">STANDARD</code>       an official sticker in a pack, part of Nitro or in a removed purchasable pack</li><li><code class="inline">2</code>  - <code class="inline">GUILD</code>          a sticker uploaded to a Boosted guild for the guild's members</li></ul>
   </section>
 </section>
-<section class="detail" id="t:temporary/0">
+<section class="detail" id="t:user/0">
 
   <div class="detail-header">
-    <a href="#t:temporary/0" class="detail-link" title="Link to this type">
+    <a href="#t:user/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature">temporary()</h1>
+    <h1 class="signature">user()</h1>
 
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L71" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/message/sticker.ex#L80" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -555,40 +584,11 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre>temporary() :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
+          <pre>user() :: <a href="Nostrum.Struct.User.html#t:t/0">Nostrum.Struct.User.t</a>()</pre>
 
       </div>
 
-<p>Whether this invite only grants temporary membership.</p>
-  </section>
-</section>
-<section class="detail" id="t:uses/0">
-
-  <div class="detail-header">
-    <a href="#t:uses/0" class="detail-link" title="Link to this type">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <h1 class="signature">uses()</h1>
-
-      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/struct/event/invite_create.ex#L76" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <h2>Specs</h2>
-      <div class="specs">
-
-          <pre>uses() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
-
-      </div>
-
-<p>Number of times this invite has been used.</p>
+<p>User that uploaded the guild sticker</p>
   </section>
 </section>
 
