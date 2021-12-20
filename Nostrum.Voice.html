@@ -10,7 +10,7 @@
     <title>Nostrum.Voice — Nostrum v0.5.0</title>
     <link rel="stylesheet" href="dist/elixir-a172fe91e725dcb259e2.css" />
 
-    <script src="dist/sidebar_items-15b1d06457.js"></script>
+    <script src="dist/sidebar_items-c2c660c6e9.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -464,7 +464,7 @@ nil</code></pre>
   <a href="#listen/2-parameters" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Parameters
 </h2>
-<ul><li><code class="inline">guild_id</code> - ID of guild that the bot is listening to.</li><li><code class="inline">num_packets</code> - Number of packets to wait for.</li></ul><p>Returns a list of 2-element tuples in the form <code class="inline">{rtp_header, opus_frame}</code>.</p><p>This function will block until the specified number of packets is received.</p>
+<ul><li><code class="inline">guild_id</code> - ID of guild that the bot is listening to.</li><li><code class="inline">num_packets</code> - Number of packets to wait for.</li></ul><p>Returns a list of 2-element tuples in the form <code class="inline">{rtp_header, opus_packet}</code>.</p><p>This function will block until the specified number of packets is received.</p>
   </section>
 </section>
 <section class="detail" id="pause/1">
