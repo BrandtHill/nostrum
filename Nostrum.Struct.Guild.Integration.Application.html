@@ -7,7 +7,7 @@
     <meta name="generator" content="ExDoc v0.28.0">
     <meta name="project" content="Nostrum v0.5.1">
 
-    <title>Nostrum.Struct.Message.Reaction — Nostrum v0.5.1</title>
+    <title>Nostrum.Struct.Guild.Integration.Application — Nostrum v0.5.1</title>
     <link rel="stylesheet" href="dist/elixir-a816d167216329cc463d.css" />
 
     <script src="dist/sidebar_items-2f9b9a740a.js"></script>
@@ -89,19 +89,19 @@ Nostrum
 </button>
 
 
-    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/message/reaction.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild/integration/application.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Nostrum.Struct.Message.Reaction</span> 
+  <span translate="no">Nostrum.Struct.Guild.Integration.Application</span> 
   <small class="app-vsn" translate="no">(Nostrum v0.5.1)</small>
 
 </h1>
 
 
   <section id="moduledoc">
-<p>Struct representing a Discord message reaction.</p>
+<p>Struct representing a Discord Guild Integration Application.</p>
   </section>
 
 
@@ -121,31 +121,61 @@ Nostrum
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#t:count/0" translate="no">count()</a>
+          <a href="#t:bot/0" translate="no">bot()</a>
 
         </div>
 
-          <div class="summary-synopsis"><p>Times this emoji has been used to react</p></div>
+          <div class="summary-synopsis"><p>The bot associated with the application.</p></div>
 
       </div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#t:emoji/0" translate="no">emoji()</a>
+          <a href="#t:description/0" translate="no">description()</a>
 
         </div>
 
-          <div class="summary-synopsis"><p>Emoji information</p></div>
+          <div class="summary-synopsis"><p>The description of the application.</p></div>
 
       </div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#t:me/0" translate="no">me()</a>
+          <a href="#t:icon/0" translate="no">icon()</a>
 
         </div>
 
-          <div class="summary-synopsis"><p>Whether the current user is the one who reacted</p></div>
+          <div class="summary-synopsis"><p>The icon hash of the application.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:id/0" translate="no">id()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The id of the application.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:name/0" translate="no">name()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The name of the application.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:summary/0" translate="no">summary()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The summary of the application.</p></div>
 
       </div>
 
@@ -171,16 +201,16 @@ Nostrum
 Types
     </h1>
     <div class="types-list">
-<section class="detail" id="t:count/0">
+<section class="detail" id="t:bot/0">
 
   <div class="detail-header">
-    <a href="#t:count/0" class="detail-link" title="Link to this type">
+    <a href="#t:bot/0" class="detail-link" title="Link to this type">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature" translate="no">count()</h1>
+    <h1 class="signature" translate="no">bot()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/message/reaction.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild/integration/application.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -193,23 +223,23 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre translate="no">count() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
+          <pre translate="no">bot() :: <a href="Nostrum.Struct.User.html#t:t/0">Nostrum.Struct.User.t</a>() | nil</pre>
 
       </div>
 
-<p>Times this emoji has been used to react</p>
+<p>The bot associated with the application.</p>
   </section>
 </section>
-<section class="detail" id="t:emoji/0">
+<section class="detail" id="t:description/0">
 
   <div class="detail-header">
-    <a href="#t:emoji/0" class="detail-link" title="Link to this type">
+    <a href="#t:description/0" class="detail-link" title="Link to this type">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature" translate="no">emoji()</h1>
+    <h1 class="signature" translate="no">description()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/message/reaction.ex#L22" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild/integration/application.ex#L30" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -222,23 +252,23 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre translate="no">emoji() :: <a href="Nostrum.Struct.Emoji.html#t:t/0">Nostrum.Struct.Emoji.t</a>()</pre>
+          <pre translate="no">description() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
 
       </div>
 
-<p>Emoji information</p>
+<p>The description of the application.</p>
   </section>
 </section>
-<section class="detail" id="t:me/0">
+<section class="detail" id="t:icon/0">
 
   <div class="detail-header">
-    <a href="#t:me/0" class="detail-link" title="Link to this type">
+    <a href="#t:icon/0" class="detail-link" title="Link to this type">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature" translate="no">me()</h1>
+    <h1 class="signature" translate="no">icon()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/message/reaction.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild/integration/application.ex#L25" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -251,11 +281,98 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre translate="no">me() :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
+          <pre translate="no">icon() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
 
       </div>
 
-<p>Whether the current user is the one who reacted</p>
+<p>The icon hash of the application.</p>
+  </section>
+</section>
+<section class="detail" id="t:id/0">
+
+  <div class="detail-header">
+    <a href="#t:id/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">id()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild/integration/application.ex#L15" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre translate="no">id() :: <a href="Nostrum.Snowflake.html#t:t/0">Nostrum.Snowflake.t</a>()</pre>
+
+      </div>
+
+<p>The id of the application.</p>
+  </section>
+</section>
+<section class="detail" id="t:name/0">
+
+  <div class="detail-header">
+    <a href="#t:name/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">name()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild/integration/application.ex#L20" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre translate="no">name() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
+
+      </div>
+
+<p>The name of the application.</p>
+  </section>
+</section>
+<section class="detail" id="t:summary/0">
+
+  <div class="detail-header">
+    <a href="#t:summary/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">summary()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild/integration/application.ex#L35" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre translate="no">summary() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
+
+      </div>
+
+<p>The summary of the application.</p>
   </section>
 </section>
 <section class="detail" id="t:t/0">
@@ -267,7 +384,7 @@ Types
     </a>
     <h1 class="signature" translate="no">t()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/message/reaction.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild/integration/application.ex#L42" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -280,10 +397,13 @@ Types
       <h2>Specs</h2>
       <div class="specs">
 
-          <pre translate="no">t() :: %Nostrum.Struct.Message.Reaction{
-  count: <a href="#t:count/0">count</a>(),
-  emoji: <a href="#t:emoji/0">emoji</a>(),
-  me: <a href="#t:me/0">me</a>()
+          <pre translate="no">t() :: %Nostrum.Struct.Guild.Integration.Application{
+  bot: <a href="#t:bot/0">bot</a>(),
+  description: <a href="#t:description/0">description</a>(),
+  icon: <a href="#t:icon/0">icon</a>(),
+  id: <a href="#t:id/0">id</a>(),
+  name: <a href="#t:name/0">name</a>(),
+  summary: <a href="#t:summary/0">summary</a>()
 }</pre>
 
       </div>
@@ -304,7 +424,7 @@ Types
               <a href="https://hex.pm/packages/nostrum/0.5.1" class="line footer-hex-package">Package</a>
               <a href="https://preview.hex.pm/preview/nostrum/0.5.1" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/nostrum/0.5.1/show/lib/nostrum/struct/message/reaction.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/nostrum/0.5.1/show/lib/nostrum/struct/guild/integration/application.ex">(current file)</a>
 
             </span>
 

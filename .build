@@ -45,6 +45,7 @@ Nostrum.Struct.Emoji.html
 Nostrum.Struct.Event.ChannelPinsUpdate.html
 Nostrum.Struct.Event.GuildBanAdd.html
 Nostrum.Struct.Event.GuildBanRemove.html
+Nostrum.Struct.Event.GuildIntegrationDelete.html
 Nostrum.Struct.Event.GuildIntegrationsUpdate.html
 Nostrum.Struct.Event.GuildScheduledEventUserAdd.html
 Nostrum.Struct.Event.GuildScheduledEventUserRemove.html
@@ -59,6 +60,8 @@ Nostrum.Struct.Event.MessageReactionRemoveEmoji.html
 Nostrum.Struct.Event.PartialApplication.html
 Nostrum.Struct.Event.Ready.html
 Nostrum.Struct.Event.SpeakingUpdate.html
+Nostrum.Struct.Event.ThreadListSync.html
+Nostrum.Struct.Event.ThreadMembersUpdate.html
 Nostrum.Struct.Event.TypingStart.html
 Nostrum.Struct.Event.VoiceReady.html
 Nostrum.Struct.Event.VoiceServerUpdate.html
@@ -67,6 +70,7 @@ Nostrum.Struct.Guild.AuditLog.html
 Nostrum.Struct.Guild.AuditLogEntry.html
 Nostrum.Struct.Guild.Ban.html
 Nostrum.Struct.Guild.Integration.Account.html
+Nostrum.Struct.Guild.Integration.Application.html
 Nostrum.Struct.Guild.Integration.html
 Nostrum.Struct.Guild.Member.html
 Nostrum.Struct.Guild.Role.html
@@ -86,6 +90,7 @@ Nostrum.Struct.Message.Reference.html
 Nostrum.Struct.Message.Sticker.html
 Nostrum.Struct.Message.html
 Nostrum.Struct.Overwrite.html
+Nostrum.Struct.ThreadMember.html
 Nostrum.Struct.User.Connection.html
 Nostrum.Struct.User.Flags.html
 Nostrum.Struct.User.html
@@ -114,8 +119,8 @@ dist/html/fonts/remixicon.svg
 dist/html/fonts/remixicon.ttf
 dist/html/fonts/remixicon.woff
 dist/html/fonts/remixicon.woff2
-dist/search_items-f673be12e8.js
-dist/sidebar_items-41e083ed2c.js
+dist/search_items-7e25b28e26.js
+dist/sidebar_items-2f9b9a740a.js
 events.html
 gateway-intents.html
 index.html
