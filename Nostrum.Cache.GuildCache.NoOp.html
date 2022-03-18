@@ -7,7 +7,7 @@
     <meta name="generator" content="ExDoc v0.28.0">
     <meta name="project" content="Nostrum v0.5.1">
 
-    <title>Nostrum.Struct.Event.MessageReactionRemoveAll — Nostrum v0.5.1</title>
+    <title>Nostrum.Cache.GuildCache.NoOp — Nostrum v0.5.1</title>
     <link rel="stylesheet" href="dist/elixir-a816d167216329cc463d.css" />
 
     <script src="dist/sidebar_items-8a6957e438.js"></script>
@@ -89,19 +89,19 @@ Nostrum
 </button>
 
 
-    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/message_reaction_remove_all.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/noop.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Nostrum.Struct.Event.MessageReactionRemoveAll</span> 
+  <span translate="no">Nostrum.Cache.GuildCache.NoOp</span> 
   <small class="app-vsn" translate="no">(Nostrum v0.5.1)</small>
 
 </h1>
 
 
   <section id="moduledoc">
-<p>Sent when a user explicitly removes all reactions from a message</p>
+<p>A cache module that does nothing.</p><p>Useful for bots that don't need to cache guilds.</p>
   </section>
 
 
@@ -114,48 +114,38 @@ Nostrum
       Summary
     </h1>
 
-  <div class="summary-types summary">
+  <div class="summary-functions summary">
     <h2>
-      <a href="#types">Types</a>
+      <a href="#functions">Functions</a>
     </h2>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#t:channel_id/0" translate="no">channel_id()</a>
+          <a href="#child_spec/1" translate="no">child_spec(init_arg)</a>
 
         </div>
 
-          <div class="summary-synopsis"><p>ID of the channel in which the message resides.</p></div>
+          <div class="summary-synopsis"><p>Returns a specification to start this module under a supervisor.</p></div>
 
       </div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#t:guild_id/0" translate="no">guild_id()</a>
+          <a href="#init/1" translate="no">init(init_arg)</a>
 
         </div>
 
-          <div class="summary-synopsis"><p>ID of the guild for the message, if applicable.</p></div>
+          <div class="summary-synopsis"><p>Start up the cache supervisor.</p></div>
 
       </div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#t:message_id/0" translate="no">message_id()</a>
+          <a href="#start_link/1" translate="no">start_link(init_arg)</a>
 
         </div>
 
-          <div class="summary-synopsis"><p>ID of the message from which all reactions were removed.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:t/0" translate="no">t()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Event sent when a user explicitly removes all reactions from a message</p></div>
+          <div class="summary-synopsis"><p>Start the supervisor.</p></div>
 
       </div>
 
@@ -164,25 +154,25 @@ Nostrum
   </section>
 
 
-  <section id="types" class="details-list">
+  <section id="functions" class="details-list">
     <h1 class="section-heading">
-      <a class="hover-link" href="#types">
+      <a class="hover-link" href="#functions">
         <i class="ri-link-m" aria-hidden="true"></i>
         <span class="sr-only">Link to this section</span>
       </a>
-Types
+Functions
     </h1>
-    <div class="types-list">
-<section class="detail" id="t:channel_id/0">
+    <div class="functions-list">
+<section class="detail" id="child_spec/1">
 
   <div class="detail-header">
-    <a href="#t:channel_id/0" class="detail-link" title="Link to this type">
+    <a href="#child_spec/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">channel_id()</h1>
+    <h1 class="signature" translate="no">child_spec(init_arg)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/message_reaction_remove_all.ex#L11" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/noop.ex#L17" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -192,26 +182,19 @@ Types
 
   <section class="docstring">
 
-      <h2>Specs</h2>
-      <div class="specs">
-
-          <pre translate="no">channel_id() :: <a href="Nostrum.Struct.Channel.html#t:id/0">Nostrum.Struct.Channel.id</a>()</pre>
-
-      </div>
-
-<p>ID of the channel in which the message resides.</p>
+<p>Returns a specification to start this module under a supervisor.</p><p>See <a href="https://hexdocs.pm/elixir/Supervisor.html"><code class="inline">Supervisor</code></a>.</p>
   </section>
 </section>
-<section class="detail" id="t:guild_id/0">
+<section class="detail" id="init/1">
 
   <div class="detail-header">
-    <a href="#t:guild_id/0" class="detail-link" title="Link to this type">
+    <a href="#init/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">guild_id()</h1>
+    <h1 class="signature" translate="no">init(init_arg)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/message_reaction_remove_all.ex#L17" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/noop.ex#L26" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -221,26 +204,19 @@ Types
 
   <section class="docstring">
 
-      <h2>Specs</h2>
-      <div class="specs">
-
-          <pre translate="no">guild_id() :: <a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>() | nil</pre>
-
-      </div>
-
-<p>ID of the guild for the message, if applicable.</p>
+<p>Start up the cache supervisor.</p>
   </section>
 </section>
-<section class="detail" id="t:message_id/0">
+<section class="detail" id="start_link/1">
 
   <div class="detail-header">
-    <a href="#t:message_id/0" class="detail-link" title="Link to this type">
+    <a href="#start_link/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">message_id()</h1>
+    <h1 class="signature" translate="no">start_link(init_arg)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/message_reaction_remove_all.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/noop.ex#L20" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -250,47 +226,7 @@ Types
 
   <section class="docstring">
 
-      <h2>Specs</h2>
-      <div class="specs">
-
-          <pre translate="no">message_id() :: <a href="Nostrum.Struct.Message.html#t:id/0">Nostrum.Struct.Message.id</a>()</pre>
-
-      </div>
-
-<p>ID of the message from which all reactions were removed.</p>
-  </section>
-</section>
-<section class="detail" id="t:t/0">
-
-  <div class="detail-header">
-    <a href="#t:t/0" class="detail-link" title="Link to this type">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <h1 class="signature" translate="no">t()</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/message_reaction_remove_all.ex#L20" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <h2>Specs</h2>
-      <div class="specs">
-
-          <pre translate="no">t() :: %Nostrum.Struct.Event.MessageReactionRemoveAll{
-  channel_id: <a href="#t:channel_id/0">channel_id</a>(),
-  guild_id: <a href="#t:guild_id/0">guild_id</a>(),
-  message_id: <a href="#t:message_id/0">message_id</a>()
-}</pre>
-
-      </div>
-
-<p>Event sent when a user explicitly removes all reactions from a message</p>
+<p>Start the supervisor.</p>
   </section>
 </section>
 
@@ -306,7 +242,7 @@ Types
               <a href="https://hex.pm/packages/nostrum/0.5.1" class="line footer-hex-package">Package</a>
               <a href="https://preview.hex.pm/preview/nostrum/0.5.1" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/nostrum/0.5.1/show/lib/nostrum/struct/event/message_reaction_remove_all.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/nostrum/0.5.1/show/lib/nostrum/cache/guild_cache/noop.ex">(current file)</a>
 
             </span>
 
