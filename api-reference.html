@@ -4,38 +4,44 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.28.0">
-    <meta name="project" content="Nostrum v0.5.1">
+    <meta name="generator" content="ExDoc v0.29.0">
+    <meta name="project" content="Nostrum v0.6.1">
 
-    <title>API Reference — Nostrum v0.5.1</title>
-    <link rel="stylesheet" href="dist/elixir-a816d167216329cc463d.css" />
+    <title>API Reference — Nostrum v0.6.1</title>
+    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
 
-    <script src="dist/sidebar_items-fbdbfbd66e.js"></script>
+    <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
+    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
+    <script src="dist/sidebar_items-0EDC7626.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/app-80aa23c1d96b6dc3c064.js"></script>
+    <script async src="dist/html-XN2TSG4M.js"></script>
 
 
   </head>
-  <body data-type="extras">
+  <body data-type="extras" class="page-extra">
     <script>
 
       try {
-        if (localStorage.getItem('night-mode') === 'true') {
-          document.body.classList.add('night-mode');
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
         }
       } catch (error) { }
     </script>
 
 <div class="main">
 
+<button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+  <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+</button>
 
 <section class="sidebar">
-  <button class="sidebar-button sidebar-toggle">
-    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
-  </button>
-
   <form class="sidebar-search" action="search.html">
     <button type="submit" class="search-button" aria-label="Submit Search">
       <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
@@ -44,6 +50,7 @@
       <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
     </button>
     <label class="search-label">
+      <p class="sr-only">Search</p>
       <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
     </label>
   </form>
@@ -60,7 +67,7 @@
 Nostrum
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.5.1
+        v0.6.1
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -79,6 +86,7 @@ Nostrum
 </section>
 
 <section class="content">
+  <output role="status" id="toast"></output>
   <div class="content-outer">
     <div id="content" class="content-inner">
 
@@ -89,13 +97,15 @@ Nostrum
 </button>
 
 
-  <span>API Reference <small class="app-vsn">Nostrum v0.5.1</small></span>
+  <span>API Reference <small class="app-vsn">Nostrum v0.6.1</small></span>
 </h1>
 
 
   <section class="details-list">
     <h2 id="modules" class="section-heading">
-  <a href="#modules" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a>
+  <a href="#modules" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">modules</p>
+  </a>
   Modules
 </h2>
 
@@ -256,6 +266,106 @@ Only to be used when starting in a rest-only manner.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Nostrum.Constants.ApplicationCommandOptionType.html" translate="no">Nostrum.Constants.ApplicationCommandOptionType</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Defines available types used for defining application command option types for passed options
+For more info please refer to <a href="https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-option-type">https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-option-type</a></p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Constants.ApplicationCommandPermissionType.html" translate="no">Nostrum.Constants.ApplicationCommandPermissionType</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Defines available types for application command permissions
+For more info please refer to <a href="https://discord.com/developers/docs/interactions/application-commands#application-command-permissions-object-application-command-permission-type">https://discord.com/developers/docs/interactions/application-commands#application-command-permissions-object-application-command-permission-type</a></p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Constants.ApplicationCommandType.html" translate="no">Nostrum.Constants.ApplicationCommandType</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Defines available types used for selecting application command types
+For more info please refer to <a href="https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-types">https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-types</a></p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Constants.ButtonStyle.html" translate="no">Nostrum.Constants.ButtonStyle</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Defines available styles for button message components
+For more info please refer to <a href="https://discord.com/developers/docs/interactions/message-components#button-object-button-styles">https://discord.com/developers/docs/interactions/message-components#button-object-button-styles</a></p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Constants.ChannelType.html" translate="no">Nostrum.Constants.ChannelType</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Defines available types for channels
+For more info please refer to <a href="https://discord.com/developers/docs/resources/channel#channel-object-channel-types">https://discord.com/developers/docs/resources/channel#channel-object-channel-types</a></p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Constants.ComponentType.html" translate="no">Nostrum.Constants.ComponentType</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Defines available types for message components
+For more info please refer to <a href="https://discord.com/developers/docs/interactions/message-components#component-object-component-types">https://discord.com/developers/docs/interactions/message-components#component-object-component-types</a></p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Constants.InteractionCallbackType.html" translate="no">Nostrum.Constants.InteractionCallbackType</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Defines available types for interaction callbacks
+For more info please refer to <a href="https://discord.com/developers/docs/interactions/receiving-and-responding#interaction-response-object-interaction-callback-type">https://discord.com/developers/docs/interactions/receiving-and-responding#interaction-response-object-interaction-callback-type</a></p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Constants.InteractionType.html" translate="no">Nostrum.Constants.InteractionType</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Defines available types for interactions
+For more info please refer to <a href="https://discord.com/developers/docs/interactions/receiving-and-responding#interaction-object-interaction-type">https://discord.com/developers/docs/interactions/receiving-and-responding#interaction-object-interaction-type</a></p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Constants.TextInputStyle.html" translate="no">Nostrum.Constants.TextInputStyle</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Defines available styles for modal text inputs
+For more info please refer to <a href="https://discord.com/developers/docs/interactions/message-components#text-inputs-text-input-styles">https://discord.com/developers/docs/interactions/message-components#text-inputs-text-input-styles</a></p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Constants.WebhookType.html" translate="no">Nostrum.Constants.WebhookType</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Defines available types for channels
+For more info please refer to <a href="https://discord.com/developers/docs/resources/webhook#webhook-object-webhook-types">https://discord.com/developers/docs/resources/webhook#webhook-object-webhook-types</a></p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Nostrum.Consumer.html" translate="no">Nostrum.Consumer</a>
 
   </div>
@@ -342,6 +452,42 @@ Only to be used when starting in a rest-only manner.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>Converted interaction payload.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Struct.AutoModerationRule.html" translate="no">Nostrum.Struct.AutoModerationRule</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Struct representing an auto-moderation rule.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Struct.AutoModerationRule.Action.html" translate="no">Nostrum.Struct.AutoModerationRule.Action</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Defines an action to be taken when a rule is triggered.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Struct.AutoModerationRule.ActionMetadata.html" translate="no">Nostrum.Struct.AutoModerationRule.ActionMetadata</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Struct representing any additional data used when an action is taken.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Struct.AutoModerationRule.TriggerMetadata.html" translate="no">Nostrum.Struct.AutoModerationRule.TriggerMetadata</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Struct representing the metadata of a trigger.</p></div>
 
 </div>
 <div class="summary-row">
@@ -486,6 +632,16 @@ Only to be used when starting in a rest-only manner.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>Struct representing a Discord emoji.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Struct.Event.AutoModerationRuleExecute.html" translate="no">Nostrum.Struct.Event.AutoModerationRuleExecute</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Sent when an auto-moderation rule executes.
+(e.g. message is blocked).</p></div>
 
 </div>
 <div class="summary-row">
@@ -994,6 +1150,15 @@ Only to be used when starting in a rest-only manner.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Nostrum.Token.html" translate="no">Nostrum.Token</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A helper module for verifying the Discord bot token.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Nostrum.Util.html" translate="no">Nostrum.Util</a>
 
   </div>
@@ -1017,7 +1182,9 @@ Only to be used when starting in a rest-only manner.</p></div>
 
   <section class="details-list">
     <h2 id="mix-tasks" class="section-heading">
-  <a href="#mix-tasks" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a>
+  <a href="#mix-tasks" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">mix-tasks</p>
+  </a>
   Mix Tasks
 </h2>
 
@@ -1052,27 +1219,28 @@ Intro
 
   </div>
 </div>
-
       <footer class="footer">
 
           <p>
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/nostrum/0.5.1" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/nostrum/0.5.1" class="line">Preview</a>
+              <a href="https://hex.pm/packages/nostrum/0.6.1" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/nostrum/0.6.1" class="line">Preview</a>
 
             </span>
 
-            <button class="line footer-button display-quick-switch">
+            <button class="a-main line footer-button display-quick-switch">
               Search
             </button>
           </p>
 
         <p>
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.0) for the
-          <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
         </p>
       </footer>
     </div>

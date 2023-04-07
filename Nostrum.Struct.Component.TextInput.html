@@ -4,38 +4,44 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.28.0">
-    <meta name="project" content="Nostrum v0.5.1">
+    <meta name="generator" content="ExDoc v0.29.0">
+    <meta name="project" content="Nostrum v0.6.1">
 
-    <title>Nostrum.Struct.Component.TextInput — Nostrum v0.5.1</title>
-    <link rel="stylesheet" href="dist/elixir-a816d167216329cc463d.css" />
+    <title>Nostrum.Struct.Component.TextInput — Nostrum v0.6.1</title>
+    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
 
-    <script src="dist/sidebar_items-fbdbfbd66e.js"></script>
+    <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
+    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
+    <script src="dist/sidebar_items-0EDC7626.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/app-80aa23c1d96b6dc3c064.js"></script>
+    <script async src="dist/html-XN2TSG4M.js"></script>
 
 
   </head>
-  <body data-type="modules">
+  <body data-type="modules" class="page-module">
     <script>
 
       try {
-        if (localStorage.getItem('night-mode') === 'true') {
-          document.body.classList.add('night-mode');
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
         }
       } catch (error) { }
     </script>
 
 <div class="main">
 
+<button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+  <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+</button>
 
 <section class="sidebar">
-  <button class="sidebar-button sidebar-toggle">
-    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
-  </button>
-
   <form class="sidebar-search" action="search.html">
     <button type="submit" class="search-button" aria-label="Submit Search">
       <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
@@ -44,6 +50,7 @@
       <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
     </button>
     <label class="search-label">
+      <p class="sr-only">Search</p>
       <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
     </label>
   </form>
@@ -60,7 +67,7 @@
 Nostrum
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.5.1
+        v0.6.1
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -79,6 +86,7 @@ Nostrum
 </section>
 
 <section class="content">
+  <output role="status" id="toast"></output>
   <div class="content-outer">
     <div id="content" class="content-inner">
 
@@ -95,7 +103,7 @@ Nostrum
     </a>
 
   <span translate="no">Nostrum.Struct.Component.TextInput</span> 
-  <small class="app-vsn" translate="no">(Nostrum v0.5.1)</small>
+  <small class="app-vsn" translate="no">(Nostrum v0.6.1)</small>
 
 </h1>
 
@@ -199,7 +207,7 @@ Types
     </a>
     <h1 class="signature" translate="no">opt()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/component/text_input.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/component/text_input.ex#L22" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -209,10 +217,9 @@ Types
 
   <section class="docstring">
 
-      <h2>Specs</h2>
       <div class="specs">
 
-          <pre translate="no">opt() ::
+          <pre translate="no"><span class="attribute">@type</span> opt() ::
   {:style, <a href="Nostrum.Struct.Component.html#t:style/0">Nostrum.Struct.Component.style</a>()}
   | {:min_length, <a href="Nostrum.Struct.Component.html#t:min_length/0">Nostrum.Struct.Component.min_length</a>()}
   | {:max_length, <a href="Nostrum.Struct.Component.html#t:max_length/0">Nostrum.Struct.Component.max_length</a>()}
@@ -235,7 +242,7 @@ Types
     </a>
     <h1 class="signature" translate="no">opts()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/component/text_input.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/component/text_input.ex#L31" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -245,10 +252,9 @@ Types
 
   <section class="docstring">
 
-      <h2>Specs</h2>
       <div class="specs">
 
-          <pre translate="no">opts() :: [<a href="#t:opt/0">opt</a>()]</pre>
+          <pre translate="no"><span class="attribute">@type</span> opts() :: [<a href="#t:opt/0">opt</a>()]</pre>
 
       </div>
 
@@ -264,7 +270,7 @@ Types
     </a>
     <h1 class="signature" translate="no">t()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/component/text_input.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/component/text_input.ex#L11" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -274,10 +280,9 @@ Types
 
   <section class="docstring">
 
-      <h2>Specs</h2>
       <div class="specs">
 
-          <pre translate="no">t() :: %Nostrum.Struct.Component{
+          <pre translate="no"><span class="attribute">@type</span> t() :: %Nostrum.Struct.Component{
   components: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
   custom_id: <a href="Nostrum.Struct.Component.html#t:custom_id/0">Nostrum.Struct.Component.custom_id</a>(),
   disabled: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
@@ -345,7 +350,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">put_style(text_input, style)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/component/text_input.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/component/text_input.ex#L62" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -369,7 +374,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">text_input(label, custom_id, opts \\ [])</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/component/text_input.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/component/text_input.ex#L48" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -392,22 +397,24 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/nostrum/0.5.1" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/nostrum/0.5.1" class="line">Preview</a>
+              <a href="https://hex.pm/packages/nostrum/0.6.1" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/nostrum/0.6.1" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/nostrum/0.5.1/show/lib/nostrum/struct/component/text_input.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/nostrum/0.6.1/show/lib/nostrum/struct/component/text_input.ex">(current file)</a>
 
             </span>
 
-            <button class="line footer-button display-quick-switch">
+            <button class="a-main line footer-button display-quick-switch">
               Search
             </button>
           </p>
 
         <p>
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.0) for the
-          <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
         </p>
       </footer>
     </div>

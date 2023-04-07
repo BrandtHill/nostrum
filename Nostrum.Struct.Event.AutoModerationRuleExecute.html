@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.29.0">
+    <meta name="project" content="Nostrum v0.6.1">
+
+    <title>Nostrum.Struct.Event.AutoModerationRuleExecute — Nostrum v0.6.1</title>
+    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
+
+    <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
+    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
+    <script src="dist/sidebar_items-0EDC7626.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/html-XN2TSG4M.js"></script>
+
+
+  </head>
+  <body data-type="modules" class="page-module">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+<button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+  <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+</button>
+
+<section class="sidebar">
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
+Nostrum
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.6.1
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L1" title="View Source" class="view-source" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span translate="no">Nostrum.Struct.Event.AutoModerationRuleExecute</span> 
+  <small class="app-vsn" translate="no">(Nostrum v0.6.1)</small>
+
+</h1>
+
+
+  <section id="moduledoc">
+<p>Sent when an auto-moderation rule executes.
+(e.g. message is blocked).</p>
+  </section>
+
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+      Summary
+    </h1>
+
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:action/0" translate="no">action()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The action that was executed</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:alert_system_message_id/0" translate="no">alert_system_message_id()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The id of any system message that was generated as a result of the action</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:channel_id/0" translate="no">channel_id()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The id of the channel in which the content was posted</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:content/0" translate="no">content()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The content of the message which triggered the rule</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:guild_id/0" translate="no">guild_id()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The id of the guild in which the action was executed</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:matched_content/0" translate="no">matched_content()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The substring which matched the content</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:matched_keyword/0" translate="no">matched_keyword()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The keyword that was matched in the content</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:message_id/0" translate="no">message_id()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The id of the message which was posted</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:rule_id/0" translate="no">rule_id()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The id of the rule that was executed</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:rule_trigger_type/0" translate="no">rule_trigger_type()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The type of the rule that was executed</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:t/0" translate="no">t()</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:user_id/0" translate="no">user_id()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The id of the user which generated the content which triggered the rule</p></div>
+
+      </div>
+
+  </div>
+
+  </section>
+
+
+  <section id="types" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#types">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Types
+    </h1>
+    <div class="types-list">
+<section class="detail" id="t:action/0">
+
+  <div class="detail-header">
+    <a href="#t:action/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">action()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L29" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> action() :: <a href="Nostrum.Struct.AutoModerationRule.Action.html#t:t/0">Nostrum.Struct.AutoModerationRule.Action.t</a>()</pre>
+
+      </div>
+
+<p>The action that was executed</p>
+  </section>
+</section>
+<section class="detail" id="t:alert_system_message_id/0">
+
+  <div class="detail-header">
+    <a href="#t:alert_system_message_id/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">alert_system_message_id()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L59" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> alert_system_message_id() :: <a href="Nostrum.Struct.Message.html#t:id/0">Nostrum.Struct.Message.id</a>() | nil</pre>
+
+      </div>
+
+<p>The id of any system message that was generated as a result of the action</p><p>note: will not exist if the event does not correspond to an action that generates a system message</p>
+  </section>
+</section>
+<section class="detail" id="t:channel_id/0">
+
+  <div class="detail-header">
+    <a href="#t:channel_id/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">channel_id()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L45" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> channel_id() :: <a href="Nostrum.Struct.Channel.html#t:id/0">Nostrum.Struct.Channel.id</a>() | nil</pre>
+
+      </div>
+
+<p>The id of the channel in which the content was posted</p><p>note: this field may not exist if the content was blocked from being created</p>
+  </section>
+</section>
+<section class="detail" id="t:content/0">
+
+  <div class="detail-header">
+    <a href="#t:content/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">content()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L62" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> content() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
+
+      </div>
+
+<p>The content of the message which triggered the rule</p>
+  </section>
+</section>
+<section class="detail" id="t:guild_id/0">
+
+  <div class="detail-header">
+    <a href="#t:guild_id/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">guild_id()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L26" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> guild_id() :: <a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>()</pre>
+
+      </div>
+
+<p>The id of the guild in which the action was executed</p>
+  </section>
+</section>
+<section class="detail" id="t:matched_content/0">
+
+  <div class="detail-header">
+    <a href="#t:matched_content/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">matched_content()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L72" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> matched_content() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
+
+      </div>
+
+<p>The substring which matched the content</p>
+  </section>
+</section>
+<section class="detail" id="t:matched_keyword/0">
+
+  <div class="detail-header">
+    <a href="#t:matched_keyword/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">matched_keyword()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L67" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> matched_keyword() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
+
+      </div>
+
+<p>The keyword that was matched in the content</p>
+  </section>
+</section>
+<section class="detail" id="t:message_id/0">
+
+  <div class="detail-header">
+    <a href="#t:message_id/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">message_id()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L52" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> message_id() :: <a href="Nostrum.Struct.Message.html#t:id/0">Nostrum.Struct.Message.id</a>() | nil</pre>
+
+      </div>
+
+<p>The id of the message which was posted</p><p>note: this field will not exist if the content was blocked from being created</p>
+  </section>
+</section>
+<section class="detail" id="t:rule_id/0">
+
+  <div class="detail-header">
+    <a href="#t:rule_id/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">rule_id()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L32" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> rule_id() :: <a href="Nostrum.Struct.AutoModerationRule.html#t:id/0">Nostrum.Struct.AutoModerationRule.id</a>()</pre>
+
+      </div>
+
+<p>The id of the rule that was executed</p>
+  </section>
+</section>
+<section class="detail" id="t:rule_trigger_type/0">
+
+  <div class="detail-header">
+    <a href="#t:rule_trigger_type/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">rule_trigger_type()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L35" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> rule_trigger_type() :: <a href="Nostrum.Struct.AutoModerationRule.html#t:trigger_type/0">Nostrum.Struct.AutoModerationRule.trigger_type</a>()</pre>
+
+      </div>
+
+<p>The type of the rule that was executed</p>
+  </section>
+</section>
+<section class="detail" id="t:t/0">
+
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">t()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L74" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> t() :: %Nostrum.Struct.Event.AutoModerationRuleExecute{
+  action: <a href="#t:action/0">action</a>(),
+  alert_system_message_id: <a href="#t:alert_system_message_id/0">alert_system_message_id</a>(),
+  channel_id: <a href="#t:channel_id/0">channel_id</a>(),
+  content: <a href="#t:content/0">content</a>(),
+  guild_id: <a href="#t:guild_id/0">guild_id</a>(),
+  matched_content: <a href="#t:matched_content/0">matched_content</a>(),
+  matched_keyword: <a href="#t:matched_keyword/0">matched_keyword</a>(),
+  message_id: <a href="#t:message_id/0">message_id</a>(),
+  rule_id: <a href="#t:rule_id/0">rule_id</a>(),
+  rule_trigger_type: <a href="#t:rule_trigger_type/0">rule_trigger_type</a>(),
+  user_id: <a href="#t:user_id/0">user_id</a>()
+}</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="t:user_id/0">
+
+  <div class="detail-header">
+    <a href="#t:user_id/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">user_id()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/event/auto_moderation_rule_execute.ex#L38" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> user_id() :: <a href="Nostrum.Struct.User.html#t:id/0">Nostrum.Struct.User.id</a>()</pre>
+
+      </div>
+
+<p>The id of the user which generated the content which triggered the rule</p>
+  </section>
+</section>
+
+    </div>
+  </section>
+
+      <footer class="footer">
+
+          <p>
+            On Hex.pm:
+
+            <span class="line">
+              <a href="https://hex.pm/packages/nostrum/0.6.1" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/nostrum/0.6.1" class="line">Preview</a>
+
+                <a href="https://preview.hex.pm/preview/nostrum/0.6.1/show/lib/nostrum/struct/event/auto_moderation_rule_execute.ex">(current file)</a>
+
+            </span>
+
+            <button class="a-main line footer-button display-quick-switch">
+              Search
+            </button>
+          </p>
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+  </body>
+</html>
