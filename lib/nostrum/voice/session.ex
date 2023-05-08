@@ -3,7 +3,8 @@ defmodule Nostrum.Voice.Session do
 
   alias Nostrum.Cache.{ChannelCache, GuildCache}
   alias Nostrum.Constants
-  alias Nostrum.Shard.Stage.Producer
+  alias Nostrum.ConsumerGroup
+  alias Nostrum.Shard.Dispatch
   alias Nostrum.Struct.{VoiceState, VoiceWSState}
   alias Nostrum.Voice
   alias Nostrum.Voice.{Event, Opus, Payload}
@@ -39,7 +40,7 @@ defmodule Nostrum.Voice.Session do
 
     {:ok, :http} = :gun.await_up(worker, @timeout_connect)
     stream = :gun.ws_upgrade(worker, @gateway_qs)
-    await_ws_upgrade(worker, stream)
+    {:upgrade, ["websocket"], _} = :gun.await(worker, stream, @timeout_ws_upgrade)
 
     state = %VoiceWSState{
       conn_pid: self(),
@@ -58,20 +59,6 @@ defmodule Nostrum.Voice.Session do
     Logger.debug(fn -> "Voice Websocket connection up on worker #{inspect(worker)}" end)
     Voice.update_voice(voice.guild_id, session_pid: self())
     {:noreply, state}
-  end
-
-  defp await_ws_upgrade(worker, stream) do
-    receive do
-      {:gun_upgrade, ^worker, ^stream, [<<"websocket">>], _headers} ->
-        :ok
-
-      {:gun_error, ^worker, ^stream, reason} ->
-        exit({:ws_upgrade_failed, reason})
-    after
-      @timeout_ws_upgrade ->
-        Logger.error("Voice Websocket upgrade failed after #{@timeout_ws_upgrade / 1000} seconds")
-        exit(:timeout)
-    end
   end
 
   def get_ws_state(pid) do
@@ -132,7 +119,7 @@ defmodule Nostrum.Voice.Session do
 
   def handle_info({:gun_up, worker, _proto}, state) do
     stream = :gun.ws_upgrade(worker, @gateway_qs)
-    await_ws_upgrade(worker, stream)
+    {:upgrade, ["websocket"], _} = :gun.await(worker, stream, @timeout_ws_upgrade)
     Logger.warn("Reconnected after connection broke")
     {:noreply, %{state | heartbeat_ack: true}}
   end
@@ -149,7 +136,10 @@ defmodule Nostrum.Voice.Session do
         <<_::16, seq::integer-16, time::integer-32, ssrc::integer-32>> = header
         opus = Opus.strip_rtp_ext(payload)
         incoming_packet = Payload.voice_incoming_packet({{seq, time, ssrc}, opus})
-        Producer.notify(Producer, incoming_packet, state)
+
+        {incoming_packet, state}
+        |> Dispatch.handle()
+        |> ConsumerGroup.dispatch()
     end
 
     {:noreply, state}
@@ -179,7 +169,9 @@ defmodule Nostrum.Voice.Session do
     voice = Voice.get_voice(state.guild_id)
     voice_ready = Payload.voice_ready_payload(voice)
 
-    Producer.notify(Producer, voice_ready, state)
+    {voice_ready, state}
+    |> Dispatch.handle()
+    |> ConsumerGroup.dispatch()
 
     {:noreply, state}
   end
@@ -189,7 +181,9 @@ defmodule Nostrum.Voice.Session do
     speaking_update = Payload.speaking_update_payload(voice, timed_out)
     payload = Payload.speaking_payload(voice)
 
-    Producer.notify(Producer, speaking_update, state)
+    {speaking_update, state}
+    |> Dispatch.handle()
+    |> ConsumerGroup.dispatch()
 
     :ok = :gun.ws_send(state.conn, state.stream, {:text, payload})
     {:noreply, state}

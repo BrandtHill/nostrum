@@ -12,7 +12,6 @@ the following -
  * [API](api.html) - Methods to interact with the RESTful API (and some other goodies).
  * [State](state.html) - `Caches` that hold the state of Discord that your bot can see.
  * [Events](events.html) - How you can handle real time events that your bot can see.
- * [Custom Consumers](consumers.html) - Information on defining custom consumer processes.
  * [Voice](voice.html) - Playing audio through Discord voice channels.
 
 ### Why Elixir?
@@ -49,14 +48,14 @@ have more errors.
 Add Nostrum as a dependency:
 
  *Stable*
-```Elixir
+```elixir
 def deps do
-  [{:nostrum, "~> 0.6"}]
+  [{:nostrum, "~> 0.7"}]
 end
 ```
 
  *Dev*
-```Elixir
+```elixir
 def deps do
   [{:nostrum, git: "https://github.com/Kraigie/nostrum.git"}]
 end
@@ -66,7 +65,7 @@ Edit or create your config file:
 
 The file should be located at `/config/config.exs`. To run Nostrum you need the
 following two fields:
-```Elixir
+```elixir
 config :nostrum,
   token: "666"  # The token of your bot as a string
 ```
@@ -89,10 +88,6 @@ The following fields are also supported:
  This is included primarily for debugging and testing purposes. Defaults to `false`.
  - `log_dispatch_events` - This will log dispatch events as they are received from the gateway.
  This is included primarily for debugging and testing purposes. Defaults to `false`. 
- - `custom_consumer` - For use when creating custom consumer processes. This disables
- all caching done internally, in lieu of sending dispatch events to the processes
- you specify. For more information see [creating custom consumers](consumers.html).
- Defaults to `false`.
  - `request_guild_members` - This will perform member chunking to retrieve a complete list of
  members for all guilds. This will increase start up time and memory usage by quite a bit.
  Defaults to `false`.
@@ -106,7 +101,7 @@ The following fields are also supported:
 
 By default, Nostrum logs a lot of data using `Logger`. If you want to ignore
 Logger debug data, include the following:
-```Elixir
+```elixir
 config :logger,
   level: :warn
 ```
@@ -117,7 +112,7 @@ Nostrum exposes the following metadata fields through logger:
  - `channel` - Name of the channel on which the voice connection event occurred
 
 To enable this metadata, logger can be configured as such:
-```Elixir
+```elixir
 config :logger, :console,
   metadata: [:shard, :guild, :channel]
 ```  

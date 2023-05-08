@@ -181,6 +181,20 @@ defmodule Nostrum.Util do
     casted
   end
 
+  @doc """
+  Converts possibly nil ISO8601 timestamp to unix time.
+  """
+  @spec maybe_to_unixtime(String.t() | nil) :: pos_integer() | nil
+  def maybe_to_unixtime(nil) do
+    nil
+  end
+
+  def maybe_to_unixtime(stamp) do
+    stamp
+    |> maybe_to_datetime()
+    |> DateTime.to_unix()
+  end
+
   # Generic casting function
   @doc false
   @spec cast(term, module | {:list, term} | {:struct, term} | {:index, [term], term}) :: term
@@ -267,6 +281,7 @@ defmodule Nostrum.Util do
       :audio,
       :audio_codec,
       :audio_ssrc,
+      :burst,
       :channel_overrides,
       :convert_emoticons,
       :detect_platform_accounts,
@@ -283,6 +298,7 @@ defmodule Nostrum.Util do
       :locale,
       :max_bitrate,
       :media_session_id,
+      :message_author_id,
       :message_display_compact,
       :message_notifications,
       :mobile_push,

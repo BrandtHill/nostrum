@@ -15,6 +15,10 @@ defmodule Nostrum.Shard.Session do
   @timeout_connect 10_000
   # Maximum time the websocket upgrade may take, in milliseconds.
   @timeout_ws_upgrade 10_000
+  # Messages to buffer at a time. Decremented by :gun by 1 for every message we
+  # receive. If this reaches zero, `:gun` will stop reading events from
+  # upstream. Equivalent to setting `{active, false}` on the socket at `0`.
+  @standard_flow 10
 
   def update_status(pid, status, game, stream, type) do
     {idle_since, afk} =
@@ -59,8 +63,8 @@ defmodule Nostrum.Shard.Session do
     gun_opts = %{protocols: [:http], retry: 1_000_000_000, tls_opts: Constants.gun_tls_opts()}
     {:ok, worker} = :gun.open(:binary.bin_to_list(gateway), 443, gun_opts)
     {:ok, :http} = :gun.await_up(worker, @timeout_connect)
-    stream = :gun.ws_upgrade(worker, @gateway_qs)
-    await_ws_upgrade(worker, stream)
+    stream = :gun.ws_upgrade(worker, @gateway_qs, [], %{flow: @standard_flow})
+    {:upgrade, ["websocket"], _} = :gun.await(worker, stream, @timeout_ws_upgrade)
 
     zlib_context = :zlib.open()
     :zlib.inflateInit(zlib_context)
@@ -81,26 +85,6 @@ defmodule Nostrum.Shard.Session do
     {:noreply, state}
   end
 
-  defp await_ws_upgrade(worker, stream) do
-    # TODO: Once gun 2.0 is released, the block below can be simplified to:
-    # {:upgrade, [<<"websocket">>], _headers} = :gun.await(worker, stream, @timeout_ws_upgrade)
-
-    receive do
-      {:gun_upgrade, ^worker, ^stream, [<<"websocket">>], _headers} ->
-        :ok
-
-      {:gun_error, ^worker, ^stream, reason} ->
-        exit({:ws_upgrade_failed, reason})
-    after
-      @timeout_ws_upgrade ->
-        Logger.error(fn ->
-          "Cannot upgrade connection to Websocket after #{@timeout_ws_upgrade / 1000} seconds"
-        end)
-
-        exit(:timeout)
-    end
-  end
-
   def handle_info({:gun_ws, _worker, stream, {:binary, frame}}, state) do
     payload =
       state.zlib_ctx
@@ -108,16 +92,18 @@ defmodule Nostrum.Shard.Session do
       |> :erlang.iolist_to_binary()
       |> :erlang.binary_to_term()
 
-    state = %{state | seq: payload.s || state.seq}
+    updated_state = %{state | seq: payload.s || state.seq}
 
     from_handle =
       payload.op
       |> Constants.atom_from_opcode()
-      |> Event.handle(payload, state)
+      |> Event.handle(payload, updated_state)
+
+    :ok = :gun.update_flow(updated_state.conn, stream, @standard_flow)
 
     case from_handle do
       {new_state, reply} ->
-        :ok = :gun.ws_send(state.conn, stream, {:binary, reply})
+        :ok = :gun.ws_send(updated_state.conn, stream, {:binary, reply})
         {:noreply, new_state}
 
       new_state ->
@@ -147,8 +133,8 @@ defmodule Nostrum.Shard.Session do
 
   def handle_info({:gun_up, worker, _proto}, state) do
     :ok = :zlib.inflateReset(state.zlib_ctx)
-    stream = :gun.ws_upgrade(worker, @gateway_qs)
-    await_ws_upgrade(worker, stream)
+    stream = :gun.ws_upgrade(worker, @gateway_qs, [], %{flow: @standard_flow})
+    {:upgrade, ["websocket"], _} = :gun.await(worker, stream, @timeout_ws_upgrade)
     Logger.warn("Reconnected after connection broke")
     {:noreply, %{state | heartbeat_ack: true}}
   end

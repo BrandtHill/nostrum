@@ -6,8 +6,12 @@
 An [Elixir](http://elixir-lang.org/) library for the Discord API.
 
 It is highly recommended to check out the
-[documentation](https://kraigie.github.io/nostrum/) first. It includes all of the
+[documentation](https://hexdocs.pm/nostrum/) first. It includes all of the
 information listed here and more.
+
+**This README is for the master branch**, which includes recent developments
+and may be unstable. If you want to live on the edge regardless, you can check
+the [pre-release documentation](https://kraigie.github.io/nostrum/).
 
 ## Installation
 
@@ -16,7 +20,7 @@ version from Hex:
 
 ```elixir
 def deps do
-  [{:nostrum, "~> 0.6"}]
+  [{:nostrum, "~> 0.7"}]
 end
 ```
 
@@ -56,15 +60,11 @@ The below module needs to be started in some fashion to capture events. See
 [here](https://github.com/Kraigie/nostrum/blob/master/examples/event_consumer.ex)
 for a full example.
 
-```Elixir
+```elixir
 defmodule ExampleConsumer do
   use Nostrum.Consumer
 
   alias Nostrum.Api
-
-  def start_link do
-    Consumer.start_link(__MODULE__)
-  end
 
   def handle_event({:MESSAGE_CREATE, msg, _ws_state}) do
     case msg.content do
@@ -83,10 +83,24 @@ defmodule ExampleConsumer do
 end
 ```
 
-Although it's recommended to run under a supervisor, you could start it from `iex`.
-```Elixir
-  iex()> ExampleConsumer.start
-  {:ok, #PID<0.208.0>}
+You should start this under a supervisor or application:
+
+```elixir
+defmodule MyApp.Application do
+  use Application
+
+  def start(_type, _args) do
+    children = [ExampleConsumer]
+    Supervisor.start_link(children, strategy: :one_for_one)
+  end
+end
+```
+
+For testing, you can start it from `iex`:
+
+```elixir
+iex()> ExampleConsumer.start_link()
+{:ok, #PID<0.208.0>}
 ```
 
 ## Getting Help

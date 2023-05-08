@@ -5,7 +5,7 @@ defmodule Nostrum.Mixfile do
   def project do
     [
       app: :nostrum,
-      version: "0.6.1",
+      version: "0.7.0-rc1",
       elixir: "~> 1.11",
       elixirc_paths: elixirc_paths(Mix.env()),
       build_embedded: Mix.env() == :prod,
@@ -41,21 +41,20 @@ defmodule Nostrum.Mixfile do
       groups_for_modules: groups_for_modules(),
       groups_for_functions: groups_for_functions(),
       source_ref: "master",
-      assets: "docs/assets",
-      nest_modules_by_prefix: [Nostrum.Cache]
+      assets: "guides/assets",
+      nest_modules_by_prefix: [Nostrum.Cache, Nostrum.Constants, Nostrum.Struct]
     ]
   end
 
   def extras do
     [
-      "docs/static/Intro.md",
-      "docs/static/API.md",
-      "docs/static/Application Commands.md",
-      "docs/static/State.md",
-      "docs/static/Events.md",
-      "docs/static/Consumers.md",
-      "docs/static/Voice.md",
-      "docs/static/Gateway Intents.md"
+      "guides/Intro.md",
+      "guides/API.md",
+      "guides/Application Commands.md",
+      "guides/State.md",
+      "guides/Events.md",
+      "guides/Voice.md",
+      "guides/Gateway Intents.md"
     ]
   end
 
@@ -69,6 +68,9 @@ defmodule Nostrum.Mixfile do
       ],
       Structs: [
         ~r/Nostrum.Struct/
+      ],
+      Constants: [
+        ~r/Nostrum.Constants/
       ]
     ]
   end
@@ -97,14 +99,13 @@ defmodule Nostrum.Mixfile do
   defp deps do
     [
       {:jason, "~> 1.2"},
-      {:gun, "== 2.0.1", hex: :remedy_gun},
+      {:gun, "~> 2.0"},
       {:certifi, "~> 2.8"},
       {:kcl, "~> 1.4"},
       {:mime, "~> 1.6 or ~> 2.0"},
       {:ex_doc, "~> 0.28", only: :dev},
       {:credo, "~> 1.4", only: [:dev, :test]},
       {:dialyxir, "~> 1.1", only: [:dev], runtime: false},
-      {:gen_stage, "~> 0.11 or ~> 1.0"},
       {:recon, "~> 2.3", only: :dev, optional: true}
     ]
   end
