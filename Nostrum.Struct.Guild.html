@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.29.0">
-    <meta name="project" content="Nostrum v0.6.1">
+    <meta name="generator" content="ExDoc v0.29.4">
+    <meta name="project" content="Nostrum v0.7.0">
 
-    <title>Nostrum.Struct.Guild — Nostrum v0.6.1</title>
-    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
+    <title>Nostrum.Struct.Guild — Nostrum v0.7.0</title>
+    <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
+
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
-    <script src="dist/sidebar_items-0EDC7626.js"></script>
+    <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
+    <script src="dist/sidebar_items-7A762AB3.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/html-XN2TSG4M.js"></script>
+    <script async src="dist/html-JDI3AVDD.js"></script>
 
 
   </head>
@@ -51,7 +52,7 @@
     </button>
     <label class="search-label">
       <p class="sr-only">Search</p>
-      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
     </label>
   </form>
 
@@ -66,9 +67,9 @@
       <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
 Nostrum
       </a>
-      <strong class="sidebar-projectVersion" translate="no">
-        v0.6.1
-      </strong>
+      <div class="sidebar-projectVersion" translate="no">
+        v0.7.0
+      </div>
     </div>
     <ul class="sidebar-listNav">
       <li><a id="extras-list-link" href="#full-list">Pages</a></li>
@@ -82,7 +83,7 @@ Nostrum
   </div>
 
   <div class="gradient"></div>
-  <ul id="full-list" class="sidebar-fullList"></ul>
+  <ul id="full-list"></ul>
 </section>
 
 <section class="content">
@@ -91,19 +92,19 @@ Nostrum
     <div id="content" class="content-inner">
 
 <h1>
-<button class="settings display-settings">
+<button class="icon-action display-settings">
   <i class="ri-settings-3-line"></i>
   <span class="sr-only">Settings</span>
 </button>
 
 
-    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Nostrum.Struct.Guild</span> 
-  <small class="app-vsn" translate="no">(Nostrum v0.6.1)</small>
+  <small class="app-vsn" translate="no">(Nostrum v0.7.0)</small>
 
 </h1>
 
@@ -121,400 +122,388 @@ Nostrum
       </a>
       Summary
     </h1>
+<div class="summary-types summary">
+  <h2>
+    <a href="#types">Types</a>
+  </h2>
 
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:afk_channel_id/0" translate="no">afk_channel_id()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>The id of the guild's afk channel</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:afk_channel_id/0" translate="no">afk_channel_id()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:afk_timeout/0" translate="no">afk_timeout()</a>
+        <div class="summary-synopsis"><p>The id of the guild's afk channel</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>The time someone must be afk before being moved</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:application_id/0" translate="no">application_id()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Application id of the guild creator if it is bot created.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:afk_timeout/0" translate="no">afk_timeout()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:available_guild/0" translate="no">available_guild()</a>
+        <div class="summary-synopsis"><p>The time someone must be afk before being moved</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>A <a href="Nostrum.Struct.Guild.html#content"><code class="inline">Nostrum.Struct.Guild</code></a> that is fully available.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:channels/0" translate="no">channels()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>List of channels</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:application_id/0" translate="no">application_id()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:default_message_notifications/0" translate="no">default_message_notifications()</a>
+        <div class="summary-synopsis"><p>Application id of the guild creator if it is bot created.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Default message notifications level.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:emojis/0" translate="no">emojis()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>List of emojis</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:available_guild/0" translate="no">available_guild()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:explicit_content_filter/0" translate="no">explicit_content_filter()</a>
+        <div class="summary-synopsis"><p>A <a href="Nostrum.Struct.Guild.html#content"><code class="inline">Nostrum.Struct.Guild</code></a> that is fully available.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Explicit content filter level.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:features/0" translate="no">features()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>List of guild features</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:channels/0" translate="no">channels()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:guild_scheduled_events/0" translate="no">guild_scheduled_events()</a>
+        <div class="summary-synopsis"><p>List of channels</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>List of scheduled events</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:icon/0" translate="no">icon()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>The hash of the guild's icon</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:default_message_notifications/0" translate="no">default_message_notifications()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:id/0" translate="no">id()</a>
+        <div class="summary-synopsis"><p>Default message notifications level.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>The guild's id</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:joined_at/0" translate="no">joined_at()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Date the bot user joined the guild</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:emojis/0" translate="no">emojis()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:large/0" translate="no">large()</a>
+        <div class="summary-synopsis"><p>List of emojis</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Whether the guild is considered 'large'</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:member_count/0" translate="no">member_count()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Total number of members in the guild</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:explicit_content_filter/0" translate="no">explicit_content_filter()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:members/0" translate="no">members()</a>
+        <div class="summary-synopsis"><p>Explicit content filter level.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>List of members</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:mfa_level/0" translate="no">mfa_level()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Required MFA level of the guild</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:features/0" translate="no">features()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:name/0" translate="no">name()</a>
+        <div class="summary-synopsis"><p>List of guild features</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>The name of the guild.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:owner_id/0" translate="no">owner_id()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>The id of the guild owner</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:guild_scheduled_events/0" translate="no">guild_scheduled_events()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:public_updates_channel_id/0" translate="no">public_updates_channel_id()</a>
+        <div class="summary-synopsis"><p>List of scheduled events</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>The id of the channel where admins and moderators receive notices from Discord. This
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:icon/0" translate="no">icon()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>The hash of the guild's icon</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:id/0" translate="no">id()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>The guild's id</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:joined_at/0" translate="no">joined_at()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Date the bot user joined the guild</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:large/0" translate="no">large()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Whether the guild is considered 'large'</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:member_count/0" translate="no">member_count()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Total number of members in the guild</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:mfa_level/0" translate="no">mfa_level()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Required MFA level of the guild</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:name/0" translate="no">name()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>The name of the guild.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:owner_id/0" translate="no">owner_id()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>The id of the guild owner</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:public_updates_channel_id/0" translate="no">public_updates_channel_id()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>The id of the channel where admins and moderators receive notices from Discord. This
 is only available to guilds that contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code class="inline">features/0</code></a>.</p></div>
 
-      </div>
+    </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:region/0" translate="no">region()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>The id of the voice region</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:region/0" translate="no">region()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:rest_guild/0" translate="no">rest_guild()</a>
+        <div class="summary-synopsis"><p>The id of the voice region</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>A <a href="Nostrum.Struct.Guild.html#content"><code class="inline">Nostrum.Struct.Guild</code></a> that is sent on guild-specific rest endpoints.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:roles/0" translate="no">roles()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>List of roles</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:rest_guild/0" translate="no">rest_guild()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:rules_channel_id/0" translate="no">rules_channel_id()</a>
+        <div class="summary-synopsis"><p>A <a href="Nostrum.Struct.Guild.html#content"><code class="inline">Nostrum.Struct.Guild</code></a> that is sent on guild-specific rest endpoints.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>The id of the channel that is used for rules. This is only available to guilds that
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:roles/0" translate="no">roles()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>List of roles</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:rules_channel_id/0" translate="no">rules_channel_id()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>The id of the channel that is used for rules. This is only available to guilds that
 contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code class="inline">features/0</code></a>.</p></div>
 
-      </div>
+    </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:splash/0" translate="no">splash()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>The hash of the guild's splash</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:splash/0" translate="no">splash()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:system_channel_id/0" translate="no">system_channel_id()</a>
+        <div class="summary-synopsis"><p>The hash of the guild's splash</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>The id of the channel to which system messages are sent.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:t/0" translate="no">t()</a>
-
-        </div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:system_channel_id/0" translate="no">system_channel_id()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:threads/0" translate="no">threads()</a>
+        <div class="summary-synopsis"><p>The id of the channel to which system messages are sent.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>All active threads in the guild that the current user has permission to view</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:unavailable/0" translate="no">unavailable()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Whether the guild is available</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:t/0" translate="no">t()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:unavailable_guild/0" translate="no">unavailable_guild()</a>
+    </div>
 
-        </div>
-
-          <div class="summary-synopsis"><p>A <a href="Nostrum.Struct.Guild.html#content"><code class="inline">Nostrum.Struct.Guild</code></a> that is unavailable.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:threads/0" translate="no">threads()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:user_guild/0" translate="no">user_guild()</a>
+        <div class="summary-synopsis"><p>All active threads in the guild that the current user has permission to view</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>A <a href="Nostrum.Struct.Guild.html#content"><code class="inline">Nostrum.Struct.Guild</code></a> that is sent on user-specific rest endpoints.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:vanity_url_code/0" translate="no">vanity_url_code()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Guild invite vanity URL</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:unavailable/0" translate="no">unavailable()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:verification_level/0" translate="no">verification_level()</a>
+        <div class="summary-synopsis"><p>Whether the guild is available</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>The level of verification</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:voice_states/0" translate="no">voice_states()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>List of voice states as maps</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:unavailable_guild/0" translate="no">unavailable_guild()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:widget_channel_id/0" translate="no">widget_channel_id()</a>
+        <div class="summary-synopsis"><p>A <a href="Nostrum.Struct.Guild.html#content"><code class="inline">Nostrum.Struct.Guild</code></a> that is unavailable.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>The channel id for the server widget.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:widget_enabled/0" translate="no">widget_enabled()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Whether or not the server widget is enabled.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:user_guild/0" translate="no">user_guild()</a>
 
       </div>
 
-  </div>
+        <div class="summary-synopsis"><p>A <a href="Nostrum.Struct.Guild.html#content"><code class="inline">Nostrum.Struct.Guild</code></a> that is sent on user-specific rest endpoints.</p></div>
 
-  <div class="summary-functions summary">
-    <h2>
-      <a href="#functions">Functions</a>
-    </h2>
+    </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#icon_url/2" translate="no">icon_url(guild, image_format \\ &quot;webp&quot;)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Returns the URL of a guild's icon, or <code class="inline">nil</code> if there is no icon.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:vanity_url_code/0" translate="no">vanity_url_code()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#splash_url/2" translate="no">splash_url(guild, image_format \\ &quot;webp&quot;)</a>
+        <div class="summary-synopsis"><p>Guild invite vanity URL</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Returns the URL of a guild's splash, or <code class="inline">nil</code> if there is no splash.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:verification_level/0" translate="no">verification_level()</a>
 
       </div>
 
-  </div>
+        <div class="summary-synopsis"><p>The level of verification</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:voice_states/0" translate="no">voice_states()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>List of voice states as maps</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:widget_channel_id/0" translate="no">widget_channel_id()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>The channel id for the server widget.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:widget_enabled/0" translate="no">widget_enabled()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Whether or not the server widget is enabled.</p></div>
+
+    </div>
+
+</div>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#icon_url/2" translate="no">icon_url(guild, image_format \\ &quot;webp&quot;)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the URL of a guild's icon, or <code class="inline">nil</code> if there is no icon.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#splash_url/2" translate="no">splash_url(guild, image_format \\ &quot;webp&quot;)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the URL of a guild's splash, or <code class="inline">nil</code> if there is no splash.</p></div>
+
+    </div>
+
+</div>
 
   </section>
 
@@ -537,7 +526,7 @@ Types
     </a>
     <h1 class="signature" translate="no">afk_channel_id()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L74" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -565,7 +554,7 @@ Types
     </a>
     <h1 class="signature" translate="no">afk_timeout()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L77" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -593,7 +582,7 @@ Types
     </a>
     <h1 class="signature" translate="no">application_id()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L109" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L107" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -621,7 +610,7 @@ Types
     </a>
     <h1 class="signature" translate="no">available_guild()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L282" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L274" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -648,7 +637,6 @@ Types
   joined_at: <a href="#t:joined_at/0">joined_at</a>(),
   large: <a href="#t:large/0">large</a>(),
   member_count: <a href="#t:member_count/0">member_count</a>(),
-  members: <a href="#t:members/0">members</a>(),
   mfa_level: <a href="#t:mfa_level/0">mfa_level</a>(),
   name: <a href="#t:name/0">name</a>(),
   owner_id: <a href="#t:owner_id/0">owner_id</a>(),
@@ -681,7 +669,7 @@ Types
     </a>
     <h1 class="signature" translate="no">channels()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L157" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L152" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -710,7 +698,7 @@ Types
     </a>
     <h1 class="signature" translate="no">default_message_notifications()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L87" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L85" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -738,7 +726,7 @@ Types
     </a>
     <h1 class="signature" translate="no">emojis()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L96" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -766,7 +754,7 @@ Types
     </a>
     <h1 class="signature" translate="no">explicit_content_filter()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L90" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -794,7 +782,7 @@ Types
     </a>
     <h1 class="signature" translate="no">features()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L101" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L99" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -822,7 +810,7 @@ Types
     </a>
     <h1 class="signature" translate="no">guild_scheduled_events()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L160" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L155" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -850,7 +838,7 @@ Types
     </a>
     <h1 class="signature" translate="no">icon()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L62" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -878,7 +866,7 @@ Types
     </a>
     <h1 class="signature" translate="no">id()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L56" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -906,7 +894,7 @@ Types
     </a>
     <h1 class="signature" translate="no">joined_at()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L139" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L137" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -934,7 +922,7 @@ Types
     </a>
     <h1 class="signature" translate="no">large()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L140" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -962,7 +950,7 @@ Types
     </a>
     <h1 class="signature" translate="no">member_count()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L146" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -981,35 +969,6 @@ Types
 <p>Total number of members in the guild</p>
   </section>
 </section>
-<section class="detail" id="t:members/0">
-
-  <div class="detail-header">
-    <a href="#t:members/0" class="detail-link" title="Link to this type">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <h1 class="signature" translate="no">members()</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L154" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@type</span> members() ::
-  %{required(<a href="Nostrum.Struct.User.html#t:id/0">Nostrum.Struct.User.id</a>()) =&gt; <a href="Nostrum.Struct.Guild.Member.html#t:t/0">Nostrum.Struct.Guild.Member.t</a>()} | nil</pre>
-
-      </div>
-
-<p>List of members</p>
-  </section>
-</section>
 <section class="detail" id="t:mfa_level/0">
 
   <div class="detail-header">
@@ -1019,7 +978,7 @@ Types
     </a>
     <h1 class="signature" translate="no">mfa_level()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L102" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1047,7 +1006,7 @@ Types
     </a>
     <h1 class="signature" translate="no">name()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L59" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1075,7 +1034,7 @@ Types
     </a>
     <h1 class="signature" translate="no">owner_id()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L68" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1103,7 +1062,7 @@ Types
     </a>
     <h1 class="signature" translate="no">public_updates_channel_id()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L136" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L134" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1132,7 +1091,7 @@ is only available to guilds that contain <code class="inline">PUBLIC</code> in <
     </a>
     <h1 class="signature" translate="no">region()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L73" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L71" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1160,7 +1119,7 @@ is only available to guilds that contain <code class="inline">PUBLIC</code> in <
     </a>
     <h1 class="signature" translate="no">rest_guild()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L202" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1187,7 +1146,6 @@ is only available to guilds that contain <code class="inline">PUBLIC</code> in <
   joined_at: nil,
   large: nil,
   member_count: nil,
-  members: nil,
   mfa_level: <a href="#t:mfa_level/0">mfa_level</a>(),
   name: <a href="#t:name/0">name</a>(),
   owner_id: <a href="#t:owner_id/0">owner_id</a>(),
@@ -1220,7 +1178,7 @@ is only available to guilds that contain <code class="inline">PUBLIC</code> in <
     </a>
     <h1 class="signature" translate="no">roles()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L95" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L93" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1250,7 +1208,7 @@ is only available to guilds that contain <code class="inline">PUBLIC</code> in <
     </a>
     <h1 class="signature" translate="no">rules_channel_id()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L130" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L128" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1279,7 +1237,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">splash()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L65" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1307,7 +1265,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">system_channel_id()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L122" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1335,7 +1293,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">t()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L316" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L307" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1363,7 +1321,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">threads()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L167" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L162" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1394,7 +1352,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">unavailable()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L145" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L143" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1422,7 +1380,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">unavailable_guild()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L245" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L238" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1449,7 +1407,6 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
   joined_at: nil,
   large: nil,
   member_count: nil,
-  members: nil,
   mfa_level: nil,
   name: nil,
   owner_id: nil,
@@ -1482,7 +1439,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">user_guild()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L172" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L167" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1509,7 +1466,6 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
   joined_at: nil,
   large: nil,
   member_count: nil,
-  members: nil,
   mfa_level: nil,
   name: <a href="#t:name/0">name</a>(),
   owner_id: nil,
@@ -1542,7 +1498,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">vanity_url_code()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L163" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L158" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1570,7 +1526,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">verification_level()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L82" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L80" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1598,7 +1554,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">voice_states()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L151" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L149" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1626,7 +1582,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">widget_channel_id()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L119" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L117" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1654,7 +1610,7 @@ contain <code class="inline">PUBLIC</code> in <a href="#t:features/0"><code clas
     </a>
     <h1 class="signature" translate="no">widget_enabled()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L114" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L112" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1697,7 +1653,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">icon_url(guild, image_format \\ &quot;webp&quot;)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L343" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L334" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1719,16 +1675,16 @@ Functions
   </a>
   Examples
 </h2>
-<pre><code class="Elixir">iex&gt; guild = %Nostrum.Struct.Guild{icon: &quot;86e39f7ae3307e811784e2ffd11a7310&quot;,
-...&gt;                               id: 41771983423143937}
-iex&gt; Nostrum.Struct.Guild.icon_url(guild)
-&quot;https://cdn.discordapp.com/icons/41771983423143937/86e39f7ae3307e811784e2ffd11a7310.webp&quot;
-iex&gt; Nostrum.Struct.Guild.icon_url(guild, &quot;png&quot;)
-&quot;https://cdn.discordapp.com/icons/41771983423143937/86e39f7ae3307e811784e2ffd11a7310.png&quot;
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">guild</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="7650038229-1">%</span><span class="nc" data-group-id="7650038229-1">Nostrum.Struct.Guild</span><span class="p" data-group-id="7650038229-1">{</span><span class="ss">icon</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;86e39f7ae3307e811784e2ffd11a7310&quot;</span><span class="p">,</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">                              </span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">41771983423143937</span><span class="p" data-group-id="7650038229-1">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.Guild</span><span class="o">.</span><span class="n">icon_url</span><span class="p" data-group-id="7650038229-2">(</span><span class="n">guild</span><span class="p" data-group-id="7650038229-2">)</span><span class="w">
+</span><span class="s">&quot;https://cdn.discordapp.com/icons/41771983423143937/86e39f7ae3307e811784e2ffd11a7310.webp&quot;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.Guild</span><span class="o">.</span><span class="n">icon_url</span><span class="p" data-group-id="7650038229-3">(</span><span class="n">guild</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;png&quot;</span><span class="p" data-group-id="7650038229-3">)</span><span class="w">
+</span><span class="s">&quot;https://cdn.discordapp.com/icons/41771983423143937/86e39f7ae3307e811784e2ffd11a7310.png&quot;</span><span class="w">
 
-iex&gt; guild = %Nostrum.Struct.Guild{icon: nil}
-iex&gt; Nostrum.Struct.Guild.icon_url(guild)
-nil</code></pre>
+</span><span class="gp unselectable">iex&gt; </span><span class="n">guild</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="7650038229-4">%</span><span class="nc" data-group-id="7650038229-4">Nostrum.Struct.Guild</span><span class="p" data-group-id="7650038229-4">{</span><span class="ss">icon</span><span class="p">:</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="7650038229-4">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.Guild</span><span class="o">.</span><span class="n">icon_url</span><span class="p" data-group-id="7650038229-5">(</span><span class="n">guild</span><span class="p" data-group-id="7650038229-5">)</span><span class="w">
+</span><span class="no">nil</span></code></pre>
   </section>
 </section>
 <section class="detail" id="splash_url/2">
@@ -1742,7 +1698,7 @@ nil</code></pre>
     </a>
     <h1 class="signature" translate="no">splash_url(guild, image_format \\ &quot;webp&quot;)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L370" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/guild.ex#L361" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1764,16 +1720,16 @@ nil</code></pre>
   </a>
   Examples
 </h2>
-<pre><code class="Elixir">iex&gt; guild = %Nostrum.Struct.Guild{splash: &quot;86e39f7ae3307e811784e2ffd11a7310&quot;,
-...&gt;                               id: 41771983423143937}
-iex&gt; Nostrum.Struct.Guild.splash_url(guild)
-&quot;https://cdn.discordapp.com/splashes/41771983423143937/86e39f7ae3307e811784e2ffd11a7310.webp&quot;
-iex&gt; Nostrum.Struct.Guild.splash_url(guild, &quot;png&quot;)
-&quot;https://cdn.discordapp.com/splashes/41771983423143937/86e39f7ae3307e811784e2ffd11a7310.png&quot;
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">guild</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="1278673356-1">%</span><span class="nc" data-group-id="1278673356-1">Nostrum.Struct.Guild</span><span class="p" data-group-id="1278673356-1">{</span><span class="ss">splash</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;86e39f7ae3307e811784e2ffd11a7310&quot;</span><span class="p">,</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">                              </span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">41771983423143937</span><span class="p" data-group-id="1278673356-1">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.Guild</span><span class="o">.</span><span class="n">splash_url</span><span class="p" data-group-id="1278673356-2">(</span><span class="n">guild</span><span class="p" data-group-id="1278673356-2">)</span><span class="w">
+</span><span class="s">&quot;https://cdn.discordapp.com/splashes/41771983423143937/86e39f7ae3307e811784e2ffd11a7310.webp&quot;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.Guild</span><span class="o">.</span><span class="n">splash_url</span><span class="p" data-group-id="1278673356-3">(</span><span class="n">guild</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;png&quot;</span><span class="p" data-group-id="1278673356-3">)</span><span class="w">
+</span><span class="s">&quot;https://cdn.discordapp.com/splashes/41771983423143937/86e39f7ae3307e811784e2ffd11a7310.png&quot;</span><span class="w">
 
-iex&gt; guild = %Nostrum.Struct.Guild{splash: nil}
-iex&gt; Nostrum.Struct.Guild.splash_url(guild)
-nil</code></pre>
+</span><span class="gp unselectable">iex&gt; </span><span class="n">guild</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="1278673356-4">%</span><span class="nc" data-group-id="1278673356-4">Nostrum.Struct.Guild</span><span class="p" data-group-id="1278673356-4">{</span><span class="ss">splash</span><span class="p">:</span><span class="w"> </span><span class="no">nil</span><span class="p" data-group-id="1278673356-4">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.Guild</span><span class="o">.</span><span class="n">splash_url</span><span class="p" data-group-id="1278673356-5">(</span><span class="n">guild</span><span class="p" data-group-id="1278673356-5">)</span><span class="w">
+</span><span class="no">nil</span></code></pre>
   </section>
 </section>
 
@@ -1781,26 +1737,32 @@ nil</code></pre>
   </section>
 
       <footer class="footer">
-
-          <p>
-            On Hex.pm:
+        <p>
 
             <span class="line">
-              <a href="https://hex.pm/packages/nostrum/0.6.1" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/nostrum/0.6.1" class="line">Preview</a>
+              <a href="https://hex.pm/packages/nostrum/0.7.0" class="footer-hex-package">Hex Package</a>
 
-                <a href="https://preview.hex.pm/preview/nostrum/0.6.1/show/lib/nostrum/struct/guild.ex">(current file)</a>
+              <a href="https://preview.hex.pm/preview/nostrum/0.7.0">Hex Preview</a>
+
+                (<a href="https://preview.hex.pm/preview/nostrum/0.7.0/show/lib/nostrum/struct/guild.ex">current file</a>)
 
             </span>
 
-            <button class="a-main line footer-button display-quick-switch">
-              Search
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+              Search HexDocs
             </button>
-          </p>
 
-        <p>
+              <a href="Nostrum.epub" title="ePub version">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.4) for the
 
             <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 

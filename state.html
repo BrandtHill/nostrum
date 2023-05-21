@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.29.0">
-    <meta name="project" content="Nostrum v0.6.1">
+    <meta name="generator" content="ExDoc v0.29.4">
+    <meta name="project" content="Nostrum v0.7.0">
 
-    <title>State — Nostrum v0.6.1</title>
-    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
+    <title>State — Nostrum v0.7.0</title>
+    <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
+
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
-    <script src="dist/sidebar_items-0EDC7626.js"></script>
+    <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
+    <script src="dist/sidebar_items-7A762AB3.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/html-XN2TSG4M.js"></script>
+    <script async src="dist/html-JDI3AVDD.js"></script>
 
 
   </head>
@@ -51,7 +52,7 @@
     </button>
     <label class="search-label">
       <p class="sr-only">Search</p>
-      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
     </label>
   </form>
 
@@ -66,9 +67,9 @@
       <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
 Nostrum
       </a>
-      <strong class="sidebar-projectVersion" translate="no">
-        v0.6.1
-      </strong>
+      <div class="sidebar-projectVersion" translate="no">
+        v0.7.0
+      </div>
     </div>
     <ul class="sidebar-listNav">
       <li><a id="extras-list-link" href="#full-list">Pages</a></li>
@@ -82,7 +83,7 @@ Nostrum
   </div>
 
   <div class="gradient"></div>
-  <ul id="full-list" class="sidebar-fullList"></ul>
+  <ul id="full-list"></ul>
 </section>
 
 <section class="content">
@@ -91,16 +92,17 @@ Nostrum
     <div id="content" class="content-inner">
 
 <h1>
-<button class="settings display-settings">
+<button class="icon-action display-settings">
   <i class="ri-settings-3-line"></i>
   <span class="sr-only">Settings</span>
 </button>
 
 
-    <a href="https://github.com/Kraigie/nostrum/blob/master/docs/static/State.md#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/Kraigie/nostrum/blob/master/guides/State.md#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
+
 
   <span>State</span>
 </h1>
@@ -120,9 +122,9 @@ implementation you want to use. This can only be set at dependency compilation
 time. A common situation is that you don't want to cache presences in your bot,
 most likely you don't care about user's status, so you can disable it altogether
 by using the <code class="inline">NoOp</code> presence cache:</p><pre><code class="makeup elixir" translate="no"><span class="n">config</span><span class="w"> </span><span class="ss">:nostrum</span><span class="p">,</span><span class="w">
-  </span><span class="ss">caches</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="6560824604-1">%{</span><span class="w">
+  </span><span class="ss">caches</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="9283354228-1">%{</span><span class="w">
     </span><span class="ss">presences</span><span class="p">:</span><span class="w"> </span><span class="nc">Nostrum.Cache.PresenceCache.NoOp</span><span class="w">
-  </span><span class="p" data-group-id="6560824604-1">}</span></code></pre><h2 id="structs" class="section-heading">
+  </span><span class="p" data-group-id="9283354228-1">}</span></code></pre><h2 id="structs" class="section-heading">
   <a href="#structs" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
   <p class="sr-only">structs</p>
   </a>
@@ -163,9 +165,8 @@ see <a href="Nostrum.Cache.UserCache.ETS.html"><code class="inline">Nostrum.Cach
 </h2>
 <p>There are some use cases where given a <code class="inline">channel_id</code> or <code class="inline">guild_id</code> we may want to
 find the <code class="inline">guild</code> or <code class="inline">shard</code> that the <code class="inline">id</code> belongs to. For this purpose Nostrum
-stores these types of relations in ETS tables.</p><p>The following mappings exists.</p><pre><code class="Elixir">guild_channel_id -&gt; guild_id
-guild_id -&gt; shard_num
-shard_num_num -&gt; shard_pid</code></pre><p>Please see <a href="Nostrum.Cache.Mapping.ChannelGuild.html"><code class="inline">Nostrum.Cache.Mapping.ChannelGuild</code></a> for one such map.</p>
+stores these types of relations in ETS tables.</p><p>The following mappings exist:</p><pre><code class="makeup elixir" translate="no"><span class="n">guild_channel_id</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">guild_id</span><span class="w">
+</span><span class="n">guild_id</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">shard_num</span></code></pre><p>Please see <a href="Nostrum.Cache.ChannelGuildMapping.html"><code class="inline">Nostrum.Cache.ChannelGuildMapping</code></a> for one such map.</p>
 <div class="bottom-actions">
   <div class="bottom-actions-item">
 
@@ -193,26 +194,32 @@ Events
   </div>
 </div>
       <footer class="footer">
-
-          <p>
-            On Hex.pm:
+        <p>
 
             <span class="line">
-              <a href="https://hex.pm/packages/nostrum/0.6.1" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/nostrum/0.6.1" class="line">Preview</a>
+              <a href="https://hex.pm/packages/nostrum/0.7.0" class="footer-hex-package">Hex Package</a>
 
-                <a href="https://preview.hex.pm/preview/nostrum/0.6.1/show/docs/static/State.md">(current file)</a>
+              <a href="https://preview.hex.pm/preview/nostrum/0.7.0">Hex Preview</a>
+
+                (<a href="https://preview.hex.pm/preview/nostrum/0.7.0/show/guides/State.md">current file</a>)
 
             </span>
 
-            <button class="a-main line footer-button display-quick-switch">
-              Search
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+              Search HexDocs
             </button>
-          </p>
 
-        <p>
+              <a href="Nostrum.epub" title="ePub version">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.4) for the
 
             <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 

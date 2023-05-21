@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.29.0">
-    <meta name="project" content="Nostrum v0.6.1">
+    <meta name="generator" content="ExDoc v0.29.4">
+    <meta name="project" content="Nostrum v0.7.0">
 
-    <title>API Reference — Nostrum v0.6.1</title>
-    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
+    <title>API Reference — Nostrum v0.7.0</title>
+    <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
+
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
-    <script src="dist/sidebar_items-0EDC7626.js"></script>
+    <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
+    <script src="dist/sidebar_items-7A762AB3.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/html-XN2TSG4M.js"></script>
+    <script async src="dist/html-JDI3AVDD.js"></script>
 
 
   </head>
@@ -51,7 +52,7 @@
     </button>
     <label class="search-label">
       <p class="sr-only">Search</p>
-      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
     </label>
   </form>
 
@@ -66,9 +67,9 @@
       <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
 Nostrum
       </a>
-      <strong class="sidebar-projectVersion" translate="no">
-        v0.6.1
-      </strong>
+      <div class="sidebar-projectVersion" translate="no">
+        v0.7.0
+      </div>
     </div>
     <ul class="sidebar-listNav">
       <li><a id="extras-list-link" href="#full-list">Pages</a></li>
@@ -82,7 +83,7 @@ Nostrum
   </div>
 
   <div class="gradient"></div>
-  <ul id="full-list" class="sidebar-fullList"></ul>
+  <ul id="full-list"></ul>
 </section>
 
 <section class="content">
@@ -91,13 +92,14 @@ Nostrum
     <div id="content" class="content-inner">
 
 <h1>
-<button class="settings display-settings">
+<button class="icon-action display-settings">
   <i class="ri-settings-3-line"></i>
   <span class="sr-only">Settings</span>
 </button>
 
 
-  <span>API Reference <small class="app-vsn">Nostrum v0.6.1</small></span>
+
+  <span>API Reference <small class="app-vsn">Nostrum v0.7.0</small></span>
 </h1>
 
 
@@ -144,7 +146,7 @@ Only to be used when starting in a rest-only manner.</p></div>
 
   </div>
 
-    <div class="summary-synopsis"><p>Cache behaviour &amp; dispatcher for channels.</p></div>
+    <div class="summary-synopsis"><p>Cache behaviour &amp; dispatcher for channels outside of guilds.</p></div>
 
 </div>
 <div class="summary-row">
@@ -153,7 +155,25 @@ Only to be used when starting in a rest-only manner.</p></div>
 
   </div>
 
-    <div class="summary-synopsis"><p>An ETS-based cache for channels.</p></div>
+    <div class="summary-synopsis"><p>An ETS-based cache for channels outside of guilds.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Cache.ChannelGuildMapping.html" translate="no">Nostrum.Cache.ChannelGuildMapping</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Cache behaviour &amp; dispatcher for mapping channel IDs to their respective guilds.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Cache.ChannelGuildMapping.ETS.html" translate="no">Nostrum.Cache.ChannelGuildMapping.ETS</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Maps channels to guilds via <code class="inline">:ets</code>.</p></div>
 
 </div>
 <div class="summary-row">
@@ -185,38 +205,29 @@ Only to be used when starting in a rest-only manner.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Nostrum.Cache.Mapping.ChannelGuild.html" translate="no">Nostrum.Cache.Mapping.ChannelGuild</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Mapping of channel -&gt; guild relationships.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Nostrum.Cache.Mapping.GuildShard.html" translate="no">Nostrum.Cache.Mapping.GuildShard</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Mapping of guild -&gt; shard relationships.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Nostrum.Cache.Mapping.ShardPidNum.html" translate="no">Nostrum.Cache.Mapping.ShardPidNum</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Simple mapping of shard pid to num</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="Nostrum.Cache.Me.html" translate="no">Nostrum.Cache.Me</a>
 
   </div>
 
     <div class="summary-synopsis"><p>Simple cache that stores information for the current user.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Cache.MemberCache.html" translate="no">Nostrum.Cache.MemberCache</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Cache behaviour &amp; dispatcher for guild members.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Cache.MemberCache.ETS.html" translate="no">Nostrum.Cache.MemberCache.ETS</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>An ETS-based cache for members.</p></div>
 
 </div>
 <div class="summary-row">
@@ -375,6 +386,15 @@ For more info please refer to <a href="https://discord.com/developers/docs/resou
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Nostrum.ConsumerGroup.html" translate="no">Nostrum.ConsumerGroup</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Registers consumers and handles event dispatch.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Nostrum.Error.ApiError.html" translate="no">Nostrum.Error.ApiError</a>
 
   </div>
@@ -416,6 +436,69 @@ For more info please refer to <a href="https://discord.com/developers/docs/resou
   </div>
 
     <div class="summary-synopsis"><p>Functions that work on Snowflakes.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Store.GuildShardMapping.html" translate="no">Nostrum.Store.GuildShardMapping</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Behaviour &amp; dispatcher for storing guild to shard mappings.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Store.GuildShardMapping.ETS.html" translate="no">Nostrum.Store.GuildShardMapping.ETS</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Stores a mapping of guild IDs to their shard numbers using <code class="inline">:ets</code>.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Store.RatelimitBucket.html" translate="no">Nostrum.Store.RatelimitBucket</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Behaviour &amp; dispatcher for storing ratelimit buckets.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Store.RatelimitBucket.ETS.html" translate="no">Nostrum.Store.RatelimitBucket.ETS</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Stores ratelimit buckets via <code class="inline">:ets</code>.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Store.Supervisor.html" translate="no">Nostrum.Store.Supervisor</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Supervises processes managing nostrum's internal state.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Store.UnavailableGuild.html" translate="no">Nostrum.Store.UnavailableGuild</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Behaviour &amp; dispatcher for storing unavailable guilds.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Nostrum.Store.UnavailableGuild.ETS.html" translate="no">Nostrum.Store.UnavailableGuild.ETS</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Stores guilds that are currently unavailable using <code class="inline">:ets</code>.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1220,24 +1303,30 @@ Intro
   </div>
 </div>
       <footer class="footer">
-
-          <p>
-            On Hex.pm:
+        <p>
 
             <span class="line">
-              <a href="https://hex.pm/packages/nostrum/0.6.1" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/nostrum/0.6.1" class="line">Preview</a>
+              <a href="https://hex.pm/packages/nostrum/0.7.0" class="footer-hex-package">Hex Package</a>
+
+              <a href="https://preview.hex.pm/preview/nostrum/0.7.0">Hex Preview</a>
 
             </span>
 
-            <button class="a-main line footer-button display-quick-switch">
-              Search
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+              Search HexDocs
             </button>
-          </p>
 
-        <p>
+              <a href="Nostrum.epub" title="ePub version">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.4) for the
 
             <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 

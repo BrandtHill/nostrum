@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.29.0">
-    <meta name="project" content="Nostrum v0.6.1">
+    <meta name="generator" content="ExDoc v0.29.4">
+    <meta name="project" content="Nostrum v0.7.0">
 
-    <title>Nostrum.Struct.User — Nostrum v0.6.1</title>
-    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
+    <title>Nostrum.Struct.User — Nostrum v0.7.0</title>
+    <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
+
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
-    <script src="dist/sidebar_items-0EDC7626.js"></script>
+    <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
+    <script src="dist/sidebar_items-7A762AB3.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/html-XN2TSG4M.js"></script>
+    <script async src="dist/html-JDI3AVDD.js"></script>
 
 
   </head>
@@ -51,7 +52,7 @@
     </button>
     <label class="search-label">
       <p class="sr-only">Search</p>
-      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
     </label>
   </form>
 
@@ -66,9 +67,9 @@
       <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
 Nostrum
       </a>
-      <strong class="sidebar-projectVersion" translate="no">
-        v0.6.1
-      </strong>
+      <div class="sidebar-projectVersion" translate="no">
+        v0.7.0
+      </div>
     </div>
     <ul class="sidebar-listNav">
       <li><a id="extras-list-link" href="#full-list">Pages</a></li>
@@ -82,7 +83,7 @@ Nostrum
   </div>
 
   <div class="gradient"></div>
-  <ul id="full-list" class="sidebar-fullList"></ul>
+  <ul id="full-list"></ul>
 </section>
 
 <section class="content">
@@ -91,19 +92,19 @@ Nostrum
     <div id="content" class="content-inner">
 
 <h1>
-<button class="settings display-settings">
+<button class="icon-action display-settings">
   <i class="ri-settings-3-line"></i>
   <span class="sr-only">Settings</span>
 </button>
 
 
-    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Nostrum.Struct.User</span> 
-  <small class="app-vsn" translate="no">(Nostrum v0.6.1)</small>
+  <small class="app-vsn" translate="no">(Nostrum v0.7.0)</small>
 
 </h1>
 
@@ -116,13 +117,13 @@ Nostrum
   Mentioning Users in Messages
 </h2>
 <p>A <a href="Nostrum.Struct.User.html#content"><code class="inline">Nostrum.Struct.User</code></a> can be mentioned in message content using the <a href="https://hexdocs.pm/elixir/String.Chars.html"><code class="inline">String.Chars</code></a>
-protocol or <a href="#mention/1"><code class="inline">mention/1</code></a>.</p><pre><code class="Elixir">user = %Nostrum.Struct.User{id: 120571255635181568}
-Nostrum.Api.create_message!(184046599834435585, &quot;#{user}&quot;)
-%Nostrum.Struct.Message{content: &quot;&lt;@120571255635181568&gt;&quot;}
+protocol or <a href="#mention/1"><code class="inline">mention/1</code></a>.</p><pre><code class="makeup elixir" translate="no"><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="2087303428-1">%</span><span class="nc" data-group-id="2087303428-1">Nostrum.Struct.User</span><span class="p" data-group-id="2087303428-1">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">120571255635181568</span><span class="p" data-group-id="2087303428-1">}</span><span class="w">
+</span><span class="nc">Nostrum.Api</span><span class="o">.</span><span class="n">create_message!</span><span class="p" data-group-id="2087303428-2">(</span><span class="mi">184046599834435585</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="si" data-group-id="2087303428-3">#{</span><span class="n">user</span><span class="si" data-group-id="2087303428-3">}</span><span class="s">&quot;</span><span class="p" data-group-id="2087303428-2">)</span><span class="w">
+</span><span class="p" data-group-id="2087303428-4">%</span><span class="nc" data-group-id="2087303428-4">Nostrum.Struct.Message</span><span class="p" data-group-id="2087303428-4">{</span><span class="ss">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;@120571255635181568&gt;&quot;</span><span class="p" data-group-id="2087303428-4">}</span><span class="w">
 
-user = %Nostrum.Struct.User{id: 89918932789497856}
-Nostrum.Api.create_message!(280085880452939778, &quot;#{Nostrum.Struct.User.mention(user)}&quot;)
-%Nostrum.Struct.Message{content: &quot;&lt;@89918932789497856&gt;&quot;}</code></pre><h2 id="module-user-vs-member" class="section-heading">
+</span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="2087303428-5">%</span><span class="nc" data-group-id="2087303428-5">Nostrum.Struct.User</span><span class="p" data-group-id="2087303428-5">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">89918932789497856</span><span class="p" data-group-id="2087303428-5">}</span><span class="w">
+</span><span class="nc">Nostrum.Api</span><span class="o">.</span><span class="n">create_message!</span><span class="p" data-group-id="2087303428-6">(</span><span class="mi">280085880452939778</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="si" data-group-id="2087303428-7">#{</span><span class="nc">Nostrum.Struct.User</span><span class="o">.</span><span class="n">mention</span><span class="p" data-group-id="2087303428-8">(</span><span class="n">user</span><span class="p" data-group-id="2087303428-8">)</span><span class="si" data-group-id="2087303428-7">}</span><span class="s">&quot;</span><span class="p" data-group-id="2087303428-6">)</span><span class="w">
+</span><span class="p" data-group-id="2087303428-9">%</span><span class="nc" data-group-id="2087303428-9">Nostrum.Struct.Message</span><span class="p" data-group-id="2087303428-9">{</span><span class="ss">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;@89918932789497856&gt;&quot;</span><span class="p" data-group-id="2087303428-9">}</span></code></pre><h2 id="module-user-vs-member" class="section-heading">
   <a href="#module-user-vs-member" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
   <p class="sr-only">user-vs-member</p>
   </a>
@@ -141,148 +142,146 @@ A <code class="inline">member</code> has everything that a <code class="inline">
       </a>
       Summary
     </h1>
+<div class="summary-types summary">
+  <h2>
+    <a href="#types">Types</a>
+  </h2>
 
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:avatar/0" translate="no">avatar()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>User's avatar hash</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:avatar/0" translate="no">avatar()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:bot/0" translate="no">bot()</a>
+        <div class="summary-synopsis"><p>User's avatar hash</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Whether the user is a bot</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:discriminator/0" translate="no">discriminator()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>The user's 4--digit discord-tag</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:bot/0" translate="no">bot()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:email/0" translate="no">email()</a>
+        <div class="summary-synopsis"><p>Whether the user is a bot</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>The user's email</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:id/0" translate="no">id()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>The user's id</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:discriminator/0" translate="no">discriminator()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:mfa_enabled/0" translate="no">mfa_enabled()</a>
+        <div class="summary-synopsis"><p>The user's 4--digit discord-tag</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Whether the user has two factor enabled</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:public_flags/0" translate="no">public_flags()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>The user's public flags</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:email/0" translate="no">email()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:t/0" translate="no">t()</a>
+        <div class="summary-synopsis"><p>The user's email</p></div>
 
-        </div>
+    </div>
 
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:username/0" translate="no">username()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>The user's username</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:id/0" translate="no">id()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:verified/0" translate="no">verified()</a>
+        <div class="summary-synopsis"><p>The user's id</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Whether the email on the account has been verified</p></div>
-
-      </div>
-
-  </div>
-
-  <div class="summary-functions summary">
-    <h2>
-      <a href="#functions">Functions</a>
-    </h2>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#avatar_url/2" translate="no">avatar_url(user, image_format \\ &quot;webp&quot;)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Returns the URL of a user's display avatar.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:mfa_enabled/0" translate="no">mfa_enabled()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#full_name/1" translate="no">full_name(user)</a>
+        <div class="summary-synopsis"><p>Whether the user has two factor enabled</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Returns a user's <code class="inline">:username</code> and <code class="inline">:discriminator</code> separated by a hashtag.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#mention/1" translate="no">mention(user)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Formats an <a href="Nostrum.Struct.User.html#content"><code class="inline">Nostrum.Struct.User</code></a> into a mention.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:public_flags/0" translate="no">public_flags()</a>
 
       </div>
 
-  </div>
+        <div class="summary-synopsis"><p>The user's public flags</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:t/0" translate="no">t()</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:username/0" translate="no">username()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>The user's username</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:verified/0" translate="no">verified()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Whether the email on the account has been verified</p></div>
+
+    </div>
+
+</div>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#avatar_url/2" translate="no">avatar_url(user, image_format \\ &quot;webp&quot;)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the URL of a user's display avatar.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#full_name/1" translate="no">full_name(user)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns a user's <code class="inline">:username</code> and <code class="inline">:discriminator</code> separated by a hashtag.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#mention/1" translate="no">mention(user)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Formats an <a href="Nostrum.Struct.User.html#content"><code class="inline">Nostrum.Struct.User</code></a> into a mention.</p></div>
+
+    </div>
+
+</div>
 
   </section>
 
@@ -305,7 +304,7 @@ Types
     </a>
     <h1 class="signature" translate="no">avatar()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L53" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L53" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -333,7 +332,7 @@ Types
     </a>
     <h1 class="signature" translate="no">bot()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L56" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -361,7 +360,7 @@ Types
     </a>
     <h1 class="signature" translate="no">discriminator()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L50" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -389,7 +388,7 @@ Types
     </a>
     <h1 class="signature" translate="no">email()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L65" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L65" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -417,7 +416,7 @@ Types
     </a>
     <h1 class="signature" translate="no">id()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L44" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -445,7 +444,7 @@ Types
     </a>
     <h1 class="signature" translate="no">mfa_enabled()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L59" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -473,7 +472,7 @@ Types
     </a>
     <h1 class="signature" translate="no">public_flags()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L68" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -501,7 +500,7 @@ Types
     </a>
     <h1 class="signature" translate="no">t()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L70" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -539,7 +538,7 @@ Types
     </a>
     <h1 class="signature" translate="no">username()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L47" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -567,7 +566,7 @@ Types
     </a>
     <h1 class="signature" translate="no">verified()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L62" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -610,7 +609,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">avatar_url(user, image_format \\ &quot;webp&quot;)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L120" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -632,17 +631,17 @@ Functions
   </a>
   Examples
 </h2>
-<pre><code class="Elixir">iex&gt; user = %Nostrum.Struct.User{avatar: &quot;8342729096ea3675442027381ff50dfe&quot;,
-...&gt;                             id: 80351110224678912}
-iex&gt; Nostrum.Struct.User.avatar_url(user)
-&quot;https://cdn.discordapp.com/avatars/80351110224678912/8342729096ea3675442027381ff50dfe.webp&quot;
-iex&gt; Nostrum.Struct.User.avatar_url(user, &quot;png&quot;)
-&quot;https://cdn.discordapp.com/avatars/80351110224678912/8342729096ea3675442027381ff50dfe.png&quot;
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="0585046849-1">%</span><span class="nc" data-group-id="0585046849-1">Nostrum.Struct.User</span><span class="p" data-group-id="0585046849-1">{</span><span class="ss">avatar</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8342729096ea3675442027381ff50dfe&quot;</span><span class="p">,</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">                            </span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">80351110224678912</span><span class="p" data-group-id="0585046849-1">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.User</span><span class="o">.</span><span class="n">avatar_url</span><span class="p" data-group-id="0585046849-2">(</span><span class="n">user</span><span class="p" data-group-id="0585046849-2">)</span><span class="w">
+</span><span class="s">&quot;https://cdn.discordapp.com/avatars/80351110224678912/8342729096ea3675442027381ff50dfe.webp&quot;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.User</span><span class="o">.</span><span class="n">avatar_url</span><span class="p" data-group-id="0585046849-3">(</span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;png&quot;</span><span class="p" data-group-id="0585046849-3">)</span><span class="w">
+</span><span class="s">&quot;https://cdn.discordapp.com/avatars/80351110224678912/8342729096ea3675442027381ff50dfe.png&quot;</span><span class="w">
 
-iex&gt; user = %Nostrum.Struct.User{avatar: nil,
-...&gt;                             discriminator: &quot;1337&quot;}
-iex&gt; Nostrum.Struct.User.avatar_url(user)
-&quot;https://cdn.discordapp.com/embed/avatars/2.png&quot;</code></pre>
+</span><span class="gp unselectable">iex&gt; </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="0585046849-4">%</span><span class="nc" data-group-id="0585046849-4">Nostrum.Struct.User</span><span class="p" data-group-id="0585046849-4">{</span><span class="ss">avatar</span><span class="p">:</span><span class="w"> </span><span class="no">nil</span><span class="p">,</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">                            </span><span class="ss">discriminator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1337&quot;</span><span class="p" data-group-id="0585046849-4">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.User</span><span class="o">.</span><span class="n">avatar_url</span><span class="p" data-group-id="0585046849-5">(</span><span class="n">user</span><span class="p" data-group-id="0585046849-5">)</span><span class="w">
+</span><span class="s">&quot;https://cdn.discordapp.com/embed/avatars/2.png&quot;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="full_name/1">
@@ -654,7 +653,7 @@ iex&gt; Nostrum.Struct.User.avatar_url(user)
     </a>
     <h1 class="signature" translate="no">full_name(user)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L147" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L147" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -676,10 +675,10 @@ iex&gt; Nostrum.Struct.User.avatar_url(user)
   </a>
   Examples
 </h2>
-<pre><code class="Elixir">iex&gt; user = %Nostrum.Struct.User{username: &quot;b1nzy&quot;,
-...&gt;                             discriminator: &quot;0852&quot;}
-iex&gt; Nostrum.Struct.User.full_name(user)
-&quot;b1nzy#0852&quot;</code></pre>
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="2003494310-1">%</span><span class="nc" data-group-id="2003494310-1">Nostrum.Struct.User</span><span class="p" data-group-id="2003494310-1">{</span><span class="ss">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;b1nzy&quot;</span><span class="p">,</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">                            </span><span class="ss">discriminator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0852&quot;</span><span class="p" data-group-id="2003494310-1">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.User</span><span class="o">.</span><span class="n">full_name</span><span class="p" data-group-id="2003494310-2">(</span><span class="n">user</span><span class="p" data-group-id="2003494310-2">)</span><span class="w">
+</span><span class="s">&quot;b1nzy#0852&quot;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="mention/1">
@@ -691,7 +690,7 @@ iex&gt; Nostrum.Struct.User.full_name(user)
     </a>
     <h1 class="signature" translate="no">mention(user)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L94" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/user.ex#L94" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -713,9 +712,9 @@ iex&gt; Nostrum.Struct.User.full_name(user)
   </a>
   Examples
 </h2>
-<pre><code class="Elixir">iex&gt; user = %Nostrum.Struct.User{id: 177888205536886784}
-...&gt; Nostrum.Struct.User.mention(user)
-&quot;&lt;@177888205536886784&gt;&quot;</code></pre>
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="6388728208-1">%</span><span class="nc" data-group-id="6388728208-1">Nostrum.Struct.User</span><span class="p" data-group-id="6388728208-1">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">177888205536886784</span><span class="p" data-group-id="6388728208-1">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="nc">Nostrum.Struct.User</span><span class="o">.</span><span class="n">mention</span><span class="p" data-group-id="6388728208-2">(</span><span class="n">user</span><span class="p" data-group-id="6388728208-2">)</span><span class="w">
+</span><span class="s">&quot;&lt;@177888205536886784&gt;&quot;</span></code></pre>
   </section>
 </section>
 
@@ -723,26 +722,32 @@ iex&gt; Nostrum.Struct.User.full_name(user)
   </section>
 
       <footer class="footer">
-
-          <p>
-            On Hex.pm:
+        <p>
 
             <span class="line">
-              <a href="https://hex.pm/packages/nostrum/0.6.1" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/nostrum/0.6.1" class="line">Preview</a>
+              <a href="https://hex.pm/packages/nostrum/0.7.0" class="footer-hex-package">Hex Package</a>
 
-                <a href="https://preview.hex.pm/preview/nostrum/0.6.1/show/lib/nostrum/struct/user.ex">(current file)</a>
+              <a href="https://preview.hex.pm/preview/nostrum/0.7.0">Hex Preview</a>
+
+                (<a href="https://preview.hex.pm/preview/nostrum/0.7.0/show/lib/nostrum/struct/user.ex">current file</a>)
 
             </span>
 
-            <button class="a-main line footer-button display-quick-switch">
-              Search
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+              Search HexDocs
             </button>
-          </p>
 
-        <p>
+              <a href="Nostrum.epub" title="ePub version">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.4) for the
 
             <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 

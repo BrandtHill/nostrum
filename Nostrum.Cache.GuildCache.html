@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.29.0">
-    <meta name="project" content="Nostrum v0.6.1">
+    <meta name="generator" content="ExDoc v0.29.4">
+    <meta name="project" content="Nostrum v0.7.0">
 
-    <title>Nostrum.Cache.GuildCache — Nostrum v0.6.1</title>
-    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
+    <title>Nostrum.Cache.GuildCache — Nostrum v0.7.0</title>
+    <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
+
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
-    <script src="dist/sidebar_items-0EDC7626.js"></script>
+    <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
+    <script src="dist/sidebar_items-7A762AB3.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/html-XN2TSG4M.js"></script>
+    <script async src="dist/html-JDI3AVDD.js"></script>
 
 
   </head>
@@ -51,7 +52,7 @@
     </button>
     <label class="search-label">
       <p class="sr-only">Search</p>
-      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
     </label>
   </form>
 
@@ -66,9 +67,9 @@
       <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
 Nostrum
       </a>
-      <strong class="sidebar-projectVersion" translate="no">
-        v0.6.1
-      </strong>
+      <div class="sidebar-projectVersion" translate="no">
+        v0.7.0
+      </div>
     </div>
     <ul class="sidebar-listNav">
       <li><a id="extras-list-link" href="#full-list">Pages</a></li>
@@ -82,7 +83,7 @@ Nostrum
   </div>
 
   <div class="gradient"></div>
-  <ul id="full-list" class="sidebar-fullList"></ul>
+  <ul id="full-list"></ul>
 </section>
 
 <section class="content">
@@ -91,19 +92,19 @@ Nostrum
     <div id="content" class="content-inner">
 
 <h1>
-<button class="settings display-settings">
+<button class="icon-action display-settings">
   <i class="ri-settings-3-line"></i>
   <span class="sr-only">Settings</span>
 </button>
 
 
-    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Nostrum.Cache.GuildCache</span> <small>behaviour</small>
-  <small class="app-vsn" translate="no">(Nostrum v0.6.1)</small>
+  <small class="app-vsn" translate="no">(Nostrum v0.7.0)</small>
 
 </h1>
 
@@ -125,7 +126,7 @@ These <strong>do not create any objects in the Discord API</strong>, they are pu
 created to update the cached data from data that Discord sends us. If you
 want to create objects on Discord, use the functions exposed by <a href="Nostrum.Api.html"><code class="inline">Nostrum.Api</code></a>
 instead.</p></li></ul><p>You need to implement both of them for nostrum to work with your custom
-cache. <strong>You also need to implement <a href="https://hexdocs.pm/elixir/Supervisor.html"><code class="inline">Supervisor</code></a> callbacks</strong>, which will
+cache. You also need to implement <a href="#c:child_spec/1"><code class="inline">child_spec/1</code></a> to allow nostrum to
 start your cache as a child under <a href="Nostrum.Cache.CacheSupervisor.html"><code class="inline">Nostrum.Cache.CacheSupervisor</code></a>: As an
 example, the <a href="Nostrum.Cache.GuildCache.ETS.html"><code class="inline">Nostrum.Cache.GuildCache.ETS</code></a> implementation uses this to to
 set up its ETS table it uses for caching. See the callbacks section for every
@@ -149,378 +150,365 @@ backing cache implementation is called.</p>
       </a>
       Summary
     </h1>
+<div class="summary-types summary">
+  <h2>
+    <a href="#types">Types</a>
+  </h2>
 
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:clause/0" translate="no">clause()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>A clause for filtering guilds.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:clause/0" translate="no">clause()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:clauses/0" translate="no">clauses()</a>
+        <div class="summary-synopsis"><p>A clause for filtering guilds.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>A collection of <a href="#t:clause/0"><code class="inline">clause/0</code></a>s for filtering guilds.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:reason/0" translate="no">reason()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Specifies the reason for why a lookup operation has failed.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:clauses/0" translate="no">clauses()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:selector/0" translate="no">selector()</a>
+        <div class="summary-synopsis"><p>A collection of <a href="#t:clause/0"><code class="inline">clause/0</code></a>s for filtering guilds.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>A selector for looking up entries in the cache.</p></div>
-
-      </div>
-
-  </div>
-
-  <div class="summary-callbacks summary">
-    <h2>
-      <a href="#callbacks">Callbacks</a>
-    </h2>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:all/0" translate="no">all()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Retrieves all <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> from the cache.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:reason/0" translate="no">reason()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:channel_create/2" translate="no">channel_create(id, channel)</a>
+        <div class="summary-synopsis"><p>Specifies the reason for why a lookup operation has failed.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Create a channel for the guild from upstream data.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:channel_delete/2" translate="no">channel_delete(id, id)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Delete the given channel from the guild.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:selector/0" translate="no">selector()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:channel_update/2" translate="no">channel_update(id, channel)</a>
+        <div class="summary-synopsis"><p>A selector for looking up entries in the cache.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Update the given channel on the given guild from upstream data.</p></div>
+</div>
+<div class="summary-callbacks summary">
+  <h2>
+    <a href="#callbacks">Callbacks</a>
+  </h2>
 
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:create/1" translate="no">create(t)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Create a guild in the cache.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:all/0" translate="no">all()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:delete/1" translate="no">delete(id)</a>
+        <div class="summary-synopsis"><p>Retrieves all <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> from the cache.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Delete a guild from the cache.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:emoji_update/2" translate="no">emoji_update(id, emojis)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Update the emoji list of the given guild from upstream data.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:channel_create/2" translate="no">channel_create(id, channel)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:get/1" translate="no">get(id)</a>
+        <div class="summary-synopsis"><p>Create a channel for the guild from upstream data.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Retrieves a single <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> from the cache via its <code class="inline">id</code>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:get_by/1" translate="no">get_by(clauses)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Retrieves a single <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> where it matches the <code class="inline">clauses</code>.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:channel_delete/2" translate="no">channel_delete(id, id)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:member_add/2" translate="no">member_add(id, member)</a>
+        <div class="summary-synopsis"><p>Delete the given channel from the guild.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Add the member for the given guild from upstream data.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:member_chunk/2" translate="no">member_chunk(id, chunk)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Bulk create multiple members in the cache from upstream data.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:channel_update/2" translate="no">channel_update(id, channel)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:member_remove/2" translate="no">member_remove(id, member)</a>
+        <div class="summary-synopsis"><p>Update the given channel on the given guild from upstream data.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Remove the given member for the given guild from upstream data.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:member_update/2" translate="no">member_update(id, member)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Update the given member for the given guild from upstream data.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:child_spec/1" translate="no">child_spec(term)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:role_create/2" translate="no">role_create(id, role)</a>
+        <div class="summary-synopsis"><p>Retrieve the child specification for starting this mapping under a supervisor.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Create a role on the given guild from upstream data.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:role_delete/2" translate="no">role_delete(id, id)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Delete the given role on the given guild.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:create/1" translate="no">create(t)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:role_update/2" translate="no">role_update(id, role)</a>
+        <div class="summary-synopsis"><p>Create a guild in the cache.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Update a role on the given guild from upstream data.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:select/2" translate="no">select(id, selector)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Selects values using a <code class="inline">selector</code> from a <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a>.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:delete/1" translate="no">delete(id)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:select_all/1" translate="no">select_all(selector)</a>
+        <div class="summary-synopsis"><p>Delete a guild from the cache.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Selects guilds matching <code class="inline">selector</code> from all <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> in the cache.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:emoji_update/2" translate="no">emoji_update(id, emojis)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:select_by/2" translate="no">select_by(clauses, selector)</a>
+        <div class="summary-synopsis"><p>Update the emoji list of the given guild from upstream data.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Selects values using a <code class="inline">selector</code> from a <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> that matches
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:get/1" translate="no">get(id)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Retrieves a single <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> from the cache via its <code class="inline">id</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:get_by/1" translate="no">get_by(clauses)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Retrieves a single <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> where it matches the <code class="inline">clauses</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:member_count_down/1" translate="no">member_count_down(id)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Decrement the member count for this guild by one.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:member_count_up/1" translate="no">member_count_up(id)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Increment the member count for this guild by one.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:role_create/2" translate="no">role_create(id, role)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Create a role on the given guild from upstream data.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:role_delete/2" translate="no">role_delete(id, id)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Delete the given role on the given guild.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:role_update/2" translate="no">role_update(id, role)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Update a role on the given guild from upstream data.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:select/2" translate="no">select(id, selector)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Selects values using a <code class="inline">selector</code> from a <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:select_all/1" translate="no">select_all(selector)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Selects guilds matching <code class="inline">selector</code> from all <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> in the cache.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:select_by/2" translate="no">select_by(clauses, selector)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Selects values using a <code class="inline">selector</code> from a <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> that matches
 the <code class="inline">clauses</code>.</p></div>
 
-      </div>
+    </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:update/1" translate="no">update(map)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Update a guild from upstream data.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:update/1" translate="no">update(map)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#c:voice_state_update/2" translate="no">voice_state_update(id, state)</a>
+        <div class="summary-synopsis"><p>Update a guild from upstream data.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Update the voice state of the given guild from upstream data.</p></div>
-
-      </div>
-
-  </div>
-
-  <div class="summary-functions summary">
-    <h2>
-      <a href="#functions">Functions</a>
-    </h2>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#all/0" translate="no">all()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#all/0"><code class="inline">Nostrum.Cache.GuildCache.ETS.all/0</code></a>.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#c:voice_state_update/2" translate="no">voice_state_update(id, state)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#get/1" translate="no">get(guild_id)</a>
+        <div class="summary-synopsis"><p>Update the voice state of the given guild from upstream data.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#get/1"><code class="inline">Nostrum.Cache.GuildCache.ETS.get/1</code></a>.</p></div>
+</div>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
 
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#get!/1" translate="no">get!(guild_id)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Same as <a href="#get/1"><code class="inline">get/1</code></a>, but raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> in case of failure.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#all/0" translate="no">all()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#get_by/1" translate="no">get_by(clauses)</a>
+        <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#all/0"><code class="inline">Nostrum.Cache.GuildCache.ETS.all/0</code></a>.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#get_by/1"><code class="inline">Nostrum.Cache.GuildCache.ETS.get_by/1</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#get_by!/1" translate="no">get_by!(clauses)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Same as <a href="#get_by/1"><code class="inline">get_by/1</code></a>, but raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> in case of failure.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#get/1" translate="no">get(guild_id)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#select/2" translate="no">select(guild_id, selector)</a>
+        <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#get/1"><code class="inline">Nostrum.Cache.GuildCache.ETS.get/1</code></a>.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#select/2"><code class="inline">Nostrum.Cache.GuildCache.ETS.select/2</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#select!/2" translate="no">select!(guild_id, selector)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Same as <a href="#select/2"><code class="inline">select/2</code></a>, but raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> in case of failure.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#get!/1" translate="no">get!(guild_id)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#select_all/1" translate="no">select_all(selector)</a>
+        <div class="summary-synopsis"><p>Same as <a href="#get/1"><code class="inline">get/1</code></a>, but raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> in case of failure.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#select_all/1"><code class="inline">Nostrum.Cache.GuildCache.ETS.select_all/1</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#select_by/2" translate="no">select_by(clauses, selector)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#select_by/2"><code class="inline">Nostrum.Cache.GuildCache.ETS.select_by/2</code></a>.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#get_by/1" translate="no">get_by(clauses)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#select_by!/2" translate="no">select_by!(clauses, selector)</a>
+        <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#get_by/1"><code class="inline">Nostrum.Cache.GuildCache.ETS.get_by/1</code></a>.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Same as <a href="#select_by/2"><code class="inline">select_by/2</code></a>, but raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> in case of failure.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#get_by!/1" translate="no">get_by!(clauses)</a>
 
       </div>
 
-  </div>
+        <div class="summary-synopsis"><p>Same as <a href="#get_by/1"><code class="inline">get_by/1</code></a>, but raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> in case of failure.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#select/2" translate="no">select(guild_id, selector)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#select/2"><code class="inline">Nostrum.Cache.GuildCache.ETS.select/2</code></a>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#select!/2" translate="no">select!(guild_id, selector)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Same as <a href="#select/2"><code class="inline">select/2</code></a>, but raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> in case of failure.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#select_all/1" translate="no">select_all(selector)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#select_all/1"><code class="inline">Nostrum.Cache.GuildCache.ETS.select_all/1</code></a>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#select_by/2" translate="no">select_by(clauses, selector)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>See <a href="Nostrum.Cache.GuildCache.ETS.html#select_by/2"><code class="inline">Nostrum.Cache.GuildCache.ETS.select_by/2</code></a>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#select_by!/2" translate="no">select_by!(clauses, selector)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Same as <a href="#select_by/2"><code class="inline">select_by/2</code></a>, but raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> in case of failure.</p></div>
+
+    </div>
+
+</div>
 
   </section>
 
@@ -543,7 +531,7 @@ Types
     </a>
     <h1 class="signature" translate="no">clause()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L66" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -574,7 +562,7 @@ Types
     </a>
     <h1 class="signature" translate="no">clauses()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L73" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L72" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -602,7 +590,7 @@ Types
     </a>
     <h1 class="signature" translate="no">reason()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L58" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -630,7 +618,7 @@ Types
     </a>
     <h1 class="signature" translate="no">selector()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L63" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -671,7 +659,7 @@ Callbacks
     </a>
     <h1 class="signature" translate="no">all()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L89" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L84" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -699,7 +687,7 @@ Callbacks
     </a>
     <h1 class="signature" translate="no">channel_create(id, channel)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L190" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L185" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -728,7 +716,7 @@ Callbacks
     </a>
     <h1 class="signature" translate="no">channel_delete(id, id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L198" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L193" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -758,7 +746,7 @@ otherwise.</p>
     </a>
     <h1 class="signature" translate="no">channel_update(id, channel)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L205" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L200" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -779,6 +767,34 @@ otherwise.</p>
 <p>Update the given channel on the given guild from upstream data.</p><p>Return the original channel before the update, and the updated channel.</p>
   </section>
 </section>
+<section class="detail" id="c:child_spec/1">
+
+  <div class="detail-header">
+    <a href="#c:child_spec/1" class="detail-link" title="Link to this callback">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this callback</span>
+    </a>
+    <h1 class="signature" translate="no">child_spec(term)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L262" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@callback</span> child_spec(<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()) :: <a href="https://hexdocs.pm/elixir/Supervisor.html#t:child_spec/0">Supervisor.child_spec</a>()</pre>
+
+      </div>
+
+<p>Retrieve the child specification for starting this mapping under a supervisor.</p>
+  </section>
+</section>
 <section class="detail" id="c:create/1">
 
   <div class="detail-header">
@@ -788,7 +804,7 @@ otherwise.</p>
     </a>
     <h1 class="signature" translate="no">create(t)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L169" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L164" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -816,7 +832,7 @@ otherwise.</p>
     </a>
     <h1 class="signature" translate="no">delete(id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L183" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L178" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -844,7 +860,7 @@ otherwise.</p>
     </a>
     <h1 class="signature" translate="no">emoji_update(id, emojis)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L216" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L211" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -875,7 +891,7 @@ emojis.</p>
     </a>
     <h1 class="signature" translate="no">get(id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L106" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -898,11 +914,11 @@ emojis.</p>
   </a>
   Examples
 </h2>
-<pre><code class="Elixir">iex&gt; Nostrum.Cache.GuildCache.get(0)
-{:ok, %Nostrum.Struct.Guild{id: 0}}
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Cache.GuildCache</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="5828710917-1">(</span><span class="mi">0</span><span class="p" data-group-id="5828710917-1">)</span><span class="w">
+</span><span class="p" data-group-id="5828710917-2">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="5828710917-3">%</span><span class="nc" data-group-id="5828710917-3">Nostrum.Struct.Guild</span><span class="p" data-group-id="5828710917-3">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="5828710917-3">}</span><span class="p" data-group-id="5828710917-2">}</span><span class="w">
 
-iex&gt; Nostrum.Cache.GuildCache.get(10)
-{:error, :id_not_found_on_guild_lookup}</code></pre>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Cache.GuildCache</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="5828710917-4">(</span><span class="mi">10</span><span class="p" data-group-id="5828710917-4">)</span><span class="w">
+</span><span class="p" data-group-id="5828710917-5">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="ss">:id_not_found_on_guild_lookup</span><span class="p" data-group-id="5828710917-5">}</span></code></pre>
   </section>
 </section>
 <section class="detail" id="c:get_by/1">
@@ -914,7 +930,7 @@ iex&gt; Nostrum.Cache.GuildCache.get(10)
     </a>
     <h1 class="signature" translate="no">get_by(clauses)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L129" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L124" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -930,30 +946,32 @@ iex&gt; Nostrum.Cache.GuildCache.get(10)
 
       </div>
 
-<p>Retrieves a single <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> where it matches the <code class="inline">clauses</code>.</p><p>Returns <code class="inline">{:error, reason}</code> if no result was found.</p><pre><code class="Elixir">iex&gt; Nostrum.Cache.GuildCache.get_by(id: 0)
-{:ok, %Nostrum.Struct.Guild{id: 0}}
+<p>Retrieves a single <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> where it matches the <code class="inline">clauses</code>.</p><p>Returns <code class="inline">{:error, reason}</code> if no result was found.</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Cache.GuildCache</span><span class="o">.</span><span class="n">get_by</span><span class="p" data-group-id="5157156572-1">(</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="5157156572-1">)</span><span class="w">
+</span><span class="p" data-group-id="5157156572-2">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="5157156572-3">%</span><span class="nc" data-group-id="5157156572-3">Nostrum.Struct.Guild</span><span class="p" data-group-id="5157156572-3">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="5157156572-3">}</span><span class="p" data-group-id="5157156572-2">}</span><span class="w">
 
-iex&gt; Nostrum.Cache.GuildCache.get_by(%{id: 0})
-{:ok, %Nostrum.Struct.Guild{id: 0}}
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Cache.GuildCache</span><span class="o">.</span><span class="n">get_by</span><span class="p" data-group-id="5157156572-4">(</span><span class="p" data-group-id="5157156572-5">%{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="5157156572-5">}</span><span class="p" data-group-id="5157156572-4">)</span><span class="w">
+</span><span class="p" data-group-id="5157156572-6">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="5157156572-7">%</span><span class="nc" data-group-id="5157156572-7">Nostrum.Struct.Guild</span><span class="p" data-group-id="5157156572-7">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="5157156572-7">}</span><span class="p" data-group-id="5157156572-6">}</span><span class="w">
 
-iex&gt; Nostrum.Cache.GuildCache.get_by(id: 10)
-{:error, :id_not_found_on_guild_lookup}</code></pre>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Cache.GuildCache</span><span class="o">.</span><span class="n">get_by</span><span class="p" data-group-id="5157156572-8">(</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p" data-group-id="5157156572-8">)</span><span class="w">
+</span><span class="p" data-group-id="5157156572-9">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="ss">:id_not_found_on_guild_lookup</span><span class="p" data-group-id="5157156572-9">}</span></code></pre>
   </section>
 </section>
-<section class="detail" id="c:member_add/2">
+<section class="detail" id="c:member_count_down/1">
 
   <div class="detail-header">
-    <a href="#c:member_add/2" class="detail-link" title="Link to this callback">
+    <a href="#c:member_count_down/1" class="detail-link" title="Link to this callback">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this callback</span>
     </a>
-    <h1 class="signature" translate="no">member_add(id, member)</h1>
+    <h1 class="signature" translate="no">member_count_down(id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L224" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L257" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
 
+
+      <span class="note">(since 0.7.0)</span>
 
   </div>
 
@@ -961,28 +979,29 @@ iex&gt; Nostrum.Cache.GuildCache.get_by(id: 10)
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@callback</span> member_add(<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>(), member :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()) ::
-  <a href="Nostrum.Struct.Guild.Member.html#t:t/0">Nostrum.Struct.Guild.Member.t</a>()</pre>
+          <pre translate="no"><span class="attribute">@callback</span> member_count_down(<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>()) :: true</pre>
 
       </div>
 
-<p>Add the member for the given guild from upstream data.</p><p>Return the casted member structure.</p>
+<p>Decrement the member count for this guild by one.</p>
   </section>
 </section>
-<section class="detail" id="c:member_chunk/2">
+<section class="detail" id="c:member_count_up/1">
 
   <div class="detail-header">
-    <a href="#c:member_chunk/2" class="detail-link" title="Link to this callback">
+    <a href="#c:member_count_up/1" class="detail-link" title="Link to this callback">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this callback</span>
     </a>
-    <h1 class="signature" translate="no">member_chunk(id, chunk)</h1>
+    <h1 class="signature" translate="no">member_count_up(id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L259" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L251" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
 
+
+      <span class="note">(since 0.7.0)</span>
 
   </div>
 
@@ -990,86 +1009,11 @@ iex&gt; Nostrum.Cache.GuildCache.get_by(id: 10)
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@callback</span> member_chunk(<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>(), chunk :: [member :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()]) :: true</pre>
+          <pre translate="no"><span class="attribute">@callback</span> member_count_up(<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>()) :: true</pre>
 
       </div>
 
-<p>Bulk create multiple members in the cache from upstream data.</p><p>Return value is unused, as we currently do not dispatch a gateway for this.</p>
-  </section>
-</section>
-<section class="detail" id="c:member_remove/2">
-
-  <div class="detail-header">
-    <a href="#c:member_remove/2" class="detail-link" title="Link to this callback">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this callback</span>
-    </a>
-    <h1 class="signature" translate="no">member_remove(id, member)</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L232" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@callback</span> member_remove(<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>(), member :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()) ::
-  {<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>(), old_member :: <a href="Nostrum.Struct.Guild.Member.html#t:t/0">Nostrum.Struct.Guild.Member.t</a>()}
-  | :noop</pre>
-
-      </div>
-
-<p>Remove the given member for the given guild from upstream data.</p><p>Return the guild ID and old member if the member was cached. Otherwise,
-return <code class="inline">:noop</code>.</p>
-  </section>
-</section>
-<section class="detail" id="c:member_update/2">
-
-  <div class="detail-header">
-    <a href="#c:member_update/2" class="detail-link" title="Link to this callback">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this callback</span>
-    </a>
-    <h1 class="signature" translate="no">member_update(id, member)</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L251" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@callback</span> member_update(<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>(), member :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()) ::
-  {<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>(),
-   old_member :: <a href="Nostrum.Struct.Guild.Member.html#t:t/0">Nostrum.Struct.Guild.Member.t</a>() | nil,
-   updated_member :: <a href="Nostrum.Struct.Guild.Member.html#t:t/0">Nostrum.Struct.Guild.Member.t</a>()}</pre>
-
-      </div>
-
-<p>Update the given member for the given guild from upstream data.</p><p>Return the guild ID that was updated, the old cached member (if the member
-was known to the cache), and the updated member.</p><h2 id="c:member_update/2-note-regarding-intents" class="section-heading">
-  <a href="#c:member_update/2-note-regarding-intents" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">note-regarding-intents</p>
-  </a>
-  Note regarding intents
-</h2>
-<p>Even if the required intents to receive <code class="inline">GUILD_MEMBER_UPDATE</code>
-events are disabled to a point where we do not receive guild creation events,
-it is still possible to receive the event for our own user. An example of
-this can be found in <a href="https://github.com/Kraigie/nostrum/issues/293">issue
-#293</a>. Note that the linked
-issue refers to the old contents of this module before the ETS-based guild
-cache was moved into <a href="Nostrum.Cache.GuildCache.ETS.html"><code class="inline">Elixir.Nostrum.Cache.GuildCache.ETS</code></a>.</p>
+<p>Increment the member count for this guild by one.</p>
   </section>
 </section>
 <section class="detail" id="c:role_create/2">
@@ -1081,7 +1025,7 @@ cache was moved into <a href="Nostrum.Cache.GuildCache.ETS.html"><code class="in
     </a>
     <h1 class="signature" translate="no">role_create(id, role)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L266" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L219" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1110,7 +1054,7 @@ cache was moved into <a href="Nostrum.Cache.GuildCache.ETS.html"><code class="in
     </a>
     <h1 class="signature" translate="no">role_delete(id, id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L273" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L226" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1139,7 +1083,7 @@ cache was moved into <a href="Nostrum.Cache.GuildCache.ETS.html"><code class="in
     </a>
     <h1 class="signature" translate="no">role_update(id, role)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L280" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L233" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1169,7 +1113,7 @@ cache was moved into <a href="Nostrum.Cache.GuildCache.ETS.html"><code class="in
     </a>
     <h1 class="signature" translate="no">select(id, selector)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L141" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1192,11 +1136,11 @@ cache was moved into <a href="Nostrum.Cache.GuildCache.ETS.html"><code class="in
   </a>
   Examples
 </h2>
-<pre><code class="Elixir">iex&gt; Nostrum.Cache.GuildCache.select(0, fn guild -&gt; guild.id end)
-{:ok, 0}
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Cache.GuildCache</span><span class="o">.</span><span class="n">select</span><span class="p" data-group-id="5924330551-1">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="5924330551-2">fn</span><span class="w"> </span><span class="n">guild</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="w"> </span><span class="k" data-group-id="5924330551-2">end</span><span class="p" data-group-id="5924330551-1">)</span><span class="w">
+</span><span class="p" data-group-id="5924330551-3">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="5924330551-3">}</span><span class="w">
 
-iex&gt; Nostrum.Cache.GuildCache.select(10, fn guild -&gt; guild.id end)
-{:error, :id_not_found_on_guild_lookup}</code></pre>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Cache.GuildCache</span><span class="o">.</span><span class="n">select</span><span class="p" data-group-id="5924330551-4">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="5924330551-5">fn</span><span class="w"> </span><span class="n">guild</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="w"> </span><span class="k" data-group-id="5924330551-5">end</span><span class="p" data-group-id="5924330551-4">)</span><span class="w">
+</span><span class="p" data-group-id="5924330551-6">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="ss">:id_not_found_on_guild_lookup</span><span class="p" data-group-id="5924330551-6">}</span></code></pre>
   </section>
 </section>
 <section class="detail" id="c:select_all/1">
@@ -1208,7 +1152,7 @@ iex&gt; Nostrum.Cache.GuildCache.select(10, fn guild -&gt; guild.id end)
     </a>
     <h1 class="signature" translate="no">select_all(selector)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L94" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L89" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1236,7 +1180,7 @@ iex&gt; Nostrum.Cache.GuildCache.select(10, fn guild -&gt; guild.id end)
     </a>
     <h1 class="signature" translate="no">select_by(clauses, selector)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L165" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L160" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1253,14 +1197,14 @@ iex&gt; Nostrum.Cache.GuildCache.select(10, fn guild -&gt; guild.id end)
       </div>
 
 <p>Selects values using a <code class="inline">selector</code> from a <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a> that matches
-the <code class="inline">clauses</code>.</p><p>Returns <code class="inline">{:error, reason}</code> if no result was found.</p><pre><code class="Elixir">iex&gt; Nostrum.Cache.GuildCache.select_by([id: 0], fn guild -&gt; guild.id end)
-{:ok, 0}
+the <code class="inline">clauses</code>.</p><p>Returns <code class="inline">{:error, reason}</code> if no result was found.</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Cache.GuildCache</span><span class="o">.</span><span class="n">select_by</span><span class="p" data-group-id="0870086213-1">(</span><span class="p" data-group-id="0870086213-2">[</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="0870086213-2">]</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="0870086213-3">fn</span><span class="w"> </span><span class="n">guild</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="w"> </span><span class="k" data-group-id="0870086213-3">end</span><span class="p" data-group-id="0870086213-1">)</span><span class="w">
+</span><span class="p" data-group-id="0870086213-4">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="0870086213-4">}</span><span class="w">
 
-iex&gt; Nostrum.Cache.GuildCache.select_by(%{id: 0}, fn guild -&gt; guild.id end)
-{:ok, 0}
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Cache.GuildCache</span><span class="o">.</span><span class="n">select_by</span><span class="p" data-group-id="0870086213-5">(</span><span class="p" data-group-id="0870086213-6">%{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="0870086213-6">}</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="0870086213-7">fn</span><span class="w"> </span><span class="n">guild</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="w"> </span><span class="k" data-group-id="0870086213-7">end</span><span class="p" data-group-id="0870086213-5">)</span><span class="w">
+</span><span class="p" data-group-id="0870086213-8">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="0870086213-8">}</span><span class="w">
 
-iex&gt; Nostrum.Cache.GuildCache.select_by([id: 10], fn guild -&gt; guild.id end)
-{:error, :id_not_found_on_guild_lookup}</code></pre>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Cache.GuildCache</span><span class="o">.</span><span class="n">select_by</span><span class="p" data-group-id="0870086213-9">(</span><span class="p" data-group-id="0870086213-10">[</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p" data-group-id="0870086213-10">]</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="0870086213-11">fn</span><span class="w"> </span><span class="n">guild</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="w"> </span><span class="k" data-group-id="0870086213-11">end</span><span class="p" data-group-id="0870086213-9">)</span><span class="w">
+</span><span class="p" data-group-id="0870086213-12">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="ss">:id_not_found_on_guild_lookup</span><span class="p" data-group-id="0870086213-12">}</span></code></pre>
   </section>
 </section>
 <section class="detail" id="c:update/1">
@@ -1272,7 +1216,7 @@ iex&gt; Nostrum.Cache.GuildCache.select_by([id: 10], fn guild -&gt; guild.id end
     </a>
     <h1 class="signature" translate="no">update(map)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L176" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L171" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1302,7 +1246,7 @@ iex&gt; Nostrum.Cache.GuildCache.select_by([id: 10], fn guild -&gt; guild.id end
     </a>
     <h1 class="signature" translate="no">voice_state_update(id, state)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L292" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L245" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1346,7 +1290,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">all()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L295" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L265" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1368,7 +1312,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get(guild_id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L297" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L267" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1390,7 +1334,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get!(guild_id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L338" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L304" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1418,7 +1362,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_by(clauses)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L298" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L268" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1440,7 +1384,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_by!(clauses)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L348" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L314" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1468,7 +1412,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">select(guild_id, selector)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L299" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L269" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1490,7 +1434,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">select!(guild_id, selector)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L358" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L324" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1518,7 +1462,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">select_all(selector)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L296" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L266" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1540,7 +1484,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">select_by(clauses, selector)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L300" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L270" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1562,7 +1506,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">select_by!(clauses, selector)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L367" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache.ex#L333" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1586,26 +1530,32 @@ Functions
   </section>
 
       <footer class="footer">
-
-          <p>
-            On Hex.pm:
+        <p>
 
             <span class="line">
-              <a href="https://hex.pm/packages/nostrum/0.6.1" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/nostrum/0.6.1" class="line">Preview</a>
+              <a href="https://hex.pm/packages/nostrum/0.7.0" class="footer-hex-package">Hex Package</a>
 
-                <a href="https://preview.hex.pm/preview/nostrum/0.6.1/show/lib/nostrum/cache/guild_cache.ex">(current file)</a>
+              <a href="https://preview.hex.pm/preview/nostrum/0.7.0">Hex Preview</a>
+
+                (<a href="https://preview.hex.pm/preview/nostrum/0.7.0/show/lib/nostrum/cache/guild_cache.ex">current file</a>)
 
             </span>
 
-            <button class="a-main line footer-button display-quick-switch">
-              Search
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+              Search HexDocs
             </button>
-          </p>
 
-        <p>
+              <a href="Nostrum.epub" title="ePub version">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.4) for the
 
             <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 

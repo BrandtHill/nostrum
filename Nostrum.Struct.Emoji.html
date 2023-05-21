@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.29.0">
-    <meta name="project" content="Nostrum v0.6.1">
+    <meta name="generator" content="ExDoc v0.29.4">
+    <meta name="project" content="Nostrum v0.7.0">
 
-    <title>Nostrum.Struct.Emoji — Nostrum v0.6.1</title>
-    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
+    <title>Nostrum.Struct.Emoji — Nostrum v0.7.0</title>
+    <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
+
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
-    <script src="dist/sidebar_items-0EDC7626.js"></script>
+    <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
+    <script src="dist/sidebar_items-7A762AB3.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/html-XN2TSG4M.js"></script>
+    <script async src="dist/html-JDI3AVDD.js"></script>
 
 
   </head>
@@ -51,7 +52,7 @@
     </button>
     <label class="search-label">
       <p class="sr-only">Search</p>
-      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
     </label>
   </form>
 
@@ -66,9 +67,9 @@
       <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
 Nostrum
       </a>
-      <strong class="sidebar-projectVersion" translate="no">
-        v0.6.1
-      </strong>
+      <div class="sidebar-projectVersion" translate="no">
+        v0.7.0
+      </div>
     </div>
     <ul class="sidebar-listNav">
       <li><a id="extras-list-link" href="#full-list">Pages</a></li>
@@ -82,7 +83,7 @@ Nostrum
   </div>
 
   <div class="gradient"></div>
-  <ul id="full-list" class="sidebar-fullList"></ul>
+  <ul id="full-list"></ul>
 </section>
 
 <section class="content">
@@ -91,19 +92,19 @@ Nostrum
     <div id="content" class="content-inner">
 
 <h1>
-<button class="settings display-settings">
+<button class="icon-action display-settings">
   <i class="ri-settings-3-line"></i>
   <span class="sr-only">Settings</span>
 </button>
 
 
-    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Nostrum.Struct.Emoji</span> 
-  <small class="app-vsn" translate="no">(Nostrum v0.6.1)</small>
+  <small class="app-vsn" translate="no">(Nostrum v0.7.0)</small>
 
 </h1>
 
@@ -116,26 +117,26 @@ Nostrum
   Mentioning Emojis in Messages
 </h2>
 <p>A <a href="Nostrum.Struct.Emoji.html#content"><code class="inline">Nostrum.Struct.Emoji</code></a> can be mentioned in message content using the <a href="https://hexdocs.pm/elixir/String.Chars.html"><code class="inline">String.Chars</code></a>
-protocol or <a href="#mention/1"><code class="inline">mention/1</code></a>.</p><pre><code class="Elixir">emoji = %Nostrum.Struct.Emoji{id: 437093487582642177, name: &quot;foxbot&quot;}
-Nostrum.Api.create_message!(184046599834435585, &quot;#{emoji}&quot;)
-%Nostrum.Struct.Message{content: &quot;&lt;:foxbot:437093487582642177&gt;&quot;}
+protocol or <a href="#mention/1"><code class="inline">mention/1</code></a>.</p><pre><code class="makeup elixir" translate="no"><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="9430168115-1">%</span><span class="nc" data-group-id="9430168115-1">Nostrum.Struct.Emoji</span><span class="p" data-group-id="9430168115-1">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">437093487582642177</span><span class="p">,</span><span class="w"> </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;foxbot&quot;</span><span class="p" data-group-id="9430168115-1">}</span><span class="w">
+</span><span class="nc">Nostrum.Api</span><span class="o">.</span><span class="n">create_message!</span><span class="p" data-group-id="9430168115-2">(</span><span class="mi">184046599834435585</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="si" data-group-id="9430168115-3">#{</span><span class="n">emoji</span><span class="si" data-group-id="9430168115-3">}</span><span class="s">&quot;</span><span class="p" data-group-id="9430168115-2">)</span><span class="w">
+</span><span class="p" data-group-id="9430168115-4">%</span><span class="nc" data-group-id="9430168115-4">Nostrum.Struct.Message</span><span class="p" data-group-id="9430168115-4">{</span><span class="ss">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;:foxbot:437093487582642177&gt;&quot;</span><span class="p" data-group-id="9430168115-4">}</span><span class="w">
 
-emoji = %Nostrum.Struct.Emoji{id: 436885297037312001, name: &quot;tealixir&quot;}
-Nostrum.Api.create_message!(280085880452939778, &quot;#{Nostrum.Struct.Emoji.mention(emoji)}&quot;)
-%Nostrum.Struct.Message{content: &quot;&lt;:tealixir:436885297037312001&gt;&quot;}</code></pre><h2 id="module-using-emojis-in-the-api" class="section-heading">
+</span><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="9430168115-5">%</span><span class="nc" data-group-id="9430168115-5">Nostrum.Struct.Emoji</span><span class="p" data-group-id="9430168115-5">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">436885297037312001</span><span class="p">,</span><span class="w"> </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;tealixir&quot;</span><span class="p" data-group-id="9430168115-5">}</span><span class="w">
+</span><span class="nc">Nostrum.Api</span><span class="o">.</span><span class="n">create_message!</span><span class="p" data-group-id="9430168115-6">(</span><span class="mi">280085880452939778</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="si" data-group-id="9430168115-7">#{</span><span class="nc">Nostrum.Struct.Emoji</span><span class="o">.</span><span class="n">mention</span><span class="p" data-group-id="9430168115-8">(</span><span class="n">emoji</span><span class="p" data-group-id="9430168115-8">)</span><span class="si" data-group-id="9430168115-7">}</span><span class="s">&quot;</span><span class="p" data-group-id="9430168115-6">)</span><span class="w">
+</span><span class="p" data-group-id="9430168115-9">%</span><span class="nc" data-group-id="9430168115-9">Nostrum.Struct.Message</span><span class="p" data-group-id="9430168115-9">{</span><span class="ss">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;:tealixir:436885297037312001&gt;&quot;</span><span class="p" data-group-id="9430168115-9">}</span></code></pre><h2 id="module-using-emojis-in-the-api" class="section-heading">
   <a href="#module-using-emojis-in-the-api" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
   <p class="sr-only">using-emojis-in-the-api</p>
   </a>
   Using Emojis in the Api
 </h2>
 <p>A <a href="Nostrum.Struct.Emoji.html#content"><code class="inline">Nostrum.Struct.Emoji</code></a> can be used in <a href="Nostrum.Api.html"><code class="inline">Nostrum.Api</code></a> by using its api name
-or the struct itself.</p><pre><code class="Elixir">emoji = %Nostrum.Struct.Emoji{id: 436885297037312001, name: &quot;tealixir&quot;}
-Nostrum.Api.create_reaction(381889573426429952, 436247584349356032, Nostrum.Struct.Emoji.api_name(emoji))
-{:ok}
+or the struct itself.</p><pre><code class="makeup elixir" translate="no"><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="8545319948-1">%</span><span class="nc" data-group-id="8545319948-1">Nostrum.Struct.Emoji</span><span class="p" data-group-id="8545319948-1">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">436885297037312001</span><span class="p">,</span><span class="w"> </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;tealixir&quot;</span><span class="p" data-group-id="8545319948-1">}</span><span class="w">
+</span><span class="nc">Nostrum.Api</span><span class="o">.</span><span class="n">create_reaction</span><span class="p" data-group-id="8545319948-2">(</span><span class="mi">381889573426429952</span><span class="p">,</span><span class="w"> </span><span class="mi">436247584349356032</span><span class="p">,</span><span class="w"> </span><span class="nc">Nostrum.Struct.Emoji</span><span class="o">.</span><span class="n">api_name</span><span class="p" data-group-id="8545319948-3">(</span><span class="n">emoji</span><span class="p" data-group-id="8545319948-3">)</span><span class="p" data-group-id="8545319948-2">)</span><span class="w">
+</span><span class="p" data-group-id="8545319948-4">{</span><span class="ss">:ok</span><span class="p" data-group-id="8545319948-4">}</span><span class="w">
 
-emoji = %Nostrum.Struct.Emoji{id: 436189601820966923, name: &quot;elixir&quot;}
-Nostrum.Api.create_reaction(381889573426429952, 436247584349356032, emoji)
-{:ok}</code></pre><p>See <a href="#t:api_name/0"><code class="inline">Nostrum.Struct.Emoji.api_name/0</code></a> for more information.</p>
+</span><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="8545319948-5">%</span><span class="nc" data-group-id="8545319948-5">Nostrum.Struct.Emoji</span><span class="p" data-group-id="8545319948-5">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">436189601820966923</span><span class="p">,</span><span class="w"> </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;elixir&quot;</span><span class="p" data-group-id="8545319948-5">}</span><span class="w">
+</span><span class="nc">Nostrum.Api</span><span class="o">.</span><span class="n">create_reaction</span><span class="p" data-group-id="8545319948-6">(</span><span class="mi">381889573426429952</span><span class="p">,</span><span class="w"> </span><span class="mi">436247584349356032</span><span class="p">,</span><span class="w"> </span><span class="n">emoji</span><span class="p" data-group-id="8545319948-6">)</span><span class="w">
+</span><span class="p" data-group-id="8545319948-7">{</span><span class="ss">:ok</span><span class="p" data-group-id="8545319948-7">}</span></code></pre><p>See <a href="#t:api_name/0"><code class="inline">Nostrum.Struct.Emoji.api_name/0</code></a> for more information.</p>
   </section>
 
 
@@ -147,139 +148,137 @@ Nostrum.Api.create_reaction(381889573426429952, 436247584349356032, emoji)
       </a>
       Summary
     </h1>
+<div class="summary-types summary">
+  <h2>
+    <a href="#types">Types</a>
+  </h2>
 
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:animated/0" translate="no">animated()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Whether this emoji is animated</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:animated/0" translate="no">animated()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:api_name/0" translate="no">api_name()</a>
+        <div class="summary-synopsis"><p>Whether this emoji is animated</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Emoji string to be used with the Discord API.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:id/0" translate="no">id()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Id of the emoji</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:api_name/0" translate="no">api_name()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:managed/0" translate="no">managed()</a>
+        <div class="summary-synopsis"><p>Emoji string to be used with the Discord API.</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Whether this emoji is managed</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:name/0" translate="no">name()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Name of the emoji</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:id/0" translate="no">id()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:require_colons/0" translate="no">require_colons()</a>
+        <div class="summary-synopsis"><p>Id of the emoji</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Whether this emoji must be wrapped in colons</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:roles/0" translate="no">roles()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Roles this emoji is whitelisted to</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:managed/0" translate="no">managed()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:t/0" translate="no">t()</a>
+        <div class="summary-synopsis"><p>Whether this emoji is managed</p></div>
 
-        </div>
+    </div>
 
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:user/0" translate="no">user()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>User that created this emoji</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:name/0" translate="no">name()</a>
 
       </div>
 
-  </div>
+        <div class="summary-synopsis"><p>Name of the emoji</p></div>
 
-  <div class="summary-functions summary">
-    <h2>
-      <a href="#functions">Functions</a>
-    </h2>
+    </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#api_name/1" translate="no">api_name(emoji)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Formats an emoji struct into its <a href="#t:api_name/0"><code class="inline">Nostrum.Struct.Emoji.api_name/0</code></a>.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:require_colons/0" translate="no">require_colons()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#image_url/1" translate="no">image_url(emoji)</a>
+        <div class="summary-synopsis"><p>Whether this emoji must be wrapped in colons</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Returns the url of a custom emoji's image. If the emoji is not a custom one,
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:roles/0" translate="no">roles()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Roles this emoji is whitelisted to</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:t/0" translate="no">t()</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:user/0" translate="no">user()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>User that created this emoji</p></div>
+
+    </div>
+
+</div>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#api_name/1" translate="no">api_name(emoji)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Formats an emoji struct into its <a href="#t:api_name/0"><code class="inline">Nostrum.Struct.Emoji.api_name/0</code></a>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#image_url/1" translate="no">image_url(emoji)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the url of a custom emoji's image. If the emoji is not a custom one,
 returns <code class="inline">nil</code>.</p></div>
 
-      </div>
+    </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#mention/1" translate="no">mention(emoji)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Formats an <a href="Nostrum.Struct.Emoji.html#content"><code class="inline">Nostrum.Struct.Emoji</code></a> into a mention.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#mention/1" translate="no">mention(emoji)</a>
 
       </div>
 
-  </div>
+        <div class="summary-synopsis"><p>Formats an <a href="Nostrum.Struct.Emoji.html#content"><code class="inline">Nostrum.Struct.Emoji</code></a> into a mention.</p></div>
+
+    </div>
+
+</div>
 
   </section>
 
@@ -302,7 +301,7 @@ Types
     </a>
     <h1 class="signature" translate="no">animated()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L102" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L102" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -330,7 +329,7 @@ Types
     </a>
     <h1 class="signature" translate="no">api_name()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L81" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L81" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -355,13 +354,13 @@ api name.</p><h2 id="t:api_name/0-examples" class="section-heading">
   </a>
   Examples
 </h2>
-<pre><code class="Elixir"># Custom Emojis
-&quot;nostrum:431890438091489&quot;
+<pre><code class="makeup elixir" translate="no"><span class="c1"># Custom Emojis</span><span class="w">
+</span><span class="s">&quot;nostrum:431890438091489&quot;</span><span class="w">
 
-# Unicode Emojis
-&quot;≡ƒæì&quot;
-&quot;\xF0\x9F\x98\x81&quot;
-&quot;\u2b50&quot;</code></pre>
+</span><span class="c1"># Unicode Emojis</span><span class="w">
+</span><span class="s">&quot;≡ƒæì&quot;</span><span class="w">
+</span><span class="s">&quot;</span><span class="se">\x</span><span class="s">F0</span><span class="se">\x</span><span class="s">9F</span><span class="se">\x</span><span class="s">98</span><span class="se">\x</span><span class="s">81&quot;</span><span class="w">
+</span><span class="s">&quot;</span><span class="se">\u2b50</span><span class="s">&quot;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="t:id/0">
@@ -373,7 +372,7 @@ api name.</p><h2 id="t:api_name/0-examples" class="section-heading">
     </a>
     <h1 class="signature" translate="no">id()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L84" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L84" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -401,7 +400,7 @@ api name.</p><h2 id="t:api_name/0-examples" class="section-heading">
     </a>
     <h1 class="signature" translate="no">managed()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L99" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L99" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -429,7 +428,7 @@ api name.</p><h2 id="t:api_name/0-examples" class="section-heading">
     </a>
     <h1 class="signature" translate="no">name()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L87" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L87" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -457,7 +456,7 @@ api name.</p><h2 id="t:api_name/0-examples" class="section-heading">
     </a>
     <h1 class="signature" translate="no">require_colons()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L96" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L96" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -485,7 +484,7 @@ api name.</p><h2 id="t:api_name/0-examples" class="section-heading">
     </a>
     <h1 class="signature" translate="no">roles()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L90" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -513,7 +512,7 @@ api name.</p><h2 id="t:api_name/0-examples" class="section-heading">
     </a>
     <h1 class="signature" translate="no">t()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L104" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -549,7 +548,7 @@ api name.</p><h2 id="t:api_name/0-examples" class="section-heading">
     </a>
     <h1 class="signature" translate="no">user()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L93" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L93" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -590,7 +589,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">api_name(emoji)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L155" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L155" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -612,13 +611,13 @@ Functions
   </a>
   Examples
 </h2>
-<pre><code class="Elixir">iex&gt; emoji = %Nostrum.Struct.Emoji{name: &quot;Γ¡É&quot;}
-...&gt; Nostrum.Struct.Emoji.api_name(emoji)
-&quot;Γ¡É&quot;
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="7633454925-1">%</span><span class="nc" data-group-id="7633454925-1">Nostrum.Struct.Emoji</span><span class="p" data-group-id="7633454925-1">{</span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Γ¡É&quot;</span><span class="p" data-group-id="7633454925-1">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="nc">Nostrum.Struct.Emoji</span><span class="o">.</span><span class="n">api_name</span><span class="p" data-group-id="7633454925-2">(</span><span class="n">emoji</span><span class="p" data-group-id="7633454925-2">)</span><span class="w">
+</span><span class="s">&quot;Γ¡É&quot;</span><span class="w">
 
-iex&gt; emoji = %Nostrum.Struct.Emoji{id: 437093487582642177, name: &quot;foxbot&quot;}
-...&gt; Nostrum.Struct.Emoji.api_name(emoji)
-&quot;foxbot:437093487582642177&quot;</code></pre>
+</span><span class="gp unselectable">iex&gt; </span><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="7633454925-3">%</span><span class="nc" data-group-id="7633454925-3">Nostrum.Struct.Emoji</span><span class="p" data-group-id="7633454925-3">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">437093487582642177</span><span class="p">,</span><span class="w"> </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;foxbot&quot;</span><span class="p" data-group-id="7633454925-3">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="nc">Nostrum.Struct.Emoji</span><span class="o">.</span><span class="n">api_name</span><span class="p" data-group-id="7633454925-4">(</span><span class="n">emoji</span><span class="p" data-group-id="7633454925-4">)</span><span class="w">
+</span><span class="s">&quot;foxbot:437093487582642177&quot;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="image_url/1">
@@ -630,7 +629,7 @@ iex&gt; emoji = %Nostrum.Struct.Emoji{id: 437093487582642177, name: &quot;foxbot
     </a>
     <h1 class="signature" translate="no">image_url(emoji)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L180" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -653,17 +652,17 @@ returns <code class="inline">nil</code>.</p><h2 id="image_url/1-examples" class=
   </a>
   Examples
 </h2>
-<pre><code class="Elixir">iex&gt; emoji = %Nostrum.Struct.Emoji{id: 450225070569291776}
-iex&gt; Nostrum.Struct.Emoji.image_url(emoji)
-&quot;https://cdn.discordapp.com/emojis/450225070569291776.png&quot;
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="7473882239-1">%</span><span class="nc" data-group-id="7473882239-1">Nostrum.Struct.Emoji</span><span class="p" data-group-id="7473882239-1">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">450225070569291776</span><span class="p" data-group-id="7473882239-1">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.Emoji</span><span class="o">.</span><span class="n">image_url</span><span class="p" data-group-id="7473882239-2">(</span><span class="n">emoji</span><span class="p" data-group-id="7473882239-2">)</span><span class="w">
+</span><span class="s">&quot;https://cdn.discordapp.com/emojis/450225070569291776.png&quot;</span><span class="w">
 
-iex&gt; emoji = %Nostrum.Struct.Emoji{id: 406140226998894614, animated: true}
-iex&gt; Nostrum.Struct.Emoji.image_url(emoji)
-&quot;https://cdn.discordapp.com/emojis/406140226998894614.gif&quot;
+</span><span class="gp unselectable">iex&gt; </span><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="7473882239-3">%</span><span class="nc" data-group-id="7473882239-3">Nostrum.Struct.Emoji</span><span class="p" data-group-id="7473882239-3">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">406140226998894614</span><span class="p">,</span><span class="w"> </span><span class="ss">animated</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p" data-group-id="7473882239-3">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.Emoji</span><span class="o">.</span><span class="n">image_url</span><span class="p" data-group-id="7473882239-4">(</span><span class="n">emoji</span><span class="p" data-group-id="7473882239-4">)</span><span class="w">
+</span><span class="s">&quot;https://cdn.discordapp.com/emojis/406140226998894614.gif&quot;</span><span class="w">
 
-iex&gt; emoji = %Nostrum.Struct.Emoji{id: nil, name: &quot;Γ¡É&quot;}
-iex&gt; Nostrum.Struct.Emoji.image_url(emoji)
-nil</code></pre>
+</span><span class="gp unselectable">iex&gt; </span><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="7473882239-5">%</span><span class="nc" data-group-id="7473882239-5">Nostrum.Struct.Emoji</span><span class="p" data-group-id="7473882239-5">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="no">nil</span><span class="p">,</span><span class="w"> </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Γ¡É&quot;</span><span class="p" data-group-id="7473882239-5">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Struct.Emoji</span><span class="o">.</span><span class="n">image_url</span><span class="p" data-group-id="7473882239-6">(</span><span class="n">emoji</span><span class="p" data-group-id="7473882239-6">)</span><span class="w">
+</span><span class="no">nil</span></code></pre>
   </section>
 </section>
 <section class="detail" id="mention/1">
@@ -675,7 +674,7 @@ nil</code></pre>
     </a>
     <h1 class="signature" translate="no">mention(emoji)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L134" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/emoji.ex#L134" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -697,17 +696,17 @@ nil</code></pre>
   </a>
   Examples
 </h2>
-<pre><code class="Elixir">iex&gt; emoji = %Nostrum.Struct.Emoji{name: &quot;≡ƒæì&quot;}
-...&gt; Nostrum.Struct.Emoji.mention(emoji)
-&quot;≡ƒæì&quot;
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="7577722833-1">%</span><span class="nc" data-group-id="7577722833-1">Nostrum.Struct.Emoji</span><span class="p" data-group-id="7577722833-1">{</span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;≡ƒæì&quot;</span><span class="p" data-group-id="7577722833-1">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="nc">Nostrum.Struct.Emoji</span><span class="o">.</span><span class="n">mention</span><span class="p" data-group-id="7577722833-2">(</span><span class="n">emoji</span><span class="p" data-group-id="7577722833-2">)</span><span class="w">
+</span><span class="s">&quot;≡ƒæì&quot;</span><span class="w">
 
-iex&gt; emoji = %Nostrum.Struct.Emoji{id: 436885297037312001, name: &quot;tealixir&quot;}
-...&gt; Nostrum.Struct.Emoji.mention(emoji)
-&quot;&lt;:tealixir:436885297037312001&gt;&quot;
+</span><span class="gp unselectable">iex&gt; </span><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="7577722833-3">%</span><span class="nc" data-group-id="7577722833-3">Nostrum.Struct.Emoji</span><span class="p" data-group-id="7577722833-3">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">436885297037312001</span><span class="p">,</span><span class="w"> </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;tealixir&quot;</span><span class="p" data-group-id="7577722833-3">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="nc">Nostrum.Struct.Emoji</span><span class="o">.</span><span class="n">mention</span><span class="p" data-group-id="7577722833-4">(</span><span class="n">emoji</span><span class="p" data-group-id="7577722833-4">)</span><span class="w">
+</span><span class="s">&quot;&lt;:tealixir:436885297037312001&gt;&quot;</span><span class="w">
 
-iex&gt; emoji = %Nostrum.Struct.Emoji{id: 437016804309860372, name: &quot;blobseizure&quot;, animated: true}
-...&gt; Nostrum.Struct.Emoji.mention(emoji)
-&quot;&lt;a:blobseizure:437016804309860372&gt;&quot;</code></pre>
+</span><span class="gp unselectable">iex&gt; </span><span class="n">emoji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="7577722833-5">%</span><span class="nc" data-group-id="7577722833-5">Nostrum.Struct.Emoji</span><span class="p" data-group-id="7577722833-5">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="mi">437016804309860372</span><span class="p">,</span><span class="w"> </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;blobseizure&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">animated</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p" data-group-id="7577722833-5">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="nc">Nostrum.Struct.Emoji</span><span class="o">.</span><span class="n">mention</span><span class="p" data-group-id="7577722833-6">(</span><span class="n">emoji</span><span class="p" data-group-id="7577722833-6">)</span><span class="w">
+</span><span class="s">&quot;&lt;a:blobseizure:437016804309860372&gt;&quot;</span></code></pre>
   </section>
 </section>
 
@@ -715,26 +714,32 @@ iex&gt; emoji = %Nostrum.Struct.Emoji{id: 437016804309860372, name: &quot;blobse
   </section>
 
       <footer class="footer">
-
-          <p>
-            On Hex.pm:
+        <p>
 
             <span class="line">
-              <a href="https://hex.pm/packages/nostrum/0.6.1" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/nostrum/0.6.1" class="line">Preview</a>
+              <a href="https://hex.pm/packages/nostrum/0.7.0" class="footer-hex-package">Hex Package</a>
 
-                <a href="https://preview.hex.pm/preview/nostrum/0.6.1/show/lib/nostrum/struct/emoji.ex">(current file)</a>
+              <a href="https://preview.hex.pm/preview/nostrum/0.7.0">Hex Preview</a>
+
+                (<a href="https://preview.hex.pm/preview/nostrum/0.7.0/show/lib/nostrum/struct/emoji.ex">current file</a>)
 
             </span>
 
-            <button class="a-main line footer-button display-quick-switch">
-              Search
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+              Search HexDocs
             </button>
-          </p>
 
-        <p>
+              <a href="Nostrum.epub" title="ePub version">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.4) for the
 
             <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 
