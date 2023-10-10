@@ -5,15 +5,15 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.29.4">
-    <meta name="project" content="Nostrum v0.7.0">
+    <meta name="project" content="Nostrum v0.9.0-alpha3">
 
-    <title>Nostrum.Util — Nostrum v0.7.0</title>
+    <title>Nostrum.Util — Nostrum v0.9.0-alpha3</title>
     <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
-    <script src="dist/sidebar_items-7A762AB3.js"></script>
+    <script src="dist/sidebar_items-E883BA30.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -68,7 +68,7 @@
 Nostrum
       </a>
       <div class="sidebar-projectVersion" translate="no">
-        v0.7.0
+        v0.9.0-alpha3
       </div>
     </div>
     <ul class="sidebar-listNav">
@@ -104,7 +104,7 @@ Nostrum
     </a>
 
   <span translate="no">Nostrum.Util</span> 
-  <small class="app-vsn" translate="no">(Nostrum v0.7.0)</small>
+  <small class="app-vsn" translate="no">(Nostrum v0.9.0-alpha3)</small>
 
 </h1>
 
@@ -221,7 +221,7 @@ Nostrum
 
       </div>
 
-        <div class="summary-synopsis"><p>Returns the number of shards.</p></div>
+        <div class="summary-synopsis"><p>Returns the total amount of shards as per the configuration.</p></div>
 
     </div>
 
@@ -303,7 +303,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">gateway()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L92" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L111" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -332,7 +332,7 @@ for future use.</p>
     </a>
     <h1 class="signature" translate="no">get_all_shard_latencies()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L264" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L295" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -363,7 +363,7 @@ shard nums and whose values are latencies in milliseconds.</p>
     </a>
     <h1 class="signature" translate="no">get_shard_latency(state)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L248" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L279" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -391,7 +391,7 @@ shard nums and whose values are latencies in milliseconds.</p>
     </a>
     <h1 class="signature" translate="no">maybe_to_atom(token)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L153" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L184" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -420,7 +420,7 @@ be parsed as such.</p><p>If atom does not currently exist, will warn that we're 
     </a>
     <h1 class="signature" translate="no">maybe_to_datetime(stamp)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L177" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L208" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -448,7 +448,7 @@ be parsed as such.</p><p>If atom does not currently exist, will warn that we're 
     </a>
     <h1 class="signature" translate="no">maybe_to_unixtime(stamp)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L190" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L221" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -532,7 +532,7 @@ be parsed as such.</p><p>If atom does not currently exist, will warn that we're 
     </a>
     <h1 class="signature" translate="no">num_shards()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L62" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L77" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -544,12 +544,23 @@ be parsed as such.</p><p>If atom does not currently exist, will warn that we're 
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@spec</span> num_shards() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
+          <pre translate="no"><span class="attribute">@spec</span> num_shards() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>()</pre>
 
       </div>
 
-<p>Returns the number of shards.</p><p>This is not the number of currently active shards, but the number of shards specified
-in your config.</p>
+<p>Returns the total amount of shards as per the configuration.</p><h2 id="num_shards/0-return-value" class="section-heading">
+  <a href="#num_shards/0-return-value" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">return-value</p>
+  </a>
+  Return value
+</h2>
+<ul><li><p>If you specified your shards as <code class="inline">:auto</code>, the return value will be the
+recommended number of shards as given by the gateway.</p></li><li><p>If you explicitly specified your shard numbers as an integer, it will be
+the given number.</p></li><li><p>If you specified your shards in the form <code class="inline">{lowest, highest, total}</code> to
+start a specific range of the total shards you want to start, this will be
+the <code class="inline">total</code> value.</p></li></ul><p>Should Discord not supply us with any shard information, this will return
+<code class="inline">1</code>.</p><p>Note that this is not the number of currently active shards, but the number
+of shards specified in your config.</p>
   </section>
 </section>
 <section class="detail" id="safe_atom_map/1">
@@ -561,7 +572,7 @@ in your config.</p>
     </a>
     <h1 class="signature" translate="no">safe_atom_map(term)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L131" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L150" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -594,7 +605,7 @@ types of objects returned by Discord, the amount of new atoms created <em>SHOULD
     </a>
     <h1 class="signature" translate="no">unused_atoms()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L280" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L313" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -607,7 +618,7 @@ types of objects returned by Discord, the amount of new atoms created <em>SHOULD
 <p>Since we're being sacrilegious and converting strings to atoms from the WS, there will be some
 atoms that we see that aren't defined in any Discord structs. This method mainly serves as a
 means to define those atoms once so the user isn't warned about them in the
-<a href="#maybe_to_atom/1"><code class="inline">Nostrum.Util.maybe_to_atom/1</code></a> function when they are in fact harmless.</p>
+<a href="#maybe_to_atom/1"><code class="inline">Nostrum.Util.maybe_to_atom/1</code></a> function when they are in fact harmless.</p><p>The function is public to prevent it from being optimized out at compile time.</p>
   </section>
 </section>
 <section class="detail" id="usec_now/0">
@@ -646,11 +657,11 @@ means to define those atoms once so the user isn't warned about them in the
         <p>
 
             <span class="line">
-              <a href="https://hex.pm/packages/nostrum/0.7.0" class="footer-hex-package">Hex Package</a>
+              <a href="https://hex.pm/packages/nostrum/0.9.0-alpha3" class="footer-hex-package">Hex Package</a>
 
-              <a href="https://preview.hex.pm/preview/nostrum/0.7.0">Hex Preview</a>
+              <a href="https://preview.hex.pm/preview/nostrum/0.9.0-alpha3">Hex Preview</a>
 
-                (<a href="https://preview.hex.pm/preview/nostrum/0.7.0/show/lib/nostrum/util.ex">current file</a>)
+                (<a href="https://preview.hex.pm/preview/nostrum/0.9.0-alpha3/show/lib/nostrum/util.ex">current file</a>)
 
             </span>
 

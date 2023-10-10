@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.29.4">
+    <meta name="project" content="Nostrum v0.9.0-alpha3">
+
+    <title>Nostrum.Shard.Session — Nostrum v0.9.0-alpha3</title>
+    <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
+
+
+    <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
+    <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
+    <script src="dist/sidebar_items-E883BA30.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/html-JDI3AVDD.js"></script>
+
+
+  </head>
+  <body data-type="modules" class="page-module">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+<button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+  <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+</button>
+
+<section class="sidebar">
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
+Nostrum
+      </a>
+      <div class="sidebar-projectVersion" translate="no">
+        v0.9.0-alpha3
+      </div>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="icon-action display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L1" title="View Source" class="icon-action" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span translate="no">Nostrum.Shard.Session</span> 
+  <small class="app-vsn" translate="no">(Nostrum v0.9.0-alpha3)</small>
+
+</h1>
+
+
+  <section id="moduledoc">
+<p>Manages a single shard's gateway connection.</p><h2 id="module-purpose" class="section-heading">
+  <a href="#module-purpose" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">purpose</p>
+  </a>
+  Purpose
+</h2>
+<p>Discord's gateway sends us events over websocket. The shard session state
+machine concerns it self with parsing these events and dispatching them to
+clients as appropriate.</p><blockquote><h3 id="module-internal-module" class="info section-heading">
+  <a href="#module-internal-module" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">internal-module</p>
+  </a>
+  Internal module
+</h3>
+<p>This module is intended for exclusive usage inside of nostrum, and is
+documented for completeness and people curious to look behind the covers.</p></blockquote><h2 id="module-inner-workings" class="section-heading">
+  <a href="#module-inner-workings" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">inner-workings</p>
+  </a>
+  Inner workings
+</h2>
+<p>The session is implemented via <code class="inline">:gen_statem</code> and can be in one of the
+following states:</p><ul><li><p><code class="inline">disconnected</code>: when no connection is up at all. On initial connection of
+the session (e.g. no <code class="inline">seq</code> field is available), this will block if we need to
+wait a moment to respect the session startup concurrency limits. Afterwards,
+it will transition to <code class="inline">connecting_http</code>.</p></li><li><p><code class="inline">connecting_http</code>: We are setting up a HTTP connection to the API. This
+means that no connection was available previously at all, and we need to open
+it from scratch. Used for gateway-initiated reconnect requests (&quot;Cloudflare
+Websocket proxy restarting&quot;) and on <code class="inline">:gun_down</code> notifications for the
+connection in connected state. Once <code class="inline">:gun</code> notifies us that the connection is
+up, we transition to the <code class="inline">connecting_ws</code> state.</p></li><li><p><code class="inline">connecting_ws</code>: We are turning the HTTP connection into a WebSocket
+connection. If this succeeds, we head into the <code class="inline">connected</code> state.</p></li><li><p><code class="inline">connected</code>: The WebSocket connection is up. This state actively deals with
+new data from the gateway, and takes care of heartbeating. If Discord fails
+to respond to our heartbeats, we close down the full connection and attempt
+to re-establish and resume events.</p></li></ul>
+  </section>
+
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+      Summary
+    </h1>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#callback_mode/0" translate="no">callback_mode()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Callback implementation for <a href="https://www.erlang.org/doc/man/gen_statem.html#Module:callback_mode-0"><code class="inline">:gen_statem.callback_mode/0</code></a>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#child_spec/1" translate="no">child_spec(opts)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#connected/3" translate="no">connected(arg1, request, data)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#connecting_http/3" translate="no">connecting_http(arg1, from, data)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#connecting_ws/3" translate="no">connecting_ws(arg1, arg2, data)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#disconnected/3" translate="no">disconnected(arg1, arg2, data)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#get_ws_state/1" translate="no">get_ws_state(pid)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#init/1" translate="no">init(list)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Callback implementation for <a href="https://www.erlang.org/doc/man/gen_statem.html#Module:init-1"><code class="inline">:gen_statem.init/1</code></a>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#request_guild_members/3" translate="no">request_guild_members(pid, guild_id, limit \\ 0)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#start_link/2" translate="no">start_link(shard_opts, statem_opts)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#update_status/5" translate="no">update_status(pid, status, game, stream, type)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#update_voice_state/5" translate="no">update_voice_state(pid, guild_id, channel_id, self_mute, self_deaf)</a>
+
+      </div>
+
+    </div>
+
+</div>
+
+  </section>
+
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Functions
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="callback_mode/0">
+
+  <div class="detail-header">
+    <a href="#callback_mode/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">callback_mode()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L113" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Callback implementation for <a href="https://www.erlang.org/doc/man/gen_statem.html#Module:callback_mode-0"><code class="inline">:gen_statem.callback_mode/0</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="child_spec/1">
+
+  <div class="detail-header">
+    <a href="#child_spec/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">child_spec(opts)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L115" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="connected/3">
+
+  <div class="detail-header">
+    <a href="#connected/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">connected(arg1, request, data)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L233" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="connecting_http/3">
+
+  <div class="detail-header">
+    <a href="#connecting_http/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">connecting_http(arg1, from, data)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L155" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="connecting_ws/3">
+
+  <div class="detail-header">
+    <a href="#connecting_ws/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">connecting_ws(arg1, arg2, data)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L192" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="disconnected/3">
+
+  <div class="detail-header">
+    <a href="#disconnected/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">disconnected(arg1, arg2, data)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L127" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_ws_state/1">
+
+  <div class="detail-header">
+    <a href="#get_ws_state/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_ws_state(pid)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L89" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="init/1">
+
+  <div class="detail-header">
+    <a href="#init/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">init(list)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L99" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Callback implementation for <a href="https://www.erlang.org/doc/man/gen_statem.html#Module:init-1"><code class="inline">:gen_statem.init/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="request_guild_members/3">
+
+    <span id="request_guild_members/2"></span>
+
+  <div class="detail-header">
+    <a href="#request_guild_members/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">request_guild_members(pid, guild_id, limit \\ 0)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L84" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="start_link/2">
+
+  <div class="detail-header">
+    <a href="#start_link/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">start_link(shard_opts, statem_opts)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L95" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="update_status/5">
+
+  <div class="detail-header">
+    <a href="#update_status/5" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">update_status(pid, status, game, stream, type)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L65" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="update_voice_state/5">
+
+  <div class="detail-header">
+    <a href="#update_voice_state/5" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">update_voice_state(pid, guild_id, channel_id, self_mute, self_deaf)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/session.ex#L79" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+
+    </div>
+  </section>
+
+      <footer class="footer">
+        <p>
+
+            <span class="line">
+              <a href="https://hex.pm/packages/nostrum/0.9.0-alpha3" class="footer-hex-package">Hex Package</a>
+
+              <a href="https://preview.hex.pm/preview/nostrum/0.9.0-alpha3">Hex Preview</a>
+
+                (<a href="https://preview.hex.pm/preview/nostrum/0.9.0-alpha3/show/lib/nostrum/shard/session.ex">current file</a>)
+
+            </span>
+
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+              Search HexDocs
+            </button>
+
+              <a href="Nostrum.epub" title="ePub version">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.4) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+  </body>
+</html>

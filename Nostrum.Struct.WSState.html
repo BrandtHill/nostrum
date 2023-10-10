@@ -5,15 +5,15 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.29.4">
-    <meta name="project" content="Nostrum v0.7.0">
+    <meta name="project" content="Nostrum v0.9.0-alpha3">
 
-    <title>Nostrum.Struct.WSState — Nostrum v0.7.0</title>
+    <title>Nostrum.Struct.WSState — Nostrum v0.9.0-alpha3</title>
     <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
-    <script src="dist/sidebar_items-7A762AB3.js"></script>
+    <script src="dist/sidebar_items-E883BA30.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -68,7 +68,7 @@
 Nostrum
       </a>
       <div class="sidebar-projectVersion" translate="no">
-        v0.7.0
+        v0.9.0-alpha3
       </div>
     </div>
     <ul class="sidebar-listNav">
@@ -104,7 +104,7 @@ Nostrum
     </a>
 
   <span translate="no">Nostrum.Struct.WSState</span> 
-  <small class="app-vsn" translate="no">(Nostrum v0.7.0)</small>
+  <small class="app-vsn" translate="no">(Nostrum v0.9.0-alpha3)</small>
 
 </h1>
 
@@ -179,16 +179,6 @@ Nostrum
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#t:heartbeat_ref/0" translate="no">heartbeat_ref()</a>
-
-      </div>
-
-        <div class="summary-synopsis"><p>Time ref for the heartbeat</p></div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
         <a href="#t:last_heartbeat_ack/0" translate="no">last_heartbeat_ack()</a>
 
       </div>
@@ -206,6 +196,16 @@ hasn't been ACK'd yet</p></div>
 
         <div class="summary-synopsis"><p>The time the last heartbeat was sent, if a heartbeat hasn't been sent it
 will be the time the websocket process was started</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:resume_gateway/0" translate="no">resume_gateway()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Gateway URL to use for resuming.</p></div>
 
     </div>
 
@@ -241,16 +241,6 @@ will be the time the websocket process was started</p></div>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#t:shard_pid/0" translate="no">shard_pid()</a>
-
-      </div>
-
-        <div class="summary-synopsis"><p>PID of the shard containing this state</p></div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
         <a href="#t:stream/0" translate="no">stream()</a>
 
       </div>
@@ -264,6 +254,16 @@ will be the time the websocket process was started</p></div>
         <a href="#t:t/0" translate="no">t()</a>
 
       </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:total_shards/0" translate="no">total_shards()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>The highest shard number for this bot.</p></div>
 
     </div>
 
@@ -300,7 +300,7 @@ Types
     </a>
     <h1 class="signature" translate="no">conn()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L36" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L42" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -328,7 +328,7 @@ Types
     </a>
     <h1 class="signature" translate="no">conn_pid()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L39" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L45" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -356,7 +356,7 @@ Types
     </a>
     <h1 class="signature" translate="no">gateway()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L46" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L52" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -384,7 +384,7 @@ Types
     </a>
     <h1 class="signature" translate="no">heartbeat_ack()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L61" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L71" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -412,7 +412,7 @@ Types
     </a>
     <h1 class="signature" translate="no">heartbeat_interval()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L64" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L74" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -431,34 +431,6 @@ Types
 <p>Interval at which heartbeats are sent</p>
   </section>
 </section>
-<section class="detail" id="t:heartbeat_ref/0">
-
-  <div class="detail-header">
-    <a href="#t:heartbeat_ref/0" class="detail-link" title="Link to this type">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <h1 class="signature" translate="no">heartbeat_ref()</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L67" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@type</span> heartbeat_ref() :: <a href="https://www.erlang.org/doc/man/timer.html#type-tref">:timer.tref</a>() | nil</pre>
-
-      </div>
-
-<p>Time ref for the heartbeat</p>
-  </section>
-</section>
 <section class="detail" id="t:last_heartbeat_ack/0">
 
   <div class="detail-header">
@@ -468,7 +440,7 @@ Types
     </a>
     <h1 class="signature" translate="no">last_heartbeat_ack()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L58" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L68" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -497,7 +469,7 @@ hasn't been ACK'd yet</p>
     </a>
     <h1 class="signature" translate="no">last_heartbeat_send()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L52" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L62" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -517,6 +489,36 @@ hasn't been ACK'd yet</p>
 will be the time the websocket process was started</p>
   </section>
 </section>
+<section class="detail" id="t:resume_gateway/0">
+
+  <div class="detail-header">
+    <a href="#t:resume_gateway/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">resume_gateway()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L56" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+      <span class="note">(since 0.9.0)</span>
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> resume_gateway() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil</pre>
+
+      </div>
+
+<p>Gateway URL to use for resuming.</p>
+  </section>
+</section>
 <section class="detail" id="t:seq/0">
 
   <div class="detail-header">
@@ -526,7 +528,7 @@ will be the time the websocket process was started</p>
     </a>
     <h1 class="signature" translate="no">seq()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L27" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L36" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -554,7 +556,7 @@ will be the time the websocket process was started</p>
     </a>
     <h1 class="signature" translate="no">session()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L30" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L39" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -601,34 +603,6 @@ will be the time the websocket process was started</p>
 <p>The shard number</p>
   </section>
 </section>
-<section class="detail" id="t:shard_pid/0">
-
-  <div class="detail-header">
-    <a href="#t:shard_pid/0" class="detail-link" title="Link to this type">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <h1 class="signature" translate="no">shard_pid()</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L33" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@type</span> shard_pid() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pid</a>()</pre>
-
-      </div>
-
-<p>PID of the shard containing this state</p>
-  </section>
-</section>
 <section class="detail" id="t:stream/0">
 
   <div class="detail-header">
@@ -638,7 +612,7 @@ will be the time the websocket process was started</p>
     </a>
     <h1 class="signature" translate="no">stream()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L43" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L49" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -668,7 +642,7 @@ will be the time the websocket process was started</p>
     </a>
     <h1 class="signature" translate="no">t()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L72" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L79" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -686,20 +660,51 @@ will be the time the websocket process was started</p>
   gateway: <a href="#t:gateway/0">gateway</a>(),
   heartbeat_ack: <a href="#t:heartbeat_ack/0">heartbeat_ack</a>(),
   heartbeat_interval: <a href="#t:heartbeat_interval/0">heartbeat_interval</a>(),
-  heartbeat_ref: <a href="#t:heartbeat_ref/0">heartbeat_ref</a>(),
   last_heartbeat_ack: <a href="#t:last_heartbeat_ack/0">last_heartbeat_ack</a>(),
   last_heartbeat_send: <a href="#t:last_heartbeat_send/0">last_heartbeat_send</a>(),
+  resume_gateway: <a href="#t:resume_gateway/0">resume_gateway</a>(),
   seq: <a href="#t:seq/0">seq</a>(),
   session: <a href="#t:session/0">session</a>(),
   shard_num: <a href="#t:shard_num/0">shard_num</a>(),
-  shard_pid: <a href="#t:shard_pid/0">shard_pid</a>(),
   stream: <a href="#t:stream/0">stream</a>(),
+  total_shards: <a href="#t:total_shards/0">total_shards</a>(),
   zlib_ctx: <a href="#t:zlib_ctx/0">zlib_ctx</a>()
 }</pre>
 
       </div>
 
 
+  </section>
+</section>
+<section class="detail" id="t:total_shards/0">
+
+  <div class="detail-header">
+    <a href="#t:total_shards/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">total_shards()</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L33" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+      <span class="note">(since 0.8.0)</span>
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> total_shards() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">non_neg_integer</a>()</pre>
+
+      </div>
+
+<p>The highest shard number for this bot.</p><p>This may not be started locally, it is just used by nostrum to inform the
+gateway which events we are interested in.</p>
   </section>
 </section>
 <section class="detail" id="t:zlib_ctx/0">
@@ -711,7 +716,7 @@ will be the time the websocket process was started</p>
     </a>
     <h1 class="signature" translate="no">zlib_ctx()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L70" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/struct/ws_state.ex#L77" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -738,11 +743,11 @@ will be the time the websocket process was started</p>
         <p>
 
             <span class="line">
-              <a href="https://hex.pm/packages/nostrum/0.7.0" class="footer-hex-package">Hex Package</a>
+              <a href="https://hex.pm/packages/nostrum/0.9.0-alpha3" class="footer-hex-package">Hex Package</a>
 
-              <a href="https://preview.hex.pm/preview/nostrum/0.7.0">Hex Preview</a>
+              <a href="https://preview.hex.pm/preview/nostrum/0.9.0-alpha3">Hex Preview</a>
 
-                (<a href="https://preview.hex.pm/preview/nostrum/0.7.0/show/lib/nostrum/struct/ws_state.ex">current file</a>)
+                (<a href="https://preview.hex.pm/preview/nostrum/0.9.0-alpha3/show/lib/nostrum/struct/ws_state.ex">current file</a>)
 
             </span>
 
