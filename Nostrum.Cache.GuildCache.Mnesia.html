@@ -4,20 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.29.4">
-    <meta name="project" content="Nostrum v0.9.0-alpha3">
+    <meta name="generator" content="ExDoc v0.32.1">
+    <meta name="project" content="Nostrum v0.9.1">
 
-    <title>Nostrum.Cache.GuildCache.Mnesia — Nostrum v0.9.0-alpha3</title>
-    <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
+
+    <title>Nostrum.Cache.GuildCache.Mnesia — Nostrum v0.9.1</title>
+    <link rel="stylesheet" href="dist/html-elixir-2C5PUTIB.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
-    <script src="dist/sidebar_items-905D2A9C.js"></script>
-
-      <script src="docs_config.js"></script>
-
-    <script async src="dist/html-JDI3AVDD.js"></script>
+    <script src="dist/handlebars.templates-IHH6HKET.js"></script>
+    <script src="dist/sidebar_items-AA0F28A1.js"></script>
+    <script src="docs_config.js"></script>
+    <script async src="dist/html-GXQ6W6IF.js"></script>
 
 
   </head>
@@ -36,93 +35,123 @@
       } catch (error) { }
     </script>
 
-<div class="main">
+<div class="body-wrapper">
 
-<button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+<button id="sidebar-menu" class="sidebar-button sidebar-toggle" aria-label="toggle sidebar" aria-controls="sidebar">
   <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
 </button>
 
-<section class="sidebar">
-  <form class="sidebar-search" action="search.html">
-    <button type="submit" class="search-button" aria-label="Submit Search">
-      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
-    </button>
-    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
-      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
-    </button>
-    <label class="search-label">
-      <p class="sr-only">Search</p>
-      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
-    </label>
-  </form>
-
-  <div class="autocomplete">
-    <div class="autocomplete-results">
-    </div>
-  </div>
+<nav id="sidebar" class="sidebar">
 
   <div class="sidebar-header">
+    <div class="sidebar-projectInfo">
 
-    <div class="sidebar-projectDetails">
-      <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
+        <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectImage">
+          <img src="assets/logo.png" alt="Nostrum" />
+        </a>
+
+      <div>
+        <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
 Nostrum
-      </a>
-      <div class="sidebar-projectVersion" translate="no">
-        v0.9.0-alpha3
+        </a>
+        <div class="sidebar-projectVersion" translate="no">
+          v0.9.1
+        </div>
       </div>
     </div>
-    <ul class="sidebar-listNav">
-      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+    <ul id="sidebar-listNav" class="sidebar-listNav" role="tablist">
+      <li>
+        <button id="extras-list-tab-button" role="tab" data-type="extras" aria-controls="extras-tab-panel" aria-selected="true" tabindex="0">
+Pages
+        </button>
+      </li>
 
-        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+        <li>
+          <button id="modules-list-tab-button" role="tab" data-type="modules" aria-controls="modules-tab-panel" aria-selected="false" tabindex="-1">
+            Modules
+          </button>
+        </li>
 
 
-        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
+        <li>
+          <button id="tasks-list-tab-button" role="tab" data-type="tasks" aria-controls="tasks-tab-panel" aria-selected="false" tabindex="-1">
+            <span translate="no">Mix</span> Tasks
+          </button>
+        </li>
 
     </ul>
   </div>
 
-  <div class="gradient"></div>
-  <ul id="full-list"></ul>
-</section>
+  <div id="extras-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="extras-list-tab-button">
+    <ul id="extras-full-list" class="full-list"></ul>
+  </div>
 
-<section class="content">
+    <div id="modules-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="modules-list-tab-button" hidden>
+      <ul id="modules-full-list" class="full-list"></ul>
+    </div>
+
+
+    <div id="tasks-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="tasks-list-tab-button" hidden>
+      <ul id="tasks-full-list" class="full-list"></ul>
+    </div>
+
+</nav>
+
+<main class="content">
   <output role="status" id="toast"></output>
-  <div class="content-outer">
-    <div id="content" class="content-inner">
 
-<h1>
-<button class="icon-action display-settings">
-  <i class="ri-settings-3-line"></i>
-  <span class="sr-only">Settings</span>
-</button>
+  <div id="content" class="content-inner">
+    <div class="top-search">
+      <div class="search-settings">
+        <form class="search-bar" action="search.html">
+          <label class="search-label">
+            <span class="sr-only">Search documentation of Nostrum</span>
+            <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+          </label>
+          <button type="submit" class="search-button" aria-label="Submit Search">
+            <i class="ri-search-2-line ri-lg" aria-hidden="true" title="Submit search"></i>
+          </button>
+          <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
+            <i class="ri-close-line ri-lg" title="Cancel search"></i>
+          </button>
+        </form>
+        <div class="autocomplete">
+        </div>
+        <button class="icon-settings display-settings">
+          <i class="ri-settings-3-line"></i>
+          <span class="sr-only">Settings</span>
+        </button>
+      </div>
+    </div>
+
+<div id="top-content">
+  <h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L2" title="View Source" class="icon-action" rel="help">
+        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        <span class="sr-only">View Source</span>
+      </a>
+
+    <span translate="no">Nostrum.Cache.GuildCache.Mnesia</span> 
+    <small class="app-vsn" translate="no">(Nostrum v0.9.1)</small>
+
+  </h1>
 
 
-    <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L2" title="View Source" class="icon-action" rel="help">
-      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-      <span class="sr-only">View Source</span>
-    </a>
-
-  <span translate="no">Nostrum.Cache.GuildCache.Mnesia</span> 
-  <small class="app-vsn" translate="no">(Nostrum v0.9.0-alpha3)</small>
-
-</h1>
-
-
-  <section id="moduledoc">
+    <section id="moduledoc">
 <p>An Mnesia-based cache for guilds.</p><p>Please note that this module is only compiled if Mnesia is available on
 your system. See the Mnesia section of the <a href="state.html">State</a>
 documentation for more information.</p><p>To retrieve the table name used by this cache, use <a href="#table/0"><code class="inline">table/0</code></a>.</p>
-  </section>
+    </section>
 
+</div>
 
   <section id="summary" class="details-list">
     <h1 class="section-heading">
       <a class="hover-link" href="#summary">
         <i class="ri-link-m" aria-hidden="true"></i>
-        <span class="sr-only">Link to this section</span>
       </a>
-      Summary
+      <span class="text">Summary</span>
     </h1>
 <div class="summary-functions summary">
   <h2>
@@ -291,6 +320,16 @@ documentation for more information.</p><p>To retrieve the table name used by thi
 
     <div class="summary-row">
       <div class="summary-signature">
+        <a href="#stickers_update/2" translate="no">stickers_update(guild_id, stickers)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Update the sticker list for the given guild in the cache.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
         <a href="#table/0" translate="no">table()</a>
 
       </div>
@@ -348,9 +387,8 @@ documentation for more information.</p><p>To retrieve the table name used by thi
     <h1 class="section-heading">
       <a class="hover-link" href="#functions">
         <i class="ri-link-m" aria-hidden="true"></i>
-        <span class="sr-only">Link to this section</span>
       </a>
-Functions
+      <span class="text">Functions</span>
     </h1>
     <div class="functions-list">
 <section class="detail" id="channel_create/2">
@@ -362,7 +400,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">channel_create(guild_id, channel)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L114" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L115" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -392,7 +430,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">channel_delete(guild_id, channel_id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L128" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L129" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -423,7 +461,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">channel_update(guild_id, channel)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L141" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L142" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -454,7 +492,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">child_spec(init_arg)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L21" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L22" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -478,7 +516,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L54" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L55" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -508,7 +546,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create(payload)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L64" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L65" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -538,7 +576,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">delete(guild_id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L98" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L99" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -568,7 +606,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">emoji_update(guild_id, payload)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L153" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L154" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -599,7 +637,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">init(init_arg)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L30" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L31" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -623,7 +661,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">member_count_down(guild_id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L237" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L252" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -653,7 +691,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">member_count_up(guild_id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L224" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L239" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -683,7 +721,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">query_handle()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L278" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L293" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -713,7 +751,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">role_create(guild_id, payload)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L167" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L182" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -744,7 +782,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">role_delete(guild_id, role_id)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L177" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L192" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -775,7 +813,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">role_update(guild_id, role)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L188" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L203" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -807,7 +845,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">start_link(init_arg)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L24" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L25" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -822,6 +860,37 @@ Functions
 <p>Start the supervisor.</p>
   </section>
 </section>
+<section class="detail" id="stickers_update/2">
+
+  <div class="detail-header">
+    <a href="#stickers_update/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">stickers_update(guild_id, stickers)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L168" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+      <span class="note">(since 0.8.0)</span>
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> stickers_update(<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>(), [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()]) ::
+  {[<a href="Nostrum.Struct.Sticker.html#t:t/0">Nostrum.Struct.Sticker.t</a>()], [<a href="Nostrum.Struct.Sticker.html#t:t/0">Nostrum.Struct.Sticker.t</a>()]}</pre>
+
+      </div>
+
+<p>Update the sticker list for the given guild in the cache.</p>
+  </section>
+</section>
 <section class="detail" id="table/0">
 
   <div class="detail-header">
@@ -831,7 +900,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">table()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L46" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L47" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -861,7 +930,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">teardown()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L50" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L51" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -891,7 +960,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">update(payload)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L75" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L76" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -921,7 +990,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">voice_state_update(guild_id, payload)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L199" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L214" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -952,7 +1021,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">wrap_qlc(fun)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L285" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/cache/guild_cache/mnesia.ex#L300" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -971,41 +1040,39 @@ Functions
     </div>
   </section>
 
-      <footer class="footer">
-        <p>
-
-            <span class="line">
-              <a href="https://hex.pm/packages/nostrum/0.9.0-alpha3" class="footer-hex-package">Hex Package</a>
-
-              <a href="https://preview.hex.pm/preview/nostrum/0.9.0-alpha3">Hex Preview</a>
-
-                (<a href="https://preview.hex.pm/preview/nostrum/0.9.0-alpha3/show/lib/nostrum/cache/guild_cache/mnesia.ex">current file</a>)
-
-            </span>
+    <footer class="footer">
+      <p>
 
           <span class="line">
-            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
-              Search HexDocs
-            </button>
+            <a href="https://hex.pm/packages/nostrum/0.9.1" class="footer-hex-package">Hex Package</a>
 
-              <a href="Nostrum.epub" title="ePub version">
-                Download ePub version
-              </a>
+            <a href="https://preview.hex.pm/preview/nostrum/0.9.1">Hex Preview</a>
 
           </span>
-        </p>
 
-        <p class="built-using">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.4) for the
+        <span class="line">
+          <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+            Search HexDocs
+          </button>
 
-            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+            <a href="Nostrum.epub" title="ePub version">
+              Download ePub version
+            </a>
 
-        </p>
-      </footer>
-    </div>
+        </span>
+      </p>
+
+      <p class="built-using">
+        Built using
+        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.32.1) for the
+
+          <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+      </p>
+
+    </footer>
   </div>
-</section>
+</main>
 </div>
 
 
