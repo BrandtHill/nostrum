@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-IHH6HKET.js"></script>
-    <script src="dist/sidebar_items-2C1026A5.js"></script>
+    <script src="dist/sidebar_items-9312FB79.js"></script>
     <script src="docs_config.js"></script>
     <script async src="dist/html-GXQ6W6IF.js"></script>
 
@@ -196,6 +196,17 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
+        <a href="#map_update_if_present/3" translate="no">map_update_if_present(map, key, fun)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Updates a map with a new value if the key is present.
+Otherwise, returns the map unchanged.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
         <a href="#maybe_to_atom/1" translate="no">maybe_to_atom(token)</a>
 
       </div>
@@ -331,7 +342,7 @@ means to define those atoms once so the user isn't warned about them in the
     </a>
     <h1 class="signature" translate="no">gateway()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L111" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L112" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -360,7 +371,7 @@ for future use.</p>
     </a>
     <h1 class="signature" translate="no">get_all_shard_latencies()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L308" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L325" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -391,7 +402,7 @@ shard nums and whose values are latencies in milliseconds.</p>
     </a>
     <h1 class="signature" translate="no">get_shard_latency(state)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L292" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L309" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -410,6 +421,35 @@ shard nums and whose values are latencies in milliseconds.</p>
 <p>Gets the latency of the shard connection from a <code class="inline">Nostrum.Struct.WSState.t()</code> struct.</p><p>Returns the latency in milliseconds as an integer, returning nil if unknown.</p>
   </section>
 </section>
+<section class="detail" id="map_update_if_present/3">
+
+  <div class="detail-header">
+    <a href="#map_update_if_present/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">map_update_if_present(map, key, fun)</h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L281" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> map_update_if_present(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(), (<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>() -&gt; <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>())) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()</pre>
+
+      </div>
+
+<p>Updates a map with a new value if the key is present.
+Otherwise, returns the map unchanged.</p>
+  </section>
+</section>
 <section class="detail" id="maybe_to_atom/1">
 
   <div class="detail-header">
@@ -419,7 +459,7 @@ shard nums and whose values are latencies in milliseconds.</p>
     </a>
     <h1 class="signature" translate="no">maybe_to_atom(token)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L187" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L188" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -449,7 +489,7 @@ provided.</p><p>If atom does not currently exist, will warn that we're doing an 
     </a>
     <h1 class="signature" translate="no">maybe_to_datetime(dt)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L217" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L218" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -477,7 +517,7 @@ provided.</p><p>If atom does not currently exist, will warn that we're doing an 
     </a>
     <h1 class="signature" translate="no">maybe_to_unixtime(stamp)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L234" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L235" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -601,7 +641,7 @@ of shards specified in your config.</p>
     </a>
     <h1 class="signature" translate="no">safe_atom_map(term)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L150" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L151" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -634,7 +674,7 @@ types of objects returned by Discord, the amount of new atoms created <em>SHOULD
     </a>
     <h1 class="signature" translate="no">unused_atoms()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L326" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/util.ex#L343" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
