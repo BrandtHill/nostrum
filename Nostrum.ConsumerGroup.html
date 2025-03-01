@@ -4,36 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.32.1">
-    <meta name="project" content="Nostrum v0.10.0">
+    <meta name="generator" content="ExDoc v0.37.2">
+    <meta name="project" content="nostrum v0.11.0-dev">
 
 
-    <title>Nostrum.ConsumerGroup — Nostrum v0.10.0</title>
-    <link rel="stylesheet" href="dist/html-elixir-2C5PUTIB.css" />
+    <title>Nostrum.ConsumerGroup — nostrum v0.11.0-dev</title>
 
+    <link rel="stylesheet" href="dist/html-elixir-6X3L5KMG.css" />
 
-    <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-IHH6HKET.js"></script>
-    <script src="dist/sidebar_items-0C0FD3DD.js"></script>
-    <script src="docs_config.js"></script>
-    <script async src="dist/html-GXQ6W6IF.js"></script>
-
+    <script defer src="dist/sidebar_items-8A52A8FF.js"></script>
+    <script defer src="docs_config.js"></script>
+    <script defer src="dist/html-6XHBGSGW.js"></script>
 
   </head>
-  <body data-type="modules" class="page-module">
-    <script>
-
-      try {
-        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
-
-        if (settings.theme === 'dark' ||
-           ((settings.theme === 'system' || settings.theme == null) &&
-             window.matchMedia('(prefers-color-scheme: dark)').matches)
-           ) {
-          document.body.classList.add('dark')
-        }
-      } catch (error) { }
-    </script>
+  <body>
+    <script>(()=>{var t="ex_doc:settings",e="dark";var o="dark",s="light";var E="sidebar_state",n="closed";var r="sidebar_width";var a="sidebar-open";var i=new URLSearchParams(window.location.search),S=i.get("theme")||JSON.parse(localStorage.getItem(t)||"{}").theme;(S===o||S!==s&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&document.body.classList.add(e);var d=sessionStorage.getItem(E),A=d!==n&&!window.matchMedia(`screen and (max-width: ${768}px)`).matches;document.body.classList.toggle(a,A);var c=sessionStorage.getItem(r);c&&document.body.style.setProperty("--sidebarWidth",`${c}px`);var p=/(Macintosh|iPhone|iPad|iPod)/.test(window.navigator.userAgent);document.documentElement.classList.toggle("apple-os",p);})();
+</script>
 
 <div class="body-wrapper">
 
@@ -47,69 +33,35 @@
     <div class="sidebar-projectInfo">
 
         <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectImage">
-          <img src="assets/logo.png" alt="Nostrum" />
+          <img src="assets/logo.png" alt="nostrum" />
         </a>
 
       <div>
         <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
-Nostrum
+nostrum
         </a>
         <div class="sidebar-projectVersion" translate="no">
-          v0.10.0
+          v0.11.0-dev
         </div>
       </div>
     </div>
-    <ul id="sidebar-listNav" class="sidebar-listNav" role="tablist">
-      <li>
-        <button id="extras-list-tab-button" role="tab" data-type="extras" aria-controls="extras-tab-panel" aria-selected="true" tabindex="0">
-Pages
-        </button>
-      </li>
-
-        <li>
-          <button id="modules-list-tab-button" role="tab" data-type="modules" aria-controls="modules-tab-panel" aria-selected="false" tabindex="-1">
-            Modules
-          </button>
-        </li>
-
-
-        <li>
-          <button id="tasks-list-tab-button" role="tab" data-type="tasks" aria-controls="tasks-tab-panel" aria-selected="false" tabindex="-1">
-            <span translate="no">Mix</span> Tasks
-          </button>
-        </li>
-
-    </ul>
+    <ul id="sidebar-list-nav" class="sidebar-list-nav" role="tablist" data-extras=""></ul>
   </div>
-
-  <div id="extras-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="extras-list-tab-button">
-    <ul id="extras-full-list" class="full-list"></ul>
-  </div>
-
-    <div id="modules-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="modules-list-tab-button" hidden>
-      <ul id="modules-full-list" class="full-list"></ul>
-    </div>
-
-
-    <div id="tasks-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="tasks-list-tab-button" hidden>
-      <ul id="tasks-full-list" class="full-list"></ul>
-    </div>
-
 </nav>
 
-<main class="content">
-  <output role="status" id="toast"></output>
+<output role="status" id="toast"></output>
 
+<main class="content page-module" id="main" data-type="modules">
   <div id="content" class="content-inner">
     <div class="top-search">
       <div class="search-settings">
         <form class="search-bar" action="search.html">
           <label class="search-label">
-            <span class="sr-only">Search documentation of Nostrum</span>
+            <span class="sr-only">Search documentation of nostrum</span>
             <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
           </label>
-          <button type="submit" class="search-button" aria-label="Submit Search">
-            <i class="ri-search-2-line ri-lg" aria-hidden="true" title="Submit search"></i>
+          <button type="submit" class="search-button" aria-label="Submit Search" tabindex="-1">
+            <i class="ri-search-2-line ri-lg" aria-hidden="true"></i>
           </button>
           <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
             <i class="ri-close-line ri-lg" title="Cancel search"></i>
@@ -125,17 +77,19 @@ Pages
     </div>
 
 <div id="top-content">
-  <h1>
+  <div class="heading-with-actions top-heading">
+    <h1>
+      <span translate="no">Nostrum.ConsumerGroup</span> 
+      <small class="app-vsn" translate="no">(nostrum v0.11.0-dev)</small>
+
+    </h1>
 
       <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L1" title="View Source" class="icon-action" rel="help">
         <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         <span class="sr-only">View Source</span>
       </a>
 
-    <span translate="no">Nostrum.ConsumerGroup</span> 
-    <small class="app-vsn" translate="no">(Nostrum v0.10.0)</small>
-
-  </h1>
+  </div>
 
 
     <section id="moduledoc">
@@ -158,7 +112,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#child_spec/1" translate="no">child_spec(opts)</a>
+        <a href="#child_spec/1" data-no-tooltip="" translate="no">child_spec(opts)</a>
 
       </div>
 
@@ -166,7 +120,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#demonitor/1" translate="no">demonitor(ref)</a>
+        <a href="#demonitor/1" data-no-tooltip="" translate="no">demonitor(ref)</a>
 
       </div>
 
@@ -176,7 +130,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#dispatch/1" translate="no">dispatch(event)</a>
+        <a href="#dispatch/2" data-no-tooltip="" translate="no">dispatch(event, bot_name)</a>
 
       </div>
 
@@ -186,7 +140,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#join/0" translate="no">join()</a>
+        <a href="#join/0" data-no-tooltip="" translate="no">join()</a>
 
       </div>
 
@@ -196,7 +150,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#join/1" translate="no">join(pid)</a>
+        <a href="#join/1" data-no-tooltip="" translate="no">join(pid)</a>
 
       </div>
 
@@ -206,7 +160,27 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#monitor/0" translate="no">monitor()</a>
+        <a href="#leave/0" data-no-tooltip="" translate="no">leave()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Equivalent to <code class="inline">ConsumerGroup.leave(self())</code>. See <a href="#leave/1"><code class="inline">leave/1</code></a>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#leave/1" data-no-tooltip="" translate="no">leave(pid_or_pids)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Leave the given process or processes from the current bot's consumer group.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#monitor/0" data-no-tooltip="" translate="no">monitor()</a>
 
       </div>
 
@@ -216,7 +190,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#start_link/1" translate="no">start_link(opts)</a>
+        <a href="#start_link/1" data-no-tooltip="" translate="no">start_link(opts)</a>
 
       </div>
 
@@ -238,20 +212,20 @@ Pages
 <section class="detail" id="child_spec/1">
 
   <div class="detail-header">
-    <a href="#child_spec/1" class="detail-link" title="Link to this function">
+    <a href="#child_spec/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">child_spec(opts)</h1>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">child_spec(opts)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L117" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+        <span class="note">(since 0.7.0)</span>
 
 
-      <span class="note">(since 0.7.0)</span>
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L136" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
 
+    </div>
   </div>
 
   <section class="docstring">
@@ -262,20 +236,20 @@ Pages
 <section class="detail" id="demonitor/1">
 
   <div class="detail-header">
-    <a href="#demonitor/1" class="detail-link" title="Link to this function">
+    <a href="#demonitor/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">demonitor(ref)</h1>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">demonitor(ref)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L31" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+        <span class="note">(since 0.9.0)</span>
 
 
-      <span class="note">(since 0.9.0)</span>
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L32" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
 
+    </div>
   </div>
 
   <section class="docstring">
@@ -289,32 +263,32 @@ Pages
 <p>Stop monitoring the given reference.</p>
   </section>
 </section>
-<section class="detail" id="dispatch/1">
+<section class="detail" id="dispatch/2">
 
   <div class="detail-header">
-    <a href="#dispatch/1" class="detail-link" title="Link to this function">
+    <a href="#dispatch/2" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">dispatch(event)</h1>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">dispatch(event, bot_name)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L43" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+        <span class="note">(since 0.7.0)</span>
 
 
-      <span class="note">(since 0.7.0)</span>
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L44" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
 
+    </div>
   </div>
 
   <section class="docstring">
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@spec</span> dispatch([<a href="Nostrum.Consumer.html#t:event/0">Nostrum.Consumer.event</a>(), ...]) :: :ok</pre>
+          <pre translate="no"><span class="attribute">@spec</span> dispatch([<a href="Nostrum.Consumer.html#t:event/0">Nostrum.Consumer.event</a>(), ...], <a href="Nostrum.Bot.html#t:name/0">Nostrum.Bot.name</a>()) :: :ok</pre>
 
-          <pre translate="no"><span class="attribute">@spec</span> dispatch(<a href="Nostrum.Consumer.html#t:event/0">Nostrum.Consumer.event</a>()) :: :ok</pre>
+          <pre translate="no"><span class="attribute">@spec</span> dispatch(<a href="Nostrum.Consumer.html#t:event/0">Nostrum.Consumer.event</a>(), <a href="Nostrum.Bot.html#t:name/0">Nostrum.Bot.name</a>()) :: :ok</pre>
 
       </div>
 
@@ -325,20 +299,20 @@ manually.</p>
 <section class="detail" id="join/0">
 
   <div class="detail-header">
-    <a href="#join/0" class="detail-link" title="Link to this function">
+    <a href="#join/0" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">join()</h1>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">join()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L65" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+        <span class="note">(since 0.7.0)</span>
 
 
-      <span class="note">(since 0.7.0)</span>
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L65" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
 
+    </div>
   </div>
 
   <section class="docstring">
@@ -355,20 +329,20 @@ manually.</p>
 <section class="detail" id="join/1">
 
   <div class="detail-header">
-    <a href="#join/1" class="detail-link" title="Link to this function">
+    <a href="#join/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">join(pid)</h1>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">join(pid)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L109" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+        <span class="note">(since 0.7.0)</span>
 
 
-      <span class="note">(since 0.7.0)</span>
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L109" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
 
+    </div>
   </div>
 
   <section class="docstring">
@@ -392,42 +366,96 @@ queue will keep growing.</p><h2 id="join/1-example" class="section-heading">
 </h2>
 <p>The following example illustrates how to use this to implement inline event
 awaiting:</p><pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">MyBot.Command</span><span class="w">
-  </span><span class="kn">alias</span><span class="w"> </span><span class="nc">Nostrum.Api</span><span class="w">
+  </span><span class="kn">alias</span><span class="w"> </span><span class="nc">Nostrum.Api.Message</span><span class="w">
   </span><span class="kn">alias</span><span class="w"> </span><span class="nc">Nostrum.ConsumerGroup</span><span class="w">
   </span><span class="kn">alias</span><span class="w"> </span><span class="nc">Nostrum.Struct.Message</span><span class="w">
   </span><span class="kn">alias</span><span class="w"> </span><span class="nc">Nostrum.Struct.User</span><span class="w">
 
-  </span><span class="kd">def</span><span class="w"> </span><span class="nf">command</span><span class="p" data-group-id="4092977854-1">(</span><span class="p" data-group-id="4092977854-2">%</span><span class="nc" data-group-id="4092977854-2">Message</span><span class="p" data-group-id="4092977854-2">{</span><span class="ss">author</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="4092977854-3">%</span><span class="nc" data-group-id="4092977854-3">User</span><span class="p" data-group-id="4092977854-3">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="n">author_id</span><span class="p" data-group-id="4092977854-3">}</span><span class="p" data-group-id="4092977854-2">}</span><span class="p" data-group-id="4092977854-1">)</span><span class="w"> </span><span class="k" data-group-id="4092977854-4">do</span><span class="w">
-    </span><span class="nc">Api</span><span class="o">.</span><span class="n">create_message!</span><span class="p" data-group-id="4092977854-5">(</span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Reply &#39;y&#39; in 5 seconds to confirm ordering a large burger menu.&quot;</span><span class="p" data-group-id="4092977854-5">)</span><span class="w">
-    </span><span class="nc">ConsumerGroup</span><span class="o">.</span><span class="n">join</span><span class="p" data-group-id="4092977854-6">(</span><span class="p" data-group-id="4092977854-6">)</span><span class="w">
-    </span><span class="k">receive</span><span class="w"> </span><span class="k" data-group-id="4092977854-7">do</span><span class="w">
-      </span><span class="p" data-group-id="4092977854-8">{</span><span class="ss">:event</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="4092977854-9">{</span><span class="ss">:MESSAGE_CREATE</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="4092977854-10">%</span><span class="nc" data-group-id="4092977854-10">Message</span><span class="p" data-group-id="4092977854-10">{</span><span class="ss">author</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="4092977854-11">%</span><span class="nc" data-group-id="4092977854-11">User</span><span class="p" data-group-id="4092977854-11">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="n">author_id</span><span class="p" data-group-id="4092977854-11">}</span><span class="p">,</span><span class="w"> </span><span class="ss">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;y&quot;</span><span class="p" data-group-id="4092977854-10">}</span><span class="p">,</span><span class="w"> </span><span class="bp">_</span><span class="p" data-group-id="4092977854-9">}</span><span class="p" data-group-id="4092977854-8">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
-        </span><span class="nc">Api</span><span class="o">.</span><span class="n">create_message!</span><span class="p" data-group-id="4092977854-12">(</span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;The large burger menu is coming.&quot;</span><span class="p" data-group-id="4092977854-12">)</span><span class="w">
-    </span><span class="k" data-group-id="4092977854-7">after</span><span class="w">
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">command</span><span class="p" data-group-id="0525888869-1">(</span><span class="p" data-group-id="0525888869-2">%</span><span class="nc" data-group-id="0525888869-2">Message</span><span class="p" data-group-id="0525888869-2">{</span><span class="ss">author</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="0525888869-3">%</span><span class="nc" data-group-id="0525888869-3">User</span><span class="p" data-group-id="0525888869-3">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="n">author_id</span><span class="p" data-group-id="0525888869-3">}</span><span class="p" data-group-id="0525888869-2">}</span><span class="p" data-group-id="0525888869-1">)</span><span class="w"> </span><span class="k" data-group-id="0525888869-4">do</span><span class="w">
+    </span><span class="nc">Message</span><span class="o">.</span><span class="n">create</span><span class="p" data-group-id="0525888869-5">(</span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Reply &#39;y&#39; in 5 seconds to confirm ordering a large burger menu.&quot;</span><span class="p" data-group-id="0525888869-5">)</span><span class="w">
+    </span><span class="nc">ConsumerGroup</span><span class="o">.</span><span class="n">join</span><span class="p" data-group-id="0525888869-6">(</span><span class="p" data-group-id="0525888869-6">)</span><span class="w">
+    </span><span class="k">receive</span><span class="w"> </span><span class="k" data-group-id="0525888869-7">do</span><span class="w">
+      </span><span class="p" data-group-id="0525888869-8">{</span><span class="ss">:event</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="0525888869-9">{</span><span class="ss">:MESSAGE_CREATE</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="0525888869-10">%</span><span class="nc" data-group-id="0525888869-10">Message</span><span class="p" data-group-id="0525888869-10">{</span><span class="ss">author</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="0525888869-11">%</span><span class="nc" data-group-id="0525888869-11">User</span><span class="p" data-group-id="0525888869-11">{</span><span class="ss">id</span><span class="p">:</span><span class="w"> </span><span class="n">author_id</span><span class="p" data-group-id="0525888869-11">}</span><span class="p">,</span><span class="w"> </span><span class="ss">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;y&quot;</span><span class="p" data-group-id="0525888869-10">}</span><span class="p">,</span><span class="w"> </span><span class="bp">_</span><span class="p" data-group-id="0525888869-9">}</span><span class="p" data-group-id="0525888869-8">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+        </span><span class="nc">Message</span><span class="o">.</span><span class="n">create</span><span class="p" data-group-id="0525888869-12">(</span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;The large burger menu is coming.&quot;</span><span class="p" data-group-id="0525888869-12">)</span><span class="w">
+    </span><span class="k" data-group-id="0525888869-7">after</span><span class="w">
       </span><span class="mi">5_000</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
-        </span><span class="nc">Api</span><span class="o">.</span><span class="n">create_message!</span><span class="p" data-group-id="4092977854-13">(</span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Too slow!&quot;</span><span class="p" data-group-id="4092977854-13">)</span><span class="w">
-    </span><span class="k" data-group-id="4092977854-7">end</span><span class="w">
-  </span><span class="k" data-group-id="4092977854-4">end</span><span class="w">
+        </span><span class="nc">Message</span><span class="o">.</span><span class="n">create</span><span class="p" data-group-id="0525888869-13">(</span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Too slow!&quot;</span><span class="p" data-group-id="0525888869-13">)</span><span class="w">
+    </span><span class="k" data-group-id="0525888869-7">end</span><span class="w">
+  </span><span class="k" data-group-id="0525888869-4">end</span><span class="w">
 </span><span class="k">end</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="leave/0">
+
+  <div class="detail-header">
+    <a href="#leave/0" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">leave()</h1>
+
+        <span class="note">(since 0.11.0)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L115" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Equivalent to <code class="inline">ConsumerGroup.leave(self())</code>. See <a href="#leave/1"><code class="inline">leave/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="leave/1">
+
+  <div class="detail-header">
+    <a href="#leave/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">leave(pid_or_pids)</h1>
+
+        <span class="note">(since 0.11.0)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L126" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> leave(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pid</a>() | [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pid</a>()]) :: :ok | :not_joined</pre>
+
+      </div>
+
+<p>Leave the given process or processes from the current bot's consumer group.</p><p>Useful if you wish to stop listening for events after a while.</p>
   </section>
 </section>
 <section class="detail" id="monitor/0">
 
   <div class="detail-header">
-    <a href="#monitor/0" class="detail-link" title="Link to this function">
+    <a href="#monitor/0" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">monitor()</h1>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">monitor()</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L22" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+        <span class="note">(since 0.9.0)</span>
 
 
-      <span class="note">(since 0.9.0)</span>
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L23" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
 
+    </div>
   </div>
 
   <section class="docstring">
@@ -439,7 +467,7 @@ awaiting:</p><pre><code class="makeup elixir" translate="no"><span class="kd">de
       </div>
 
 <p>Monitor the consumer group for changes.</p><p>Return the initial state of the group on first call. Further updates are
-delivered as messages to the calling process, see <a href="https://www.erlang.org/doc/man/pg.html#monitor-2"><code class="inline">:pg.monitor/2</code></a> for
+delivered as messages to the calling process, see <a href="https://www.erlang.org/doc/apps/kernel/pg.html#monitor/2"><code class="inline">:pg.monitor/2</code></a> for
 details. The returned <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types"><code class="inline">reference/0</code></a> must be saved for later calls to
 <a href="#demonitor/1"><code class="inline">demonitor/1</code></a>.</p>
   </section>
@@ -447,20 +475,20 @@ details. The returned <a href="https://hexdocs.pm/elixir/typespecs.html#basic-ty
 <section class="detail" id="start_link/1">
 
   <div class="detail-header">
-    <a href="#start_link/1" class="detail-link" title="Link to this function">
+    <a href="#start_link/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">start_link(opts)</h1>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">start_link(opts)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L113" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+        <span class="note">(since 0.7.0)</span>
 
 
-      <span class="note">(since 0.7.0)</span>
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/consumer_group.ex#L130" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
 
+    </div>
   </div>
 
   <section class="docstring">
@@ -476,9 +504,9 @@ details. The returned <a href="https://hexdocs.pm/elixir/typespecs.html#basic-ty
       <p>
 
           <span class="line">
-            <a href="https://hex.pm/packages/nostrum/0.10.0" class="footer-hex-package">Hex Package</a>
+            <a href="https://hex.pm/packages/nostrum/0.11.0-dev" class="footer-hex-package">Hex Package</a>
 
-            <a href="https://preview.hex.pm/preview/nostrum/0.10.0">Hex Preview</a>
+            <a href="https://preview.hex.pm/preview/nostrum/0.11.0-dev">Hex Preview</a>
 
           </span>
 
@@ -487,7 +515,7 @@ details. The returned <a href="https://hexdocs.pm/elixir/typespecs.html#basic-ty
             Search HexDocs
           </button>
 
-            <a href="Nostrum.epub" title="ePub version">
+            <a href="nostrum.epub" title="ePub version">
               Download ePub version
             </a>
 
@@ -496,7 +524,7 @@ details. The returned <a href="https://hexdocs.pm/elixir/typespecs.html#basic-ty
 
       <p class="built-using">
         Built using
-        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.32.1) for the
+        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.37.2) for the
 
           <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 
@@ -506,7 +534,6 @@ details. The returned <a href="https://hexdocs.pm/elixir/typespecs.html#basic-ty
   </div>
 </main>
 </div>
-
 
   </body>
 </html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.37.2">
+    <meta name="project" content="nostrum v0.11.0-dev">
+
+
+    <title>Nostrum.Api.Sticker — nostrum v0.11.0-dev</title>
+
+    <link rel="stylesheet" href="dist/html-elixir-6X3L5KMG.css" />
+
+    <script defer src="dist/sidebar_items-8A52A8FF.js"></script>
+    <script defer src="docs_config.js"></script>
+    <script defer src="dist/html-6XHBGSGW.js"></script>
+
+  </head>
+  <body>
+    <script>(()=>{var t="ex_doc:settings",e="dark";var o="dark",s="light";var E="sidebar_state",n="closed";var r="sidebar_width";var a="sidebar-open";var i=new URLSearchParams(window.location.search),S=i.get("theme")||JSON.parse(localStorage.getItem(t)||"{}").theme;(S===o||S!==s&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&document.body.classList.add(e);var d=sessionStorage.getItem(E),A=d!==n&&!window.matchMedia(`screen and (max-width: ${768}px)`).matches;document.body.classList.toggle(a,A);var c=sessionStorage.getItem(r);c&&document.body.style.setProperty("--sidebarWidth",`${c}px`);var p=/(Macintosh|iPhone|iPad|iPod)/.test(window.navigator.userAgent);document.documentElement.classList.toggle("apple-os",p);})();
+</script>
+
+<div class="body-wrapper">
+
+<button id="sidebar-menu" class="sidebar-button sidebar-toggle" aria-label="toggle sidebar" aria-controls="sidebar">
+  <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+</button>
+
+<nav id="sidebar" class="sidebar">
+
+  <div class="sidebar-header">
+    <div class="sidebar-projectInfo">
+
+        <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectImage">
+          <img src="assets/logo.png" alt="nostrum" />
+        </a>
+
+      <div>
+        <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
+nostrum
+        </a>
+        <div class="sidebar-projectVersion" translate="no">
+          v0.11.0-dev
+        </div>
+      </div>
+    </div>
+    <ul id="sidebar-list-nav" class="sidebar-list-nav" role="tablist" data-extras=""></ul>
+  </div>
+</nav>
+
+<output role="status" id="toast"></output>
+
+<main class="content page-module" id="main" data-type="modules">
+  <div id="content" class="content-inner">
+    <div class="top-search">
+      <div class="search-settings">
+        <form class="search-bar" action="search.html">
+          <label class="search-label">
+            <span class="sr-only">Search documentation of nostrum</span>
+            <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+          </label>
+          <button type="submit" class="search-button" aria-label="Submit Search" tabindex="-1">
+            <i class="ri-search-2-line ri-lg" aria-hidden="true"></i>
+          </button>
+          <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
+            <i class="ri-close-line ri-lg" title="Cancel search"></i>
+          </button>
+        </form>
+        <div class="autocomplete">
+        </div>
+        <button class="icon-settings display-settings">
+          <i class="ri-settings-3-line"></i>
+          <span class="sr-only">Settings</span>
+        </button>
+      </div>
+    </div>
+
+<div id="top-content">
+  <div class="heading-with-actions top-heading">
+    <h1>
+      <span translate="no">Nostrum.Api.Sticker</span> 
+      <small class="app-vsn" translate="no">(nostrum v0.11.0-dev)</small>
+
+    </h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/api/sticker.ex#L1" title="View Source" class="icon-action" rel="help">
+        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        <span class="sr-only">View Source</span>
+      </a>
+
+  </div>
+
+
+    <section id="moduledoc">
+<p>Functions for interacting with the Discord API's sticker endpoints.</p><p>See: <a href="https://discord.com/developers/docs/resources/sticker">https://discord.com/developers/docs/resources/sticker</a></p>
+    </section>
+
+</div>
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+      </a>
+      <span class="text">Summary</span>
+    </h1>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#create/6" data-no-tooltip="" translate="no">create(guild_id, name, description, tags, file, reason \\ nil)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Create a sticker in a guild.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#delete/2" data-no-tooltip="" translate="no">delete(guild_id, sticker_id)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Delete a guild sticker with the specified ID.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#get/1" data-no-tooltip="" translate="no">get(sticker_id)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Fetch a sticker with the provided ID.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#get/2" data-no-tooltip="" translate="no">get(guild_id, sticker_id)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Return the specified sticker from the specified guild.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#list/1" data-no-tooltip="" translate="no">list(guild_id)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>List all stickers in the provided guild.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#modify/3" data-no-tooltip="" translate="no">modify(guild_id, sticker_id, options)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Modify a guild sticker with the specified ID.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#pack/1" data-no-tooltip="" translate="no">pack(id)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Fetch a sticker pack with the provided ID.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#packs/0" data-no-tooltip="" translate="no">packs()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Get a list of available sticker packs.</p></div>
+
+    </div>
+
+</div>
+
+  </section>
+
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+      </a>
+      <span class="text">Functions</span>
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="create/6">
+
+    <span id="create/5"></span>
+
+  <div class="detail-header">
+    <a href="#create/6" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">create(guild_id, name, description, tags, file, reason \\ nil)</h1>
+
+        <span class="note">(since 1.x.x)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/api/sticker.ex#L52" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> create(
+  <a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>(),
+  <a href="Nostrum.Struct.Sticker.html#t:name/0">Nostrum.Struct.Sticker.name</a>(),
+  <a href="Nostrum.Struct.Sticker.html#t:description/0">Nostrum.Struct.Sticker.description</a>(),
+  <a href="Nostrum.Struct.Sticker.html#t:tags/0">Nostrum.Struct.Sticker.tags</a>(),
+  <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | %{body: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">iodata</a>(), name: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()},
+  <a href="Nostrum.Struct.Guild.AuditLogEntry.html#t:reason/0">Nostrum.Struct.Guild.AuditLogEntry.reason</a>()
+) :: {:ok, <a href="Nostrum.Struct.Sticker.html#t:t/0">Nostrum.Struct.Sticker.t</a>()} | <a href="Nostrum.Api.html#t:error/0">Nostrum.Api.error</a>()</pre>
+
+      </div>
+
+<p>Create a sticker in a guild.</p><p>Every guild has five free sticker slots by default, and each Boost level will
+grant access to more slots.</p><p>Uploaded stickers are constrained to 5 seconds in length for animated stickers, and 320 x 320 pixels.</p><p>Stickers in the <a href="https://airbnb.design/lottie/">Lottie file format</a> can only
+be uploaded on guilds that have either the <code class="inline">VERIFIED</code> and/or the <code class="inline">PARTNERED</code>
+guild feature.</p><h2 id="create/6-parameters" class="section-heading">
+  <a href="#create/6-parameters" class="hover-link">
+    <i class="ri-link-m" aria-hidden="true"></i>
+  </a>
+  <span class="text">Parameters</span>
+</h2>
+<ul><li><code class="inline">name</code>: Name of the sticker (2-30 characters)</li><li><code class="inline">description</code>: Description of the sticker (2-100 characters)</li><li><code class="inline">tags</code>: Autocomplete/suggestion tags for the sticker (max 200 characters)</li><li><code class="inline">file</code>: A path to a file to upload or a map of <code class="inline">name</code> (file name) and <code class="inline">body</code> (file data).</li><li><code class="inline">reason</code> (optional): audit log reason to attach to this event</li></ul><h2 id="create/6-returns" class="section-heading">
+  <a href="#create/6-returns" class="hover-link">
+    <i class="ri-link-m" aria-hidden="true"></i>
+  </a>
+  <span class="text">Returns</span>
+</h2>
+<p>Returns a <a href="Nostrum.Struct.Sticker.html#t:t/0"><code class="inline">Nostrum.Struct.Sticker.t/0</code></a> on success.</p>
+  </section>
+</section>
+<section class="detail" id="delete/2">
+
+  <div class="detail-header">
+    <a href="#delete/2" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">delete(guild_id, sticker_id)</h1>
+
+        <span class="note">(since 1.x.x)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/api/sticker.ex#L92" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> delete(<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>(), <a href="Nostrum.Struct.Sticker.html#t:id/0">Nostrum.Struct.Sticker.id</a>()) ::
+  :ok | <a href="Nostrum.Api.html#t:error/0">Nostrum.Api.error</a>()</pre>
+
+      </div>
+
+<p>Delete a guild sticker with the specified ID.</p>
+  </section>
+</section>
+<section class="detail" id="get/1">
+
+  <div class="detail-header">
+    <a href="#get/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">get(sticker_id)</h1>
+
+        <span class="note">(since 1.x.x)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/api/sticker.ex#L103" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> get(<a href="Nostrum.Struct.Sticker.html#t:id/0">Nostrum.Struct.Sticker.id</a>()) ::
+  {:ok, <a href="Nostrum.Struct.Sticker.html#t:t/0">Nostrum.Struct.Sticker.t</a>()} | <a href="Nostrum.Api.html#t:error/0">Nostrum.Api.error</a>()</pre>
+
+      </div>
+
+<p>Fetch a sticker with the provided ID.</p><p>Returns a <a href="Nostrum.Struct.Sticker.html#t:t/0"><code class="inline">Nostrum.Struct.Sticker.t/0</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get/2">
+
+  <div class="detail-header">
+    <a href="#get/2" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">get(guild_id, sticker_id)</h1>
+
+        <span class="note">(since 1.x.x)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/api/sticker.ex#L115" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> get(<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>(), <a href="Nostrum.Struct.Sticker.html#t:id/0">Nostrum.Struct.Sticker.id</a>()) ::
+  <a href="Nostrum.Struct.Sticker.html#t:t/0">Nostrum.Struct.Sticker.t</a>() | <a href="Nostrum.Api.html#t:error/0">Nostrum.Api.error</a>()</pre>
+
+      </div>
+
+<p>Return the specified sticker from the specified guild.</p><p>Returns a <a href="Nostrum.Struct.Sticker.html#t:t/0"><code class="inline">Nostrum.Struct.Sticker.t/0</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="list/1">
+
+  <div class="detail-header">
+    <a href="#list/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">list(guild_id)</h1>
+
+        <span class="note">(since 1.x.x)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/api/sticker.ex#L153" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> list(<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>()) ::
+  {:ok, [<a href="Nostrum.Struct.Sticker.html#t:t/0">Nostrum.Struct.Sticker.t</a>()]} | <a href="Nostrum.Api.html#t:error/0">Nostrum.Api.error</a>()</pre>
+
+      </div>
+
+<p>List all stickers in the provided guild.</p><p>Returns a list of <a href="Nostrum.Struct.Sticker.html#t:t/0"><code class="inline">Nostrum.Struct.Sticker.t/0</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="modify/3">
+
+  <div class="detail-header">
+    <a href="#modify/3" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">modify(guild_id, sticker_id, options)</h1>
+
+        <span class="note">(since 1.x.x)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/api/sticker.ex#L175" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> modify(<a href="Nostrum.Struct.Guild.html#t:id/0">Nostrum.Struct.Guild.id</a>(), <a href="Nostrum.Struct.Sticker.html#t:id/0">Nostrum.Struct.Sticker.id</a>(), %{
+  name: <a href="Nostrum.Struct.Sticker.html#t:name/0">Nostrum.Struct.Sticker.name</a>() | nil,
+  description: <a href="Nostrum.Struct.Sticker.html#t:description/0">Nostrum.Struct.Sticker.description</a>() | nil,
+  tags: <a href="Nostrum.Struct.Sticker.html#t:tags/0">Nostrum.Struct.Sticker.tags</a>() | nil
+}) :: {:ok, <a href="Nostrum.Struct.Sticker.html#t:t/0">Nostrum.Struct.Sticker.t</a>()} | <a href="Nostrum.Api.html#t:error/0">Nostrum.Api.error</a>()</pre>
+
+      </div>
+
+<p>Modify a guild sticker with the specified ID.</p><p>Pass in a map of properties to update, with any of the following keys:</p><ul><li><code class="inline">name</code>: Name of the sticker (2-30 characters)</li><li><code class="inline">description</code>: Description of the sticker (2-100 characters)</li><li><code class="inline">tags</code>: Autocomplete/suggestion tags for the sticker (max 200 characters)</li></ul><p>Returns an updated sticker on update completion.</p>
+  </section>
+</section>
+<section class="detail" id="pack/1">
+
+  <div class="detail-header">
+    <a href="#pack/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">pack(id)</h1>
+
+        <span class="note">(since 1.x.x)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/api/sticker.ex#L127" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> pack(<a href="Nostrum.Snowflake.html#t:t/0">Nostrum.Snowflake.t</a>()) ::
+  {:ok, <a href="Nostrum.Struct.Sticker.Pack.html#t:t/0">Nostrum.Struct.Sticker.Pack.t</a>()} | <a href="Nostrum.Api.html#t:error/0">Nostrum.Api.error</a>()</pre>
+
+      </div>
+
+<p>Fetch a sticker pack with the provided ID.</p><p>Returns a <a href="Nostrum.Struct.Sticker.Pack.html#t:t/0"><code class="inline">Nostrum.Struct.Sticker.Pack.t/0</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="packs/0">
+
+  <div class="detail-header">
+    <a href="#packs/0" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">packs()</h1>
+
+        <span class="note">(since 1.x.x)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/api/sticker.ex#L137" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> packs() :: {:ok, [<a href="Nostrum.Struct.Sticker.Pack.html#t:t/0">Nostrum.Struct.Sticker.Pack.t</a>()]} | <a href="Nostrum.Api.html#t:error/0">Nostrum.Api.error</a>()</pre>
+
+      </div>
+
+<p>Get a list of available sticker packs.</p>
+  </section>
+</section>
+
+    </div>
+  </section>
+
+    <footer class="footer">
+      <p>
+
+          <span class="line">
+            <a href="https://hex.pm/packages/nostrum/0.11.0-dev" class="footer-hex-package">Hex Package</a>
+
+            <a href="https://preview.hex.pm/preview/nostrum/0.11.0-dev">Hex Preview</a>
+
+          </span>
+
+        <span class="line">
+          <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+            Search HexDocs
+          </button>
+
+            <a href="nostrum.epub" title="ePub version">
+              Download ePub version
+            </a>
+
+        </span>
+      </p>
+
+      <p class="built-using">
+        Built using
+        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.37.2) for the
+
+          <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+      </p>
+
+    </footer>
+  </div>
+</main>
+</div>
+
+  </body>
+</html>

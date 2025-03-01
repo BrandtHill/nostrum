@@ -4,36 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.32.1">
-    <meta name="project" content="Nostrum v0.10.0">
+    <meta name="generator" content="ExDoc v0.37.2">
+    <meta name="project" content="nostrum v0.11.0-dev">
 
 
-    <title>Introduction — Nostrum v0.10.0</title>
-    <link rel="stylesheet" href="dist/html-elixir-2C5PUTIB.css" />
+    <title>Introduction — nostrum v0.11.0-dev</title>
 
+    <link rel="stylesheet" href="dist/html-elixir-6X3L5KMG.css" />
 
-    <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-IHH6HKET.js"></script>
-    <script src="dist/sidebar_items-0C0FD3DD.js"></script>
-    <script src="docs_config.js"></script>
-    <script async src="dist/html-GXQ6W6IF.js"></script>
-
+    <script defer src="dist/sidebar_items-8A52A8FF.js"></script>
+    <script defer src="docs_config.js"></script>
+    <script defer src="dist/html-6XHBGSGW.js"></script>
 
   </head>
-  <body data-type="extras" class="page-extra">
-    <script>
-
-      try {
-        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
-
-        if (settings.theme === 'dark' ||
-           ((settings.theme === 'system' || settings.theme == null) &&
-             window.matchMedia('(prefers-color-scheme: dark)').matches)
-           ) {
-          document.body.classList.add('dark')
-        }
-      } catch (error) { }
-    </script>
+  <body>
+    <script>(()=>{var t="ex_doc:settings",e="dark";var o="dark",s="light";var E="sidebar_state",n="closed";var r="sidebar_width";var a="sidebar-open";var i=new URLSearchParams(window.location.search),S=i.get("theme")||JSON.parse(localStorage.getItem(t)||"{}").theme;(S===o||S!==s&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&document.body.classList.add(e);var d=sessionStorage.getItem(E),A=d!==n&&!window.matchMedia(`screen and (max-width: ${768}px)`).matches;document.body.classList.toggle(a,A);var c=sessionStorage.getItem(r);c&&document.body.style.setProperty("--sidebarWidth",`${c}px`);var p=/(Macintosh|iPhone|iPad|iPod)/.test(window.navigator.userAgent);document.documentElement.classList.toggle("apple-os",p);})();
+</script>
 
 <div class="body-wrapper">
 
@@ -47,69 +33,35 @@
     <div class="sidebar-projectInfo">
 
         <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectImage">
-          <img src="assets/logo.png" alt="Nostrum" />
+          <img src="assets/logo.png" alt="nostrum" />
         </a>
 
       <div>
         <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
-Nostrum
+nostrum
         </a>
         <div class="sidebar-projectVersion" translate="no">
-          v0.10.0
+          v0.11.0-dev
         </div>
       </div>
     </div>
-    <ul id="sidebar-listNav" class="sidebar-listNav" role="tablist">
-      <li>
-        <button id="extras-list-tab-button" role="tab" data-type="extras" aria-controls="extras-tab-panel" aria-selected="true" tabindex="0">
-Pages
-        </button>
-      </li>
-
-        <li>
-          <button id="modules-list-tab-button" role="tab" data-type="modules" aria-controls="modules-tab-panel" aria-selected="false" tabindex="-1">
-            Modules
-          </button>
-        </li>
-
-
-        <li>
-          <button id="tasks-list-tab-button" role="tab" data-type="tasks" aria-controls="tasks-tab-panel" aria-selected="false" tabindex="-1">
-            <span translate="no">Mix</span> Tasks
-          </button>
-        </li>
-
-    </ul>
+    <ul id="sidebar-list-nav" class="sidebar-list-nav" role="tablist" data-extras=""></ul>
   </div>
-
-  <div id="extras-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="extras-list-tab-button">
-    <ul id="extras-full-list" class="full-list"></ul>
-  </div>
-
-    <div id="modules-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="modules-list-tab-button" hidden>
-      <ul id="modules-full-list" class="full-list"></ul>
-    </div>
-
-
-    <div id="tasks-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="tasks-list-tab-button" hidden>
-      <ul id="tasks-full-list" class="full-list"></ul>
-    </div>
-
 </nav>
 
-<main class="content">
-  <output role="status" id="toast"></output>
+<output role="status" id="toast"></output>
 
+<main class="content page-extra" id="main" data-type="extras">
   <div id="content" class="content-inner">
     <div class="top-search">
       <div class="search-settings">
         <form class="search-bar" action="search.html">
           <label class="search-label">
-            <span class="sr-only">Search documentation of Nostrum</span>
+            <span class="sr-only">Search documentation of nostrum</span>
             <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
           </label>
-          <button type="submit" class="search-button" aria-label="Submit Search">
-            <i class="ri-search-2-line ri-lg" aria-hidden="true" title="Submit search"></i>
+          <button type="submit" class="search-button" aria-label="Submit Search" tabindex="-1">
+            <i class="ri-search-2-line ri-lg" aria-hidden="true"></i>
           </button>
           <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
             <i class="ri-close-line ri-lg" title="Cancel search"></i>
@@ -125,51 +77,108 @@ Pages
     </div>
 
 <div id="top-content">
-  <h1>
+  <div class="heading-with-actions top-heading">
+    <h1>Introduction</h1>
+
 
       <a href="https://github.com/Kraigie/nostrum/blob/master/guides/intro/intro.md#L1" title="View Source" class="icon-action" rel="help">
         <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         <span class="sr-only">View Source</span>
       </a>
 
-
-    <span>Introduction</span>
-  </h1>
+  </div>
 
 <p>nostrum is an Elixir library that can be used to interact with Discord.</p><p>To see documentation about a specific part of the library, please visit one of
-the following:</p><ul><li><a href="api-1.html">API</a> - Methods to interact with the RESTful API (and some other goodies).</li><li><a href="state.html">State</a> - Caches that keep information from Discord fresh at your disposal.</li><li><a href="event_handling.html">Events</a> - Handling events from Discord as they come in.</li><li><a href="voice-2.html">Voice</a> - Playing audio through Discord voice channels.</li></ul><h2 id="setup" class="section-heading">
-  <a href="#setup" class="hover-link">
+the following:</p><ul><li><a href="api-1.html">API</a> - Methods to interact with the RESTful API (and some other goodies).</li><li><a href="state.html">State</a> - Caches that keep information from Discord fresh at your disposal.</li><li><a href="event_handling.html">Events</a> - Handling events from Discord as they come in.</li><li><a href="voice-2.html">Voice</a> - Playing audio through Discord voice channels.</li></ul><p>This introductory document assumes some basic familarity with Elixir, although
+we aim to make it easy to understand for newcomers as well.</p><h2 id="project-setup" class="section-heading">
+  <a href="#project-setup" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
   </a>
-  <span class="text">Setup</span>
+  <span class="text">Project setup</span>
 </h2>
-<p>There are two versions of nostrum, a stable version released on Hex and a dev
-version on GitHub. The dev version will be more up to date but will likely
-have more errors.</p><pre><code class="makeup elixir" translate="no"><span class="kd">def</span><span class="w"> </span><span class="nf">deps</span><span class="w"> </span><span class="k" data-group-id="8381936160-1">do</span><span class="w">
-  </span><span class="p" data-group-id="8381936160-2">[</span><span class="p" data-group-id="8381936160-3">{</span><span class="ss">:nostrum</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;~&gt; 0.10&quot;</span><span class="p" data-group-id="8381936160-3">}</span><span class="p" data-group-id="8381936160-2">]</span><span class="w">
+<p>If you are starting out on a completely new project, please <a href="https://elixir-lang.org/install.html">install
+Elixir</a> first. Once you have Elixir
+installed, run the following to set up your bot repository:</p><pre><code class="makeup elixir" translate="no"><span class="n">mix</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">my_bot</span><span class="w"> </span><span class="o">--</span><span class="n">sup</span></code></pre><p>Give it any name you like. <code class="inline">--sup</code> is needed to generate a supervisor, more on
+this in a moment.</p><p>Head to the project directory. <a href="https://hexdocs.pm/mix/Mix.Tasks.New.html"><code class="inline">mix new</code></a> has generated a basic structure for
+your bot for you.</p><h2 id="adding-the-dependency" class="section-heading">
+  <a href="#adding-the-dependency" class="hover-link">
+    <i class="ri-link-m" aria-hidden="true"></i>
+  </a>
+  <span class="text">Adding the dependency</span>
+</h2>
+<p>We need to add nostrum as a dependency to be able to use it. Dependencies are
+tracked in <code class="inline">mix.exs</code>. Open this file with your favourite text editor, and head
+down to the <code class="inline">def deps do</code> function. Update it as follows:</p><pre><code class="makeup elixir" translate="no"><span class="kd">def</span><span class="w"> </span><span class="nf">deps</span><span class="w"> </span><span class="k" data-group-id="9618613656-1">do</span><span class="w">
+  </span><span class="p" data-group-id="9618613656-2">[</span><span class="p" data-group-id="9618613656-3">{</span><span class="ss">:nostrum</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;~&gt; 0.10&quot;</span><span class="p" data-group-id="9618613656-3">}</span><span class="p" data-group-id="9618613656-2">]</span><span class="w">
   </span><span class="c1"># Or, for bleeding edge changes:</span><span class="w">
   </span><span class="c1"># [{:nostrum, github: &quot;Kraigie/nostrum&quot;}]</span><span class="w">
-</span><span class="k" data-group-id="8381936160-1">end</span></code></pre><p>Next up, you need to configure nostrum. The most basic configuration is simply
-setting a token to log in with:</p><pre><code class="makeup elixir" translate="no"><span class="n">config</span><span class="w"> </span><span class="ss">:nostrum</span><span class="p">,</span><span class="w">
-  </span><span class="ss">token</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;666&quot;</span><span class="w">  </span><span class="c1"># The token of your bot as a string</span></code></pre><h2 id="configuration-options" class="section-heading">
+</span><span class="k" data-group-id="9618613656-1">end</span></code></pre><p>Afterwards, run <a href="https://hexdocs.pm/mix/Mix.Tasks.Deps.Get.html"><code class="inline">mix deps.get</code></a> to fetch dependencies.</p><blockquote><h4>Stable and development versions</h4><p>There are two versions of nostrum, a stable version released on Hex and a dev
+version on GitHub. The development version will be more up to date but might
+suffer from some bugs - we generally patch them quickly if you report them on
+the issue tracker. It's appreciated if you can use the development version to
+help test nostrum.</p></blockquote><h2 id="consumer-setup" class="section-heading">
+  <a href="#consumer-setup" class="hover-link">
+    <i class="ri-link-m" aria-hidden="true"></i>
+  </a>
+  <span class="text">Consumer setup</span>
+</h2>
+<p>Next up, you need to define a consumer - a module which handles events, see the
+<a href="Nostrum.Consumer.html"><code class="inline">Nostrum.Consumer</code></a> docs. In <code class="inline">lib/my_bot/consumer.ex</code>, define the
+following:</p><p>A basic consumer could look like the following:</p><pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">MyBot.Consumer</span><span class="w"> </span><span class="k" data-group-id="4811289870-1">do</span><span class="w">
+  </span><span class="na">@behaviour</span><span class="w"> </span><span class="nc">Nostrum.Consumer</span><span class="w">
+
+  </span><span class="kn">alias</span><span class="w"> </span><span class="nc">Nostrum.Api.Message</span><span class="w">
+
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">handle_event</span><span class="p" data-group-id="4811289870-2">(</span><span class="p" data-group-id="4811289870-3">{</span><span class="ss">:MESSAGE_CREATE</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="c">_ws_state</span><span class="p" data-group-id="4811289870-3">}</span><span class="p" data-group-id="4811289870-2">)</span><span class="w"> </span><span class="k" data-group-id="4811289870-4">do</span><span class="w">
+    </span><span class="k">case</span><span class="w"> </span><span class="n">msg</span><span class="o">.</span><span class="n">content</span><span class="w"> </span><span class="k" data-group-id="4811289870-5">do</span><span class="w">
+      </span><span class="s">&quot;!hello&quot;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+        </span><span class="p" data-group-id="4811289870-6">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="c">_message</span><span class="p" data-group-id="4811289870-6">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Message</span><span class="o">.</span><span class="n">create</span><span class="p" data-group-id="4811289870-7">(</span><span class="n">msg</span><span class="o">.</span><span class="n">channel_id</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello, world!&quot;</span><span class="p" data-group-id="4811289870-7">)</span><span class="w">
+
+      </span><span class="bp">_</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+        </span><span class="ss">:ignore</span><span class="w">
+    </span><span class="k" data-group-id="4811289870-5">end</span><span class="w">
+  </span><span class="k" data-group-id="4811289870-4">end</span><span class="w">
+
+  </span><span class="c1"># Ignore any other events</span><span class="w">
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">handle_event</span><span class="p" data-group-id="4811289870-8">(</span><span class="bp">_</span><span class="p" data-group-id="4811289870-8">)</span><span class="p">,</span><span class="w"> </span><span class="ss">do</span><span class="p">:</span><span class="w"> </span><span class="ss">:ok</span><span class="w">
+</span><span class="k" data-group-id="4811289870-1">end</span></code></pre><p>Finally, you need to add <a href="Nostrum.Bot.html"><code class="inline">Nostrum.Bot</code></a> to your app's supervisor tree in
+<code class="inline">lib/my_bot/application.ex</code> to start the bot as part of your app's startup:</p><pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">MyBot.Application</span><span class="w"> </span><span class="k" data-group-id="8138063049-1">do</span><span class="w">
+  </span><span class="kn">use</span><span class="w"> </span><span class="nc">Application</span><span class="w">
+
+  </span><span class="na">@impl</span><span class="w"> </span><span class="no">true</span><span class="w">
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">start</span><span class="p" data-group-id="8138063049-2">(</span><span class="c">_type</span><span class="p">,</span><span class="w"> </span><span class="c">_args</span><span class="p" data-group-id="8138063049-2">)</span><span class="w"> </span><span class="k" data-group-id="8138063049-3">do</span><span class="w">
+    </span><span class="n">bot_options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="8138063049-4">%{</span><span class="w">
+      </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="nc">MyBot</span><span class="p">,</span><span class="w">
+      </span><span class="ss">consumer</span><span class="p">:</span><span class="w"> </span><span class="nc">MyBot.Consumer</span><span class="p">,</span><span class="w">
+      </span><span class="ss">intents</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8138063049-5">[</span><span class="ss">:direct_messages</span><span class="p">,</span><span class="w"> </span><span class="ss">:guild_messages</span><span class="p">,</span><span class="w"> </span><span class="ss">:message_content</span><span class="p" data-group-id="8138063049-5">]</span><span class="p">,</span><span class="w">
+      </span><span class="ss">wrapped_token</span><span class="p">:</span><span class="w"> </span><span class="k" data-group-id="8138063049-6">fn</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">System</span><span class="o">.</span><span class="n">fetch_env!</span><span class="p" data-group-id="8138063049-7">(</span><span class="s">&quot;BOT_TOKEN&quot;</span><span class="p" data-group-id="8138063049-7">)</span><span class="w"> </span><span class="k" data-group-id="8138063049-6">end</span><span class="w">
+    </span><span class="p" data-group-id="8138063049-4">}</span><span class="w">
+    </span><span class="n">children</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="8138063049-8">[</span><span class="w">
+      </span><span class="p" data-group-id="8138063049-9">{</span><span class="nc">Nostrum.Bot</span><span class="p">,</span><span class="w"> </span><span class="n">bot_options</span><span class="p" data-group-id="8138063049-9">}</span><span class="w">
+    </span><span class="p" data-group-id="8138063049-8">]</span><span class="w">
+
+    </span><span class="nc">Supervisor</span><span class="o">.</span><span class="n">start_link</span><span class="p" data-group-id="8138063049-10">(</span><span class="n">children</span><span class="p">,</span><span class="w"> </span><span class="ss">strategy</span><span class="p">:</span><span class="w"> </span><span class="ss">:one_for_one</span><span class="p" data-group-id="8138063049-10">)</span><span class="w">
+  </span><span class="k" data-group-id="8138063049-3">end</span><span class="w">
+</span><span class="k" data-group-id="8138063049-1">end</span></code></pre><p>Note that this assumes you set the environment variable <code class="inline">$BOT_TOKEN</code> to your bot
+token, for example via <code class="inline">export BOT_TOKEN=my-bot-token</code>. This is recommended, but
+feel free to use any other configuration method you like.</p><section role="note" class="admonition info"><h4 class="admonition-title info">Message intents</h4><p>Due to Discord API changes, <em>in order to receive message content</em> (e.g.  for
+non-slash commands or moderation tools), you need to have the &quot;Message Content
+Intent&quot; enabled on your <a href="https://discord.com/developers/applications/">Bot's application
+settings</a>, and the
+<code class="inline">:message_content</code> intent specified in the bot's options.</p></section><h2 id="configuration-options" class="section-heading">
   <a href="#configuration-options" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
   </a>
   <span class="text">Configuration options</span>
 </h2>
-<p>Apart from the <code class="inline">token</code> field mentioned above, the following fields are also supported:</p><ul><li><code class="inline">num_shards</code> - the amount of shards to run. Can be one of the following:<ul><li><code class="inline">:auto</code>: use the suggested amount of shards as provided by Discord.</li><li><em><code class="inline">num</code></em>: a number of shards to run. nostrum will warn if this is not the
-recommended amount.</li><li><code class="inline">{lowest, highest, total}</code>: start shards <code class="inline">lowest</code> to <code class="inline">highest</code>. <code class="inline">total</code>
-should contain the total amount of shards that your bot is expected to have.
-Useful for splitting a single bot across multiple servers, but see also <a href="multi_node.html">the
-multi-node documentation</a>.</li><li><code class="inline">:manual</code>: nostrum does not automatically spawn shards. See the <a href="manual_sharding.html">Manual
-Sharding</a> guide for more information.</li></ul></li><li><code class="inline">gateway_intents</code> - a list of atoms representing gateway intents for Nostrum
-to subscribe to from the Discord API. More information can be found in the
-<a href="gateway_intents.html">gateway intents</a> documentation page.</li><li><code class="inline">request_guild_members</code> - perform member chunking to retrieve a complete list
+<p>nostrum supports the following global configuration options with <code class="inline">:nostrum</code> as the
+config root key. Most of them may be overridden per-bot.</p><ul><li><code class="inline">request_guild_members</code> - perform member chunking to retrieve a complete list
 of members for all guilds at startup. Depending on your <a href="pluggable_caching.html">cache
 backend</a>, this may increase startup time
 and memory usage by quite a bit. Defaults to <code class="inline">false</code>.</li><li><code class="inline">gateway_compression</code> - use either <code class="inline">:zlib</code> (default) or <code class="inline">:zstd</code> for compression
 of messages from the Discord gateway. See the documentation on
-<a href="gateway_compression.html">Gateway Compression</a> for more information.</li></ul><h3 id="voice-specific" class="section-heading">
+<a href="gateway_compression.html">Gateway Compression</a> for more information.
+<em>This is a global, compile-time config option only.</em></li></ul><h3 id="voice-specific" class="section-heading">
   <a href="#voice-specific" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
   </a>
@@ -195,16 +204,7 @@ option can be found <a href="./voice-2.html#encryption-modes">here</a>.</li></ul
 </h3>
 <ul><li><code class="inline">log_full_events</code> - This will log the full payload received over the
 websocket. Defaults to <code class="inline">false</code>.</li><li><code class="inline">log_dispatch_events</code> - This will log dispatch events as they are received
-from the gateway. Defaults to <code class="inline">false</code>.</li><li><code class="inline">fullsweep_after_default</code> - Sets the <code class="inline">fullsweep_after</code> flag for processes
-that can have irregularly high memory usage due to Discord payloads. This
-options will dramatically reduce the amount of memory used by some processes
-at the cost of increased CPU usage. This is useful if you're running your
-application under a memory constrained environment. This comes at the cost
-of increased CPU usage. By default, this option will only affect some
-processes. You can set this flag for <em>all</em> processes using environment
-variables or by <a href="http://erlang.org/doc/man/erlang.html#system_flag-2">setting the system flag
-yourself</a>. Defaults to
-whatever your system recommends, which is probably <code class="inline">65535</code>.</li><li><code class="inline">force_http1</code> - Set to <code class="inline">true</code> if you wish to disable automatic use of HTTP 2
+from the gateway. Defaults to <code class="inline">false</code>.</li><li><code class="inline">force_http1</code> - Set to <code class="inline">true</code> if you wish to disable automatic use of HTTP 2
 or newer HTTP versions for API requests to Discord. Useful to diagnose issues
 with ratelimiter connections during abnormal network conditions.</li></ul><h3 id="internal-options" class="section-heading">
   <a href="#internal-options" class="hover-link">
@@ -224,8 +224,8 @@ alongside your application some of your events will be consumed. Defaults to
 </h2>
 <p>nostrum uses Elixir's standard logger to inform you about regular and irregular
 events. Normal messages include Discord-requested shard reconnections and the
-<code class="inline">IDENTIFY</code> and <code class="inline">READY</code> events.</p><p>The following metadata fields through logger:</p><ul><li><code class="inline">shard</code> - Id of the shard on which the event occurred</li><li><code class="inline">guild</code> - Name of the guild on which the voice connection event occurred</li><li><code class="inline">channel</code> - Name of the channel on which the voice connection event occurred</li></ul><p>To enable this metadata, logger can be configured as such:</p><pre><code class="makeup elixir" translate="no"><span class="n">config</span><span class="w"> </span><span class="ss">:logger</span><span class="p">,</span><span class="w"> </span><span class="ss">:console</span><span class="p">,</span><span class="w">
-  </span><span class="ss">metadata</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="0255590974-1">[</span><span class="ss">:shard</span><span class="p">,</span><span class="w"> </span><span class="ss">:guild</span><span class="p">,</span><span class="w"> </span><span class="ss">:channel</span><span class="p" data-group-id="0255590974-1">]</span></code></pre><p>For more information on how this works, and how to change the logging
+<code class="inline">IDENTIFY</code> and <code class="inline">READY</code> events.</p><p>The following metadata fields through logger:</p><ul><li><code class="inline">bot</code> - Name of the bot that received the event</li><li><code class="inline">shard</code> - Id of the shard on which the event occurred</li><li><code class="inline">guild</code> - Name of the guild on which the voice connection event occurred</li><li><code class="inline">channel</code> - Name of the channel on which the voice connection event occurred</li></ul><p>To enable this metadata, logger can be configured as such:</p><pre><code class="makeup elixir" translate="no"><span class="n">config</span><span class="w"> </span><span class="ss">:logger</span><span class="p">,</span><span class="w"> </span><span class="ss">:console</span><span class="p">,</span><span class="w">
+  </span><span class="ss">metadata</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8289916387-1">[</span><span class="ss">:bot</span><span class="p">,</span><span class="w"> </span><span class="ss">:shard</span><span class="p">,</span><span class="w"> </span><span class="ss">:guild</span><span class="p">,</span><span class="w"> </span><span class="ss">:channel</span><span class="p" data-group-id="8289916387-1">]</span></code></pre><p>For more information on how this works, and how to change the logging
 configuration for nostrum on its own, please see the <a href="https://hexdocs.pm/logger/Logger.html">Logger
 documentation</a></p><h3 id="why-elixir" class="section-heading">
   <a href="#why-elixir" class="hover-link">
@@ -251,9 +251,9 @@ provided functionality. </p></li></ul><h2 id="example-bots" class="section-headi
   </a>
   <span class="text">Example bots</span>
 </h2>
-<ul><li><p>A simple bot that consumes events from the gateway can be found <a href="https://github.com/Kraigie/nostrum/blob/master/examples/event_consumer.ex">at
-<code class="inline">examples/event_consumer.ex</code></a>.</p></li><li><p>An example bot that plays audio through voice channels can be found <a href="https://github.com/Kraigie/nostrum/blob/master/examples/audio_player_example.ex">at
-<code class="inline">examples/audio_player_example.ex</code></a>.</p></li><li><p>A properly structured bot with commands utilizing
+<ul><li><p>A simple bot that consumes events from the gateway can be found in the docs of
+the <a href="Nostrum.Consumer.html"><code class="inline">Nostrum.Consumer</code></a> module.</p></li><li><p>An example bot that plays audio through voice channels can be found in the
+docs of the <a href="Nostrum.Voice.html"><code class="inline">Nostrum.Voice</code></a> module.</p></li><li><p>A properly structured bot with commands utilizing
 <a href="https://github.com/jchristgit/nosedrum">nosedrum</a> can be found <a href="https://github.com/kshannoninnes/sample_bot">in this
 GitHub repository</a></p></li><li><p>A rather large and complex bot, bolt, can be found
 <a href="https://github.com/jchristgit/bolt">here</a>.</p></li></ul><!-- vim: set textwidth=80 sw=2 ts=2: -->
@@ -289,11 +289,11 @@ API
       <p>
 
           <span class="line">
-            <a href="https://hex.pm/packages/nostrum/0.10.0" class="footer-hex-package">Hex Package</a>
+            <a href="https://hex.pm/packages/nostrum/0.11.0-dev" class="footer-hex-package">Hex Package</a>
 
-            <a href="https://preview.hex.pm/preview/nostrum/0.10.0">Hex Preview</a>
+            <a href="https://preview.hex.pm/preview/nostrum/0.11.0-dev">Hex Preview</a>
 
-              (<a href="https://preview.hex.pm/preview/nostrum/0.10.0/show/guides/intro/intro.md">current file</a>)
+              (<a href="https://preview.hex.pm/preview/nostrum/0.11.0-dev/show/guides/intro/intro.md">current file</a>)
 
           </span>
 
@@ -302,7 +302,7 @@ API
             Search HexDocs
           </button>
 
-            <a href="Nostrum.epub" title="ePub version">
+            <a href="nostrum.epub" title="ePub version">
               Download ePub version
             </a>
 
@@ -311,7 +311,7 @@ API
 
       <p class="built-using">
         Built using
-        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.32.1) for the
+        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.37.2) for the
 
           <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 
@@ -321,7 +321,6 @@ API
   </div>
 </main>
 </div>
-
 
   </body>
 </html>

@@ -4,36 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.32.1">
-    <meta name="project" content="Nostrum v0.10.0">
+    <meta name="generator" content="ExDoc v0.37.2">
+    <meta name="project" content="nostrum v0.11.0-dev">
 
 
-    <title>Nostrum.Shard.Supervisor — Nostrum v0.10.0</title>
-    <link rel="stylesheet" href="dist/html-elixir-2C5PUTIB.css" />
+    <title>Nostrum.Shard.Supervisor — nostrum v0.11.0-dev</title>
 
+    <link rel="stylesheet" href="dist/html-elixir-6X3L5KMG.css" />
 
-    <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-IHH6HKET.js"></script>
-    <script src="dist/sidebar_items-0C0FD3DD.js"></script>
-    <script src="docs_config.js"></script>
-    <script async src="dist/html-GXQ6W6IF.js"></script>
-
+    <script defer src="dist/sidebar_items-8A52A8FF.js"></script>
+    <script defer src="docs_config.js"></script>
+    <script defer src="dist/html-6XHBGSGW.js"></script>
 
   </head>
-  <body data-type="modules" class="page-module">
-    <script>
-
-      try {
-        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
-
-        if (settings.theme === 'dark' ||
-           ((settings.theme === 'system' || settings.theme == null) &&
-             window.matchMedia('(prefers-color-scheme: dark)').matches)
-           ) {
-          document.body.classList.add('dark')
-        }
-      } catch (error) { }
-    </script>
+  <body>
+    <script>(()=>{var t="ex_doc:settings",e="dark";var o="dark",s="light";var E="sidebar_state",n="closed";var r="sidebar_width";var a="sidebar-open";var i=new URLSearchParams(window.location.search),S=i.get("theme")||JSON.parse(localStorage.getItem(t)||"{}").theme;(S===o||S!==s&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&document.body.classList.add(e);var d=sessionStorage.getItem(E),A=d!==n&&!window.matchMedia(`screen and (max-width: ${768}px)`).matches;document.body.classList.toggle(a,A);var c=sessionStorage.getItem(r);c&&document.body.style.setProperty("--sidebarWidth",`${c}px`);var p=/(Macintosh|iPhone|iPad|iPod)/.test(window.navigator.userAgent);document.documentElement.classList.toggle("apple-os",p);})();
+</script>
 
 <div class="body-wrapper">
 
@@ -47,69 +33,35 @@
     <div class="sidebar-projectInfo">
 
         <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectImage">
-          <img src="assets/logo.png" alt="Nostrum" />
+          <img src="assets/logo.png" alt="nostrum" />
         </a>
 
       <div>
         <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
-Nostrum
+nostrum
         </a>
         <div class="sidebar-projectVersion" translate="no">
-          v0.10.0
+          v0.11.0-dev
         </div>
       </div>
     </div>
-    <ul id="sidebar-listNav" class="sidebar-listNav" role="tablist">
-      <li>
-        <button id="extras-list-tab-button" role="tab" data-type="extras" aria-controls="extras-tab-panel" aria-selected="true" tabindex="0">
-Pages
-        </button>
-      </li>
-
-        <li>
-          <button id="modules-list-tab-button" role="tab" data-type="modules" aria-controls="modules-tab-panel" aria-selected="false" tabindex="-1">
-            Modules
-          </button>
-        </li>
-
-
-        <li>
-          <button id="tasks-list-tab-button" role="tab" data-type="tasks" aria-controls="tasks-tab-panel" aria-selected="false" tabindex="-1">
-            <span translate="no">Mix</span> Tasks
-          </button>
-        </li>
-
-    </ul>
+    <ul id="sidebar-list-nav" class="sidebar-list-nav" role="tablist" data-extras=""></ul>
   </div>
-
-  <div id="extras-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="extras-list-tab-button">
-    <ul id="extras-full-list" class="full-list"></ul>
-  </div>
-
-    <div id="modules-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="modules-list-tab-button" hidden>
-      <ul id="modules-full-list" class="full-list"></ul>
-    </div>
-
-
-    <div id="tasks-tab-panel" class="sidebar-tabpanel" role="tabpanel" aria-labelledby="tasks-list-tab-button" hidden>
-      <ul id="tasks-full-list" class="full-list"></ul>
-    </div>
-
 </nav>
 
-<main class="content">
-  <output role="status" id="toast"></output>
+<output role="status" id="toast"></output>
 
+<main class="content page-module" id="main" data-type="modules">
   <div id="content" class="content-inner">
     <div class="top-search">
       <div class="search-settings">
         <form class="search-bar" action="search.html">
           <label class="search-label">
-            <span class="sr-only">Search documentation of Nostrum</span>
+            <span class="sr-only">Search documentation of nostrum</span>
             <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
           </label>
-          <button type="submit" class="search-button" aria-label="Submit Search">
-            <i class="ri-search-2-line ri-lg" aria-hidden="true" title="Submit search"></i>
+          <button type="submit" class="search-button" aria-label="Submit Search" tabindex="-1">
+            <i class="ri-search-2-line ri-lg" aria-hidden="true"></i>
           </button>
           <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
             <i class="ri-close-line ri-lg" title="Cancel search"></i>
@@ -125,17 +77,19 @@ Pages
     </div>
 
 <div id="top-content">
-  <h1>
+  <div class="heading-with-actions top-heading">
+    <h1>
+      <span translate="no">Nostrum.Shard.Supervisor</span> 
+      <small class="app-vsn" translate="no">(nostrum v0.11.0-dev)</small>
+
+    </h1>
 
       <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L1" title="View Source" class="icon-action" rel="help">
         <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         <span class="sr-only">View Source</span>
       </a>
 
-    <span translate="no">Nostrum.Shard.Supervisor</span> 
-    <small class="app-vsn" translate="no">(Nostrum v0.10.0)</small>
-
-  </h1>
+  </div>
 
 
     <section id="moduledoc">
@@ -179,7 +133,7 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#t:resume_information/0" translate="no">resume_information()</a>
+        <a href="#t:resume_information/0" data-no-tooltip="" translate="no">resume_information()</a>
 
       </div>
 
@@ -189,7 +143,7 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#t:shard_num/0" translate="no">shard_num()</a>
+        <a href="#t:shard_num/0" data-no-tooltip="" translate="no">shard_num()</a>
 
       </div>
 
@@ -199,7 +153,7 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#t:total_shards/0" translate="no">total_shards()</a>
+        <a href="#t:total_shards/0" data-no-tooltip="" translate="no">total_shards()</a>
 
       </div>
 
@@ -215,7 +169,7 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#child_spec/1" translate="no">child_spec(arg)</a>
+        <a href="#child_spec/1" data-no-tooltip="" translate="no">child_spec(init_arg)</a>
 
       </div>
 
@@ -225,7 +179,7 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#connect/2" translate="no">connect(shard_num, total_shards)</a>
+        <a href="#connect/4" data-no-tooltip="" translate="no">connect(supervisor \\ fetch_shard_sup_pid(), shard_num, total_shards, bot_options)</a>
 
       </div>
 
@@ -235,7 +189,7 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#disconnect/1" translate="no">disconnect(shard_num)</a>
+        <a href="#disconnect/2" data-no-tooltip="" translate="no">disconnect(shard_session \\ nil, shard_num)</a>
 
       </div>
 
@@ -245,7 +199,7 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#reconnect/1" translate="no">reconnect(opts)</a>
+        <a href="#reconnect/2" data-no-tooltip="" translate="no">reconnect(supervisor \\ fetch_shard_sup_pid(), opts)</a>
 
       </div>
 
@@ -255,7 +209,7 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#start_link/1" translate="no">start_link(args)</a>
+        <a href="#start_link/1" data-no-tooltip="" translate="no">start_link(bot_options)</a>
 
       </div>
 
@@ -263,7 +217,7 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#update_status/4" translate="no">update_status(status, game, stream, type)</a>
+        <a href="#update_status/2" data-no-tooltip="" translate="no">update_status(status, activity)</a>
 
       </div>
 
@@ -271,7 +225,7 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#update_voice_state/4" translate="no">update_voice_state(guild_id, channel_id, self_mute, self_deaf)</a>
+        <a href="#update_voice_state/4" data-no-tooltip="" translate="no">update_voice_state(guild_id, channel_id, self_mute, self_deaf)</a>
 
       </div>
 
@@ -293,18 +247,18 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 <section class="detail" id="t:resume_information/0">
 
   <div class="detail-header">
-    <a href="#t:resume_information/0" class="detail-link" title="Link to this type">
+    <a href="#t:resume_information/0" class="detail-link" data-no-tooltip="" aria-label="Link to this type">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature" translate="no">resume_information()</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L48" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">resume_information()</h1>
 
 
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L48" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
   </div>
 
   <section class="docstring">
@@ -315,6 +269,7 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
   shard_num: <a href="#t:shard_num/0">shard_num</a>(),
   total_shards: <a href="#t:total_shards/0">total_shards</a>(),
   gateway: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(),
+  bot_options: <a href="Nostrum.Bot.html#t:bot_options/0">Nostrum.Bot.bot_options</a>(),
   resume_gateway: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil,
   session: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(),
   seq: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>()
@@ -328,18 +283,18 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 <section class="detail" id="t:shard_num/0">
 
   <div class="detail-header">
-    <a href="#t:shard_num/0" class="detail-link" title="Link to this type">
+    <a href="#t:shard_num/0" class="detail-link" data-no-tooltip="" aria-label="Link to this type">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature" translate="no">shard_num()</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L40" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">shard_num()</h1>
 
 
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L40" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
   </div>
 
   <section class="docstring">
@@ -356,18 +311,18 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 <section class="detail" id="t:total_shards/0">
 
   <div class="detail-header">
-    <a href="#t:total_shards/0" class="detail-link" title="Link to this type">
+    <a href="#t:total_shards/0" class="detail-link" data-no-tooltip="" aria-label="Link to this type">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature" translate="no">total_shards()</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L44" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">total_shards()</h1>
 
 
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L44" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
   </div>
 
   <section class="docstring">
@@ -396,18 +351,18 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 <section class="detail" id="child_spec/1">
 
   <div class="detail-header">
-    <a href="#child_spec/1" class="detail-link" title="Link to this function">
+    <a href="#child_spec/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">child_spec(arg)</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L56" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">child_spec(init_arg)</h1>
 
 
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L58" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
   </div>
 
   <section class="docstring">
@@ -415,97 +370,110 @@ handle yet, thus growing the message queue and the memory usage.</p></li></ol>
 <p>Returns a specification to start this module under a supervisor.</p><p>See <a href="https://hexdocs.pm/elixir/Supervisor.html"><code class="inline">Supervisor</code></a>.</p>
   </section>
 </section>
-<section class="detail" id="connect/2">
+<section class="detail" id="connect/4">
+
+    <span id="connect/3"></span>
 
   <div class="detail-header">
-    <a href="#connect/2" class="detail-link" title="Link to this function">
+    <a href="#connect/4" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">connect(shard_num, total_shards)</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L174" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">connect(supervisor \\ fetch_shard_sup_pid(), shard_num, total_shards, bot_options)</h1>
 
 
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L191" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
   </div>
 
   <section class="docstring">
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@spec</span> connect(<a href="#t:shard_num/0">shard_num</a>(), <a href="#t:total_shards/0">total_shards</a>()) :: <a href="https://hexdocs.pm/elixir/DynamicSupervisor.html#t:on_start_child/0">DynamicSupervisor.on_start_child</a>()</pre>
+          <pre translate="no"><span class="attribute">@spec</span> connect(
+  <a href="https://hexdocs.pm/elixir/Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>(),
+  <a href="#t:shard_num/0">shard_num</a>(),
+  <a href="#t:total_shards/0">total_shards</a>(),
+  <a href="Nostrum.Bot.html#t:bot_options/0">Nostrum.Bot.bot_options</a>()
+) ::
+  <a href="https://hexdocs.pm/elixir/Supervisor.html#t:on_start_child/0">Supervisor.on_start_child</a>()</pre>
 
       </div>
 
 <p>Spawns a shard with the specified number and connects it to the discord gateway.</p>
   </section>
 </section>
-<section class="detail" id="disconnect/1">
+<section class="detail" id="disconnect/2">
+
+    <span id="disconnect/1"></span>
 
   <div class="detail-header">
-    <a href="#disconnect/1" class="detail-link" title="Link to this function">
+    <a href="#disconnect/2" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">disconnect(shard_num)</h1>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">disconnect(shard_session \\ nil, shard_num)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L162" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+        <span class="note">(since 0.10.0)</span>
 
 
-      <span class="note">(since 0.10.0)</span>
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L181" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
 
+    </div>
   </div>
 
   <section class="docstring">
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@spec</span> disconnect(<a href="#t:shard_num/0">shard_num</a>()) :: <a href="#t:resume_information/0">resume_information</a>()</pre>
+          <pre translate="no"><span class="attribute">@spec</span> disconnect(<a href="https://www.erlang.org/doc/apps/stdlib/gen_statem.html#t:server_ref/0">:gen_statem.server_ref</a>() | nil, <a href="#t:shard_num/0">shard_num</a>()) :: <a href="#t:resume_information/0">resume_information</a>()</pre>
 
       </div>
 
 <p>Disconnects the shard with the given shard number from the Gateway.</p><p>This function returns <a href="#t:resume_information/0"><code class="inline">resume_information/0</code></a> which can be provided
 to <a href="#reconnect/1"><code class="inline">reconnect/1</code></a> to reconnect a shard to the gateway and (attempt) to
-catch up on any missed events.</p><h3 id="disconnect/1-examples" class="section-heading">
-  <a href="#disconnect/1-examples" class="hover-link">
+catch up on any missed events.</p><h3 id="disconnect/2-examples" class="section-heading">
+  <a href="#disconnect/2-examples" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
   </a>
   <span class="text">Examples</span>
 </h3>
-<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Shard.Supervisor</span><span class="o">.</span><span class="n">disconnect</span><span class="p" data-group-id="2318126073-1">(</span><span class="mi">4</span><span class="p" data-group-id="2318126073-1">)</span><span class="w">
-</span><span class="p" data-group-id="2318126073-2">%{</span><span class="ss">shard_num</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="p" data-group-id="2318126073-2">}</span></code></pre>
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Shard.Supervisor</span><span class="o">.</span><span class="n">disconnect</span><span class="p" data-group-id="3316303848-1">(</span><span class="mi">4</span><span class="p" data-group-id="3316303848-1">)</span><span class="w">
+</span><span class="p" data-group-id="3316303848-2">%{</span><span class="ss">shard_num</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="p" data-group-id="3316303848-2">}</span></code></pre>
   </section>
 </section>
-<section class="detail" id="reconnect/1">
+<section class="detail" id="reconnect/2">
+
+    <span id="reconnect/1"></span>
 
   <div class="detail-header">
-    <a href="#reconnect/1" class="detail-link" title="Link to this function">
+    <a href="#reconnect/2" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">reconnect(opts)</h1>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">reconnect(supervisor \\ fetch_shard_sup_pid(), opts)</h1>
 
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L200" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+        <span class="note">(since 0.10.0)</span>
 
 
-      <span class="note">(since 0.10.0)</span>
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L220" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
 
+    </div>
   </div>
 
   <section class="docstring">
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@spec</span> reconnect(<a href="#t:resume_information/0">resume_information</a>()) :: <a href="https://hexdocs.pm/elixir/DynamicSupervisor.html#t:on_start_child/0">DynamicSupervisor.on_start_child</a>()</pre>
+          <pre translate="no"><span class="attribute">@spec</span> reconnect(<a href="https://hexdocs.pm/elixir/Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>(), <a href="#t:resume_information/0">resume_information</a>()) ::
+  <a href="https://hexdocs.pm/elixir/Supervisor.html#t:on_start_child/0">Supervisor.on_start_child</a>()</pre>
 
       </div>
 
@@ -514,32 +482,32 @@ guaranteed that a resume will work (though Nostrum will handle failed attempts
 at a resumption). If a reconnect is successful, any events received during the
 reconnection period should be received. If the reconnect fails, events
 received between the disconnect and re-authentication may be lost.</p><p>For more information about resuming sessions, visit
-<a href="https://discord.com/developers/docs/topics/gateway#resuming">the Discord Developer Portal</a>.</p><h3 id="reconnect/1-examples" class="section-heading">
-  <a href="#reconnect/1-examples" class="hover-link">
+<a href="https://discord.com/developers/docs/topics/gateway#resuming">the Discord Developer Portal</a>.</p><h3 id="reconnect/2-examples" class="section-heading">
+  <a href="#reconnect/2-examples" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
   </a>
   <span class="text">Examples</span>
 </h3>
-<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">resume</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Nostrum.Shard.Supervisor</span><span class="o">.</span><span class="n">disconnect</span><span class="p" data-group-id="3732925635-1">(</span><span class="mi">4</span><span class="p" data-group-id="3732925635-1">)</span><span class="w">
-</span><span class="p" data-group-id="3732925635-2">%{</span><span class="ss">shard_num</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="p" data-group-id="3732925635-2">}</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Shard.Supervisor</span><span class="o">.</span><span class="n">reconnect</span><span class="p" data-group-id="3732925635-3">(</span><span class="n">resume</span><span class="p" data-group-id="3732925635-3">)</span></code></pre>
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">resume</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Nostrum.Shard.Supervisor</span><span class="o">.</span><span class="n">disconnect</span><span class="p" data-group-id="3915770405-1">(</span><span class="mi">4</span><span class="p" data-group-id="3915770405-1">)</span><span class="w">
+</span><span class="p" data-group-id="3915770405-2">%{</span><span class="ss">shard_num</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="p" data-group-id="3915770405-2">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Nostrum.Shard.Supervisor</span><span class="o">.</span><span class="n">reconnect</span><span class="p" data-group-id="3915770405-3">(</span><span class="n">resume</span><span class="p" data-group-id="3915770405-3">)</span></code></pre>
   </section>
 </section>
 <section class="detail" id="start_link/1">
 
   <div class="detail-header">
-    <a href="#start_link/1" class="detail-link" title="Link to this function">
+    <a href="#start_link/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">start_link(args)</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L85" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">start_link(bot_options)</h1>
 
 
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L89" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
   </div>
 
   <section class="docstring">
@@ -547,21 +515,21 @@ received between the disconnect and re-authentication may be lost.</p><p>For mor
 
   </section>
 </section>
-<section class="detail" id="update_status/4">
+<section class="detail" id="update_status/2">
 
   <div class="detail-header">
-    <a href="#update_status/4" class="detail-link" title="Link to this function">
+    <a href="#update_status/2" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">update_status(status, game, stream, type)</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L110" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">update_status(status, activity)</h1>
 
 
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L108" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
   </div>
 
   <section class="docstring">
@@ -572,18 +540,18 @@ received between the disconnect and re-authentication may be lost.</p><p>For mor
 <section class="detail" id="update_voice_state/4">
 
   <div class="detail-header">
-    <a href="#update_voice_state/4" class="detail-link" title="Link to this function">
+    <a href="#update_voice_state/4" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">update_voice_state(guild_id, channel_id, self_mute, self_deaf)</h1>
-
-      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L121" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">update_voice_state(guild_id, channel_id, self_mute, self_deaf)</h1>
 
 
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/shard/supervisor.ex#L115" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
   </div>
 
   <section class="docstring">
@@ -599,9 +567,9 @@ received between the disconnect and re-authentication may be lost.</p><p>For mor
       <p>
 
           <span class="line">
-            <a href="https://hex.pm/packages/nostrum/0.10.0" class="footer-hex-package">Hex Package</a>
+            <a href="https://hex.pm/packages/nostrum/0.11.0-dev" class="footer-hex-package">Hex Package</a>
 
-            <a href="https://preview.hex.pm/preview/nostrum/0.10.0">Hex Preview</a>
+            <a href="https://preview.hex.pm/preview/nostrum/0.11.0-dev">Hex Preview</a>
 
           </span>
 
@@ -610,7 +578,7 @@ received between the disconnect and re-authentication may be lost.</p><p>For mor
             Search HexDocs
           </button>
 
-            <a href="Nostrum.epub" title="ePub version">
+            <a href="nostrum.epub" title="ePub version">
               Download ePub version
             </a>
 
@@ -619,7 +587,7 @@ received between the disconnect and re-authentication may be lost.</p><p>For mor
 
       <p class="built-using">
         Built using
-        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.32.1) for the
+        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.37.2) for the
 
           <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 
@@ -629,7 +597,6 @@ received between the disconnect and re-authentication may be lost.</p><p>For mor
   </div>
 </main>
 </div>
-
 
   </body>
 </html>

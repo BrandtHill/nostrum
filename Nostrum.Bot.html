@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.37.2">
+    <meta name="project" content="nostrum v0.11.0-dev">
+
+
+    <title>Nostrum.Bot — nostrum v0.11.0-dev</title>
+
+    <link rel="stylesheet" href="dist/html-elixir-6X3L5KMG.css" />
+
+    <script defer src="dist/sidebar_items-8A52A8FF.js"></script>
+    <script defer src="docs_config.js"></script>
+    <script defer src="dist/html-6XHBGSGW.js"></script>
+
+  </head>
+  <body>
+    <script>(()=>{var t="ex_doc:settings",e="dark";var o="dark",s="light";var E="sidebar_state",n="closed";var r="sidebar_width";var a="sidebar-open";var i=new URLSearchParams(window.location.search),S=i.get("theme")||JSON.parse(localStorage.getItem(t)||"{}").theme;(S===o||S!==s&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&document.body.classList.add(e);var d=sessionStorage.getItem(E),A=d!==n&&!window.matchMedia(`screen and (max-width: ${768}px)`).matches;document.body.classList.toggle(a,A);var c=sessionStorage.getItem(r);c&&document.body.style.setProperty("--sidebarWidth",`${c}px`);var p=/(Macintosh|iPhone|iPad|iPod)/.test(window.navigator.userAgent);document.documentElement.classList.toggle("apple-os",p);})();
+</script>
+
+<div class="body-wrapper">
+
+<button id="sidebar-menu" class="sidebar-button sidebar-toggle" aria-label="toggle sidebar" aria-controls="sidebar">
+  <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+</button>
+
+<nav id="sidebar" class="sidebar">
+
+  <div class="sidebar-header">
+    <div class="sidebar-projectInfo">
+
+        <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectImage">
+          <img src="assets/logo.png" alt="nostrum" />
+        </a>
+
+      <div>
+        <a href="https://github.com/Kraigie/nostrum" class="sidebar-projectName" translate="no">
+nostrum
+        </a>
+        <div class="sidebar-projectVersion" translate="no">
+          v0.11.0-dev
+        </div>
+      </div>
+    </div>
+    <ul id="sidebar-list-nav" class="sidebar-list-nav" role="tablist" data-extras=""></ul>
+  </div>
+</nav>
+
+<output role="status" id="toast"></output>
+
+<main class="content page-module" id="main" data-type="modules">
+  <div id="content" class="content-inner">
+    <div class="top-search">
+      <div class="search-settings">
+        <form class="search-bar" action="search.html">
+          <label class="search-label">
+            <span class="sr-only">Search documentation of nostrum</span>
+            <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+          </label>
+          <button type="submit" class="search-button" aria-label="Submit Search" tabindex="-1">
+            <i class="ri-search-2-line ri-lg" aria-hidden="true"></i>
+          </button>
+          <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
+            <i class="ri-close-line ri-lg" title="Cancel search"></i>
+          </button>
+        </form>
+        <div class="autocomplete">
+        </div>
+        <button class="icon-settings display-settings">
+          <i class="ri-settings-3-line"></i>
+          <span class="sr-only">Settings</span>
+        </button>
+      </div>
+    </div>
+
+<div id="top-content">
+  <div class="heading-with-actions top-heading">
+    <h1>
+      <span translate="no">Nostrum.Bot</span> 
+      <small class="app-vsn" translate="no">(nostrum v0.11.0-dev)</small>
+
+    </h1>
+
+      <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/bot.ex#L1" title="View Source" class="icon-action" rel="help">
+        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        <span class="sr-only">View Source</span>
+      </a>
+
+  </div>
+
+
+    <section id="moduledoc">
+<p>Supervisor for a bot along with all its associated components.</p><h2 id="module-usage" class="section-heading">
+  <a href="#module-usage" class="hover-link">
+    <i class="ri-link-m" aria-hidden="true"></i>
+  </a>
+  <span class="text">Usage</span>
+</h2>
+<p>In your supervisor tree, write:</p><pre><code class="makeup elixir" translate="no"><span class="n">bot_options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="4960257884-1">%{</span><span class="w">
+  </span><span class="ss">consumer</span><span class="p">:</span><span class="w"> </span><span class="nc">MyBot.Consumer</span><span class="p">,</span><span class="w">
+  </span><span class="c1"># This is an example and includes privileged intents, but</span><span class="w">
+  </span><span class="c1"># should provide a useful set of intents for bots. Feel</span><span class="w">
+  </span><span class="c1"># free to adjust this as you see fit.</span><span class="w">
+  </span><span class="ss">intents</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="4960257884-2">[</span><span class="w">
+    </span><span class="ss">:direct_messages</span><span class="p">,</span><span class="w">
+    </span><span class="ss">:guild_bans</span><span class="p">,</span><span class="w">
+    </span><span class="ss">:guild_members</span><span class="p">,</span><span class="w">
+    </span><span class="ss">:guild_message_reactions</span><span class="p">,</span><span class="w">
+    </span><span class="ss">:guild_messages</span><span class="p">,</span><span class="w">
+    </span><span class="ss">:guilds</span><span class="p">,</span><span class="w">
+    </span><span class="ss">:message_content</span><span class="w">
+  </span><span class="p" data-group-id="4960257884-2">]</span><span class="p">,</span><span class="w">
+  </span><span class="ss">wrapped_token</span><span class="p">:</span><span class="w"> </span><span class="k" data-group-id="4960257884-3">fn</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">System</span><span class="o">.</span><span class="n">fetch_env!</span><span class="p" data-group-id="4960257884-4">(</span><span class="s">&quot;BOT_TOKEN&quot;</span><span class="p" data-group-id="4960257884-4">)</span><span class="w"> </span><span class="k" data-group-id="4960257884-3">end</span><span class="p">,</span><span class="w">
+</span><span class="p" data-group-id="4960257884-1">}</span><span class="w">
+</span><span class="n">children</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="4960257884-5">[</span><span class="w">
+  </span><span class="p" data-group-id="4960257884-6">{</span><span class="nc">Nostrum.Bot</span><span class="p">,</span><span class="w"> </span><span class="n">bot_options</span><span class="p" data-group-id="4960257884-6">}</span><span class="w">
+</span><span class="p" data-group-id="4960257884-5">]</span></code></pre><p>See <a href="#t:bot_options/0"><code class="inline">bot_options/0</code></a> for which options you can configure here.
+You may also configure <a href="#t:supervisor_options/0"><code class="inline">supervisor_options/0</code></a>, which allow you
+to customize the options we start the <a href="https://hexdocs.pm/elixir/Supervisor.html"><code class="inline">Supervisor</code></a> with by defining
+your child in the form <code class="inline">{Nostrum.Bot, {bot_options, supervisor_options}}</code>,
+but the default <a href="#t:supervisor_options/0"><code class="inline">supervisor_options/0</code></a> should suit most needs.</p><h2 id="module-migration-guide" class="section-heading">
+  <a href="#module-migration-guide" class="hover-link">
+    <i class="ri-link-m" aria-hidden="true"></i>
+  </a>
+  <span class="text">Migration guide</span>
+</h2>
+<p>If you are still using the old way of deploying nostrum, please do the following:</p><ol><li><p>Remove the <code class="inline">:nostrum</code>, <code class="inline">:token</code> configuration option. nostrum will then
+assume that you are starting it as part of your own supervision tree, and
+automatic startup via the application is disabled.</p></li><li><p>Remove your consumer from your application supervisor tree.</p></li><li><p>In your supervisor tree, add the <code class="inline">bot_options</code> described above, and add
+<a href="Nostrum.Bot.html"><code class="inline">Nostrum.Bot</code></a> to your supervisor tree as described above. For the <code class="inline">:intents</code>
+setting, cut the value you previously had in your <code class="inline">config.exs</code> and use it
+here. Do the same with <code class="inline">:num_shards</code>, renaming it to <code class="inline">:shards</code> on the
+<code class="inline">bot_options</code> map. You can then remove the old config values.</p></li><li><p>In your consumer, change <code class="inline">use Nostrum.Consumer</code> to <code class="inline">@behaviour Nostrum.Consumer</code>.</p></li><li><p>In your consumer, add a default event handling clause for unmatched events
+at the end of the module, such as:</p></li></ol><pre><code class="makeup elixir" translate="no"><span class="w">  </span><span class="kd">def</span><span class="w"> </span><span class="nf">handle_event</span><span class="p" data-group-id="4726887770-1">(</span><span class="bp">_</span><span class="p" data-group-id="4726887770-1">)</span><span class="p">,</span><span class="w"> </span><span class="ss">do</span><span class="p">:</span><span class="w"> </span><span class="ss">:ok</span></code></pre><h2 id="module-multiple-bots" class="section-heading">
+  <a href="#module-multiple-bots" class="hover-link">
+    <i class="ri-link-m" aria-hidden="true"></i>
+  </a>
+  <span class="text">Multiple Bots</span>
+</h2>
+<p>Nostrum allows you to start multiple bots under your supervision tree. If you are
+calling a function that interacts with an API specific to a bot - Rest, Cache, Voice, etc. -
+nostrum needs to determine which bot to call it for. It does this with a bot <a href="https://hexdocs.pm/elixir/Registry.html"><code class="inline">Registry</code></a>
+and process dictionaries so that you don't have to pass an additional argument to every
+function.</p><p>Inside the <code class="inline">handle_event/1</code> callback in your consumer, the calling process already
+has the context of the bot that generated the event for any API calls that follow.</p><p>If you have a single bot running and need to call an API asynchronously, i.e. <em>not</em> as a response
+to a gateway event in your consumer, nostrum will automatically determine the bot.</p><p>However, if you have multiple bots running <em>and</em> you need to make unprompted bot calls, you
+will need to assist nostrum by setting the process's context in one of three ways:</p><ul><li><code class="inline">Nostrum.Bot.with_bot(MyBot, fn -&gt; ... end)</code> to wrap the API function calls</li><li><code class="inline">use Nostrum.Bot, name: MyBot</code> at the top of the module where the API-calling functions are defined</li><li><code class="inline">Nostrum.Bot.set_bot_name(MyBot)</code> dynamically before each API call</li></ul><p>You are free to call API functions from newly-spawned tasks as nostrum will search the process dictionaries
+of a few generations of calling processes to find the bot context.</p>
+    </section>
+
+</div>
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+      </a>
+      <span class="text">Summary</span>
+    </h1>
+<div class="summary-types summary">
+  <h2>
+    <a href="#types">Types</a>
+  </h2>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:bot_options/0" data-no-tooltip="" translate="no">bot_options()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Options to start a bot with.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:intents/0" data-no-tooltip="" translate="no">intents()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Which gateway intents to request.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:name/0" data-no-tooltip="" translate="no">name()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Unique name for the bot.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:supervisor_options/0" data-no-tooltip="" translate="no">supervisor_options()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Options to pass to the bot's supervisor.</p></div>
+
+    </div>
+
+</div>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#child_spec/1" data-no-tooltip="" translate="no">child_spec(nostrum_options)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#fetch_all_bots/0" data-no-tooltip="" translate="no">fetch_all_bots()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns all running bots</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#set_bot_name/1" data-no-tooltip="" translate="no">set_bot_name(name)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Manually set the bot name in the calling process's context</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#with_bot/3" data-no-tooltip="" translate="no">with_bot(name, function, next \\ :reset)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Call a function with the context of the provided bot</p></div>
+
+    </div>
+
+</div>
+
+  </section>
+
+
+  <section id="types" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#types">
+        <i class="ri-link-m" aria-hidden="true"></i>
+      </a>
+      <span class="text">Types</span>
+    </h1>
+    <div class="types-list">
+<section class="detail" id="t:bot_options/0">
+
+  <div class="detail-header">
+    <a href="#t:bot_options/0" class="detail-link" data-no-tooltip="" aria-label="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">bot_options()</h1>
+
+        <span class="note">(since 0.11.0)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/bot.ex#L148" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> bot_options() :: %{
+  :consumer =&gt; <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">module</a>(),
+  :intents =&gt; :all | :nonprivileged | [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()],
+  :wrapped_token =&gt; (-&gt; <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()),
+  optional(:name) =&gt; <a href="#t:name/0">name</a>(),
+  optional(:shards) =&gt;
+    :auto
+    | :manual
+    | (num_shards :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>())
+    | {lowest :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>(), highest :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>(),
+       total :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>()},
+  optional(:request_guild_members) =&gt; <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>(),
+  optional(:ffmpeg) =&gt; <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(),
+  optional(:youtubedl) =&gt; <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(),
+  optional(:streamlink) =&gt; <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(),
+  optional(:audio_timeout) =&gt; <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>(),
+  optional(:audio_frames_per_burst) =&gt; <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>(),
+  optional(:voice_auto_connect) =&gt; <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>(),
+  optional(:voice_encryption_mode) =&gt; Nostrum.Voice.Crypto.cipher(),
+  optional(:log_full_events) =&gt; <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>(),
+  optional(:log_dispatch_events) =&gt; <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>(),
+  optional(:force_http1) =&gt; <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()
+}</pre>
+
+      </div>
+
+<p>Options to start a bot with.</p><h2 id="t:bot_options/0-required-fields" class="section-heading">
+  <a href="#t:bot_options/0-required-fields" class="hover-link">
+    <i class="ri-link-m" aria-hidden="true"></i>
+  </a>
+  <span class="text">Required fields</span>
+</h2>
+<ul><li><p><code class="inline">:consumer</code>: A module implementing the <a href="Nostrum.Consumer.html"><code class="inline">Nostrum.Consumer</code></a> behaviour that
+should be called for each event.</p></li><li><p><code class="inline">:intents</code>: Which gateway intents to request. See the <a href="gateway_intents.html">Gateway
+Intents</a> documentation for more details.</p></li><li><p><code class="inline">:wrapped_token</code>: A function that takes no arguments and returns the bot
+token to use. This is wrapped to prevent exposure of the token in
+stacktraces.</p></li></ul><h2 id="t:bot_options/0-optional-fields" class="section-heading">
+  <a href="#t:bot_options/0-optional-fields" class="hover-link">
+    <i class="ri-link-m" aria-hidden="true"></i>
+  </a>
+  <span class="text">Optional fields</span>
+</h2>
+<ul><li><p><code class="inline">:name</code>: Unique name for your bot. Defaults to the integer bot id encoded into the token.</p></li><li><p><code class="inline">:shards</code>: Shards that should be started with this bot. Possible values:</p><ul><li><p><code class="inline">:auto</code> uses the suggested amount of shards as provided by Discord. This
+value is the default.</p></li><li><p><code class="inline">:manual</code> do not automatically spawn shards. In this case, it is your
+responsibility to spawn shards manually, see <a href="./manual_sharding.html">the manual sharding
+documentation</a>.</p></li><li><p><code class="inline">pos_integer()</code>: A number of shards to run. nostrum will warn if this is
+not the recommended amount.</p></li><li><p><code class="inline">{lowest, highest, total}</code> starts shards <code class="inline">lowest</code> to <code class="inline">highest</code>. <code class="inline">total</code>
+should contain the total amount of shards that your bot is expected to
+have. Useful for splitting a single bot across multiple nodes, see the
+<a href="./multi_node.html">multi-node documentation</a> for further information.</p></li></ul></li></ul><h2 id="t:bot_options/0-global-config-override-fields" class="section-heading">
+  <a href="#t:bot_options/0-global-config-override-fields" class="hover-link">
+    <i class="ri-link-m" aria-hidden="true"></i>
+  </a>
+  <span class="text">Global config override fields</span>
+</h2>
+<p>The following fields will override global config values if provided.
+More information on globally configuring these options and their defaults
+<a href="./intro.html#configuration-options">may be found here</a>.</p><ul><li><code class="inline">:request_guild_members</code></li><li><code class="inline">:ffmpeg</code></li><li><code class="inline">:youtubedl</code></li><li><code class="inline">:streamlink</code></li><li><code class="inline">:audio_timeout</code></li><li><code class="inline">:audio_frames_per_burst</code></li><li><code class="inline">:voice_auto_connect</code></li><li><code class="inline">:voice_encryption_mode</code></li><li><code class="inline">:log_full_events</code></li><li><code class="inline">:log_dispatch_events</code></li><li><code class="inline">:force_http1</code></li></ul>
+  </section>
+</section>
+<section class="detail" id="t:intents/0">
+
+  <div class="detail-header">
+    <a href="#t:intents/0" class="detail-link" data-no-tooltip="" aria-label="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">intents()</h1>
+
+        <span class="note">(since 0.11.0)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/bot.ex#L178" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> intents() :: :all | :nonprivileged | [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()]</pre>
+
+      </div>
+
+<p>Which gateway intents to request.</p><p>A full reference can be found either <a href="https://discord.com/developers/docs/events/gateway#gateway-intents">on
+Discord</a>
+or on our <a href="gateway_intents.html">Gateway Intents</a> documentation.</p>
+  </section>
+</section>
+<section class="detail" id="t:name/0">
+
+  <div class="detail-header">
+    <a href="#t:name/0" class="detail-link" data-no-tooltip="" aria-label="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">name()</h1>
+
+        <span class="note">(since 0.11.0)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/bot.ex#L183" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> name() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>() | <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>() | <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
+
+      </div>
+
+<p>Unique name for the bot.</p>
+  </section>
+</section>
+<section class="detail" id="t:supervisor_options/0">
+
+  <div class="detail-header">
+    <a href="#t:supervisor_options/0" class="detail-link" data-no-tooltip="" aria-label="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">supervisor_options()</h1>
+
+        <span class="note">(since 0.11.0)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/bot.ex#L191" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> supervisor_options() :: [<a href="https://hexdocs.pm/elixir/Supervisor.html#t:init_option/0">Supervisor.init_option</a>()]</pre>
+
+      </div>
+
+<p>Options to pass to the bot's supervisor.</p><p>By default, we set the <code class="inline">strategy: :one_for_one</code>. No other options are set by
+nostrum.</p>
+  </section>
+</section>
+
+    </div>
+  </section>
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+      </a>
+      <span class="text">Functions</span>
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="child_spec/1">
+
+  <div class="detail-header">
+    <a href="#child_spec/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">child_spec(nostrum_options)</h1>
+
+        <span class="note">(since 0.11.0)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/bot.ex#L229" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> child_spec(options()) :: <a href="https://hexdocs.pm/elixir/Supervisor.html#t:child_spec/0">Supervisor.child_spec</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="fetch_all_bots/0">
+
+  <div class="detail-header">
+    <a href="#fetch_all_bots/0" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">fetch_all_bots()</h1>
+
+        <span class="note">(since 0.11.0)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/bot.ex#L253" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> fetch_all_bots() :: [%{name: <a href="#t:name/0">name</a>(), pid: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pid</a>(), bot_options: <a href="#t:bot_options/0">bot_options</a>()}]</pre>
+
+      </div>
+
+<p>Returns all running bots</p>
+  </section>
+</section>
+<section class="detail" id="set_bot_name/1">
+
+  <div class="detail-header">
+    <a href="#set_bot_name/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">set_bot_name(name)</h1>
+
+        <span class="note">(since 0.11.0)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/bot.ex#L344" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> set_bot_name(<a href="#t:name/0">name</a>()) :: <a href="#t:name/0">name</a>() | nil</pre>
+
+      </div>
+
+<p>Manually set the bot name in the calling process's context</p>
+  </section>
+</section>
+<section class="detail" id="with_bot/3">
+
+    <span id="with_bot/2"></span>
+
+  <div class="detail-header">
+    <a href="#with_bot/3" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">with_bot(name, function, next \\ :reset)</h1>
+
+        <span class="note">(since 0.11.0)</span>
+
+
+        <a href="https://github.com/Kraigie/nostrum/blob/master/lib/nostrum/bot.ex#L377" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> with_bot(<a href="#t:name/0">name</a>(), (-&gt; <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()), :reset | :clear | :keep) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+
+      </div>
+
+<p>Call a function with the context of the provided bot</p><pre><code class="makeup elixir" translate="no"><span class="nc">Nostrum.Bot</span><span class="o">.</span><span class="n">with_bot</span><span class="p" data-group-id="1212728261-1">(</span><span class="nc">ReticentBot</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="1212728261-2">fn</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+  </span><span class="nc">Nostrum.Api.Message</span><span class="o">.</span><span class="n">create</span><span class="p" data-group-id="1212728261-3">(</span><span class="n">channel_id</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hi...&quot;</span><span class="p" data-group-id="1212728261-3">)</span><span class="w">
+</span><span class="k" data-group-id="1212728261-2">end</span><span class="p" data-group-id="1212728261-1">)</span><span class="w">
+
+</span><span class="nc">Nostrum.Bot</span><span class="o">.</span><span class="n">with_bot</span><span class="p" data-group-id="1212728261-4">(</span><span class="nc">SillyGoofyBot</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="1212728261-5">fn</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+  </span><span class="nc">Nostrum.Api.Message</span><span class="o">.</span><span class="n">create</span><span class="p" data-group-id="1212728261-6">(</span><span class="n">channel_id</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Heyyy :)&quot;</span><span class="p" data-group-id="1212728261-6">)</span><span class="w">
+</span><span class="k" data-group-id="1212728261-5">end</span><span class="p">,</span><span class="w"> </span><span class="ss">:keep</span><span class="p" data-group-id="1212728261-4">)</span><span class="w">
+
+</span><span class="c1"># Context is still set to SillyGoofyBot</span><span class="w">
+</span><span class="nc">Nostrum.Api.Message</span><span class="o">.</span><span class="n">create</span><span class="p" data-group-id="1212728261-7">(</span><span class="n">channel_id</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Me again :)&quot;</span><span class="p" data-group-id="1212728261-7">)</span></code></pre><h2 id="with_bot/3-parameters" class="section-heading">
+  <a href="#with_bot/3-parameters" class="hover-link">
+    <i class="ri-link-m" aria-hidden="true"></i>
+  </a>
+  <span class="text">Parameters</span>
+</h2>
+<ul><li><code class="inline">name</code> - Name of the bot to run the function as</li><li><code class="inline">function</code> - Zero arity function to execute</li><li><code class="inline">next</code> - What to do with the process's bot context after the function<ul><li><code class="inline">:reset</code> - Reset the values to what they were before (default)</li><li><code class="inline">:clear</code> - Set the values to <code class="inline">nil</code></li><li><code class="inline">:keep</code> - Keep the provided bot's context in this process's dictionary</li></ul></li></ul>
+  </section>
+</section>
+
+    </div>
+  </section>
+
+    <footer class="footer">
+      <p>
+
+          <span class="line">
+            <a href="https://hex.pm/packages/nostrum/0.11.0-dev" class="footer-hex-package">Hex Package</a>
+
+            <a href="https://preview.hex.pm/preview/nostrum/0.11.0-dev">Hex Preview</a>
+
+          </span>
+
+        <span class="line">
+          <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+            Search HexDocs
+          </button>
+
+            <a href="nostrum.epub" title="ePub version">
+              Download ePub version
+            </a>
+
+        </span>
+      </p>
+
+      <p class="built-using">
+        Built using
+        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.37.2) for the
+
+          <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+      </p>
+
+    </footer>
+  </div>
+</main>
+</div>
+
+  </body>
+</html>
