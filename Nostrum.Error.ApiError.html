@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="dist/html-elixir-6X3L5KMG.css" />
 
-    <script defer src="dist/sidebar_items-EC739B63.js"></script>
+    <script defer src="dist/sidebar_items-67752356.js"></script>
     <script defer src="docs_config.js"></script>
     <script defer src="dist/html-6XHBGSGW.js"></script>
 
@@ -411,7 +411,11 @@ This should only be raised explicitly when using the banged API methods.</p>
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@type</span> t() :: %{status_code: <a href="#t:status_code/0">status_code</a>(), response: <a href="#t:response/0">response</a>()}</pre>
+          <pre translate="no"><span class="attribute">@type</span> t() :: %Nostrum.Error.ApiError{
+  __exception__: true,
+  response: <a href="#t:response/0">response</a>(),
+  status_code: <a href="#t:status_code/0">status_code</a>()
+}</pre>
 
       </div>
 
